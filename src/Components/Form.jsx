@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const NOTIFICATION_TTL = 5000;
-const PUBLIC_kEY = '6LfXr3oqAAAAAJ3PL5UDEXod_u7uxvyrcHo3skwX';
+const PUBLIC_kEY = '6LcLKnkqAAAAAJyPa6kv7Nzi9h8y60DUW2fkB6l6';
 
 const Form = () => {
   const form = useRef();
@@ -136,9 +136,14 @@ const Form = () => {
       //     },
       //   )
       emailjs
-      .sendForm('service_m6zqb38', 'template_atk9df3', form.current, {
-        publicKey: 'sA_P3nSKIOHL1Z_mt',
-      })
+      .sendForm(
+        'service_m6zqb38',
+        'template_atk9df3',
+        form.current,
+        {
+          publicKey: 'sA_P3nSKIOHL1Z_mt',
+        },
+      )
         .then(
           () => {
             // console.log('SUCCESS!');

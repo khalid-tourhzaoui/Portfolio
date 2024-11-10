@@ -9,13 +9,13 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     define: {
-      'process.env.REACT_APP_SERVICE_ID': JSON.stringify(
+      'service_m6zqb38': JSON.stringify(
         env.REACT_APP_SERVICE_ID,
       ),
-      'process.env.REACT_APP_TEMPLATE_ID': JSON.stringify(
+      'template_atk9df3': JSON.stringify(
         env.REACT_APP_TEMPLATE_ID,
       ),
-      'process.env.REACT_APP_PUBLIC_KEY': JSON.stringify(
+      'sA_P3nSKIOHL1Z_mt': JSON.stringify(
         env.REACT_APP_PUBLIC_KEY,
       ),
     },

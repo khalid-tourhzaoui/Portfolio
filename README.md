@@ -1,7 +1,7 @@
 ## *Portfolio*
 
 Welcome to my portfolio ! This project showcases my work, skills, and experiences in data science, web development.
-## *To isit my portfolio :* [www.khalidtourhzaoui.com](https://khalid-tourhzaoui.vercel.app/)
+## *To visit my portfolio :* [www.khalidtourhzaoui.com](https://khalid-tourhzaoui.vercel.app/)
 
 ## *Table of Contents*
 

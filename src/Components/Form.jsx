@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const NOTIFICATION_TTL = 5000;
-const PUBLIC_kEY = '6LcLKnkqAAAAAJyPa6kv7Nzi9h8y60DUW2fkB6l6';
+const PUBLIC_kEY = '6LfXr3oqAAAAAJ3PL5UDEXod_u7uxvyrcHo3skwX';
 
 const Form = () => {
   const form = useRef();

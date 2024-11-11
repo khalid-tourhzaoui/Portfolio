@@ -46,12 +46,12 @@ const ScrollerVaul = () => {
                 <div>
                   Email :{' '}
                   <span className="md:text-lg font-bold">
-                    OthmanElhadrati@gmail.com
+                    khalidtourhzaoui@gmail.com
                   </span>
                 </div>
                 <div>
                   {' '}
-                  &copy; 2024 Othman El Hadrati . All&nbsp;Rights&nbsp;Reserved{' '}
+                  &copy; 2024 Khalid Tourhzaoui . All&nbsp;Rights&nbsp;Reserved{' '}
                 </div>
               </div>
             </div>

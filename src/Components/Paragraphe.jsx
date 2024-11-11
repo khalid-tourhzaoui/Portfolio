@@ -29,19 +29,4 @@ export default function Paragraphe({ partie }) {
         solutions that help people and improve their everyday experiences.
       </motion.div>
     );
-  else
-    return (
-      <motion.div
-        className="text-start md:text-left font-customFont text-1xl backdrop-blur-[3px] "
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-      >
-        <p>
-          I&apos;m currently a first-year engineering student specializing in
-          Data Engineering at the National School of Applied Sciences in Al
-          Hoceima (<strong>ENSAH</strong>).
-        </p>
-      </motion.div>
-    );
 }

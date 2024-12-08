@@ -32,6 +32,22 @@ const data = [
     link: 'https://github.com/khalid-tourhzaoui/WEATHER-APP',
     imgUrl: WeatherApp,
   },
+  {
+    id: 2,
+    serviceName: 'QR CODE GENERATOR',
+    tools: [
+      FaReact, 
+      SiTailwindcss, 
+      SiShadcnui,  
+      SiTypescript, 
+      BiQrScan,
+      MdColorLens,
+      AiOutlineDownload,
+      SiVercel
+    ],
+    link: 'https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR',
+    imgUrl: QrCode,
+  },
   
 ];
 

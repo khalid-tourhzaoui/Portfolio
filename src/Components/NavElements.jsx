@@ -1,20 +1,37 @@
-import { FaHome, FaRegUserCircle } from 'react-icons/fa';
-import { MdOutlineAlternateEmail } from 'react-icons/md';
-import { SiHyperskill } from 'react-icons/si';
+import { FaHome, FaRegUserCircle } from "react-icons/fa";
+import { GrProjects } from "react-icons/gr";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { SiHyperskill } from "react-icons/si";
 
 export const NavElements = [
-  { id: 1, name: 'home', path: '/', icon: <FaHome /> },
-  { id: 2, name: 'about', path: '/about', icon: <FaRegUserCircle /> },
+  { 
+    id: 1,
+    name: "home",
+    path: "/", 
+    icon: <FaHome /> 
+  },
+  { 
+    id: 2, 
+    name: "about", 
+    path: "/about", 
+    icon: <FaRegUserCircle /> 
+  },
   {
     id: 3,
-    name: 'service',
-    path: '/service',
+    name: "service",
+    path: "/service",
     icon: <SiHyperskill />,
   },
   {
+    id: 4,
+    name: "projects",
+    path: "/projects",
+    icon: <GrProjects />,
+  },
+  {
     id: 5,
-    name: 'contact me',
-    path: '/contactme',
+    name: "contact me",
+    path: "/contactme",
     icon: <MdOutlineAlternateEmail />,
   },
 ];

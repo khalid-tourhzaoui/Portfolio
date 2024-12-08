@@ -2,7 +2,6 @@ import SecName from './SecName';
 import { motion } from 'framer-motion';
 import { SiHyperskill } from 'react-icons/si';
 import SkillsPart from './SkillsPart';
-import Certificats from './Certificats';
 import { useState } from 'react';
 
 const Categories = ['Skills', 'Certificates'];
@@ -35,13 +34,7 @@ export default function Skills() {
         </motion.div>
       );
     } 
-    // else if (active === 'Certificates') {
-    //   return (
-    //     <motion.div className='pb-7 md:pb-2 '>
-    //       <Certificats />
-    //     </motion.div>
-    //   );
-    // } 
+    
     else {
       return <h1>Unknown Category</h1>;
     }

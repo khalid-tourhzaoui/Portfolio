@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideBar from './SideBar';
 import Home from './Home';
@@ -10,6 +11,7 @@ import Loader from './Loader';
 import BackGround from './BackGround';
 import Fragment1 from '../assets/pngegg.png'
 const ContactMe = lazy(() => import('./Contactme'));
+const Projects = lazy(() => import('./Projects'));
 const PageNotFound = lazy(() => import('./PageNotFound'));
 
 export default function Layout() {
@@ -42,7 +44,20 @@ export default function Layout() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/service" element={<Service />} />
-                
+                <Route
+                  path="/projects"
+                  element={
+                    <Suspense
+                      fallback={
+                        <div className="pl-20">
+                          <Loader hiddenText={true} />
+                        </div>
+                      }
+                    >
+                      <Projects />
+                    </Suspense>
+                  }
+                />
                 <Route
                   path="/contactme"
                   element={

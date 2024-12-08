@@ -4,8 +4,7 @@ import { IoLogoCss3 } from 'react-icons/io';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiOracle, SiMysql, SiFastapi, SiShadcnui, SiPostman, SiMongodb, SiUml, SiSpringboot } from 'react-icons/si';
-import { DiGit, DiGithubBadge, DiLinux, DiBootstrap, DiScrum } from 'react-icons/di';
-
+import { DiGit, DiGithubBadge, DiLinux, DiBootstrap } from 'react-icons/di';
 
 import { motion } from 'framer-motion';
 import CIcon from './Ccompo';

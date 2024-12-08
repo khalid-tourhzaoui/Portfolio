@@ -8,6 +8,7 @@ import { DiGit, DiGithubBadge, DiLinux, DiBootstrap } from 'react-icons/di';
 
 import { motion } from 'framer-motion';
 import CIcon from './Ccompo';
+import { TbBrandFramerMotion } from 'react-icons/tb';
 
 const SkillCategory = ({ category, skills }) => (
   <motion.div
@@ -85,7 +86,8 @@ export default function SkillsPart() {
         skills={[
           { icon: FaLaravel, name: 'Laravel' },
           { icon: FaReact, name: 'React' },
-          { icon: SiSpringboot, name: 'Framer-Motion' },
+          { icon: SiSpringboot, name: 'SpringBoot' },
+          { icon: TbBrandFramerMotion, name: 'Framer-Motion' },
           { icon: SiFastapi, name: 'FastAPI' },
           { icon: RiTailwindCssFill, name: 'Tailwind CSS' },
           { icon: SiShadcnui, name: 'Shadcn UI' },

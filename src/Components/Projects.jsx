@@ -5,16 +5,16 @@ import { AnimatePresence } from 'framer-motion';
 import Transition from './Transition';
 import Grid from './Grid';
 import { FaReact } from 'react-icons/fa';
-import { SiFramer, SiMapbox, SiTailwindcss, SiTiktok, SiTypescript, SiVercel } from 'react-icons/si';
+import { SiMapbox, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
 import { SiFastapi } from 'react-icons/si';
 import { SiShadcnui } from 'react-icons/si';
 import { BiQrScan } from 'react-icons/bi';
 import { MdColorLens } from 'react-icons/md';
-import { AiFillInstagram, AiFillYoutube, AiOutlineDownload } from 'react-icons/ai';
+import { AiOutlineDownload } from 'react-icons/ai';
+import { TbBrandFramerMotion } from 'react-icons/tb';
 import WeatherApp from '../assets/WeatherApp.png';
 import QrCode from '../assets/QrCode.png';
-import { FaFacebook, FaTwitter } from 'react-icons/fa6';
-import { TbBrandFramerMotion } from 'react-icons/tb';
+import SocialMedia from '../assets/SocialMedia.png';
 
 const data = [
   {
@@ -48,7 +48,21 @@ const data = [
     link: 'https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR',
     imgUrl: QrCode,
   },
-  
+  {
+    id: 3,
+    serviceName: 'Social Media Downloader',
+    tools: [
+      FaReact, 
+      SiTailwindcss, 
+      SiShadcnui,  
+      AiOutlineDownload,
+      SiFastapi,
+      TbBrandFramerMotion,
+      SiVercel,
+    ],
+    link: 'https://github.com/khalid-tourhzaoui/social-media-downloader',
+    imgUrl: SocialMedia,
+  },
 ];
 
 const staggerContainer = {

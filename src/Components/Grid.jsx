@@ -36,9 +36,10 @@ const BounceCard = ({ className, data }) => {
         scale: 0.95,
         transition: { duration: 0.4 },
       }}
-      className={`group hover:shadow-shad2  relative space-y-4 text-white h-48 cursor-pointer overflow-hidden rounded-2xl backdrop-blur-[2px] bg-primary3/35  md:py-8 px-5 ${className}`}
+      className={`group hover:shadow-shad2  relative space-y-4 text-white h-48 cursor-pointer overflow-hidden rounded-2xl backdrop-blur-[2px]
+         bg-primary3/35  md:py-8 px-5 ${className} border-2`}
     >
-      <div className="mx-auto text-center group-hover:md:text-2xl  group-hover:text-xl w-max text-xl  md:text-2xl font-semibold">
+      <div className="mx-auto text-center group-hover:md:text-2xl group-hover:text-xl w-max text-xl  md:text-2xl font-semibold">
         <h1 className="group-hover:md:-translate-y-3 pt-4  md:pt-0  transition-all duration-500">
           {data.serviceName}
         </h1>

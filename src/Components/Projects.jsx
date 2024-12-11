@@ -4,7 +4,7 @@ import { GrProjects } from 'react-icons/gr';
 import { AnimatePresence } from 'framer-motion';
 import Transition from './Transition';
 import Grid from './Grid';
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaRegPlayCircle } from 'react-icons/fa';
 import { SiMapbox, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
 import { SiFastapi } from 'react-icons/si';
 import { SiShadcnui } from 'react-icons/si';
@@ -15,6 +15,7 @@ import { TbBrandFramerMotion } from 'react-icons/tb';
 import WeatherApp from '../assets/WeatherApp.png';
 import QrCode from '../assets/QrCode.png';
 import SocialMedia from '../assets/SocialMedia.png';
+import smartlanguageconverter from '../assets/smartlanguageconverter.png';
 
 const data = [
   {
@@ -62,6 +63,21 @@ const data = [
     ],
     link: 'https://github.com/khalid-tourhzaoui/social-media-downloader',
     imgUrl: SocialMedia,
+  },
+  {
+    id: 4,
+    serviceName: 'Smart Language Converter',
+    tools: [
+      FaReact, 
+      SiTailwindcss, 
+      SiShadcnui,  
+      SiVercel,
+      FaRegPlayCircle,
+      SiTypescript,
+      SiFastapi,
+    ],
+    link: 'https://smartlanguageconverter.vercel.app/',
+    imgUrl: smartlanguageconverter,
   },
 ];
 

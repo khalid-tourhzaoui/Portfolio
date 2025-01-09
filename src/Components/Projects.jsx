@@ -1,83 +1,105 @@
-import SecName from './SecName';
-import { motion } from 'framer-motion';
-import { GrProjects } from 'react-icons/gr';
-import { AnimatePresence } from 'framer-motion';
-import Transition from './Transition';
-import Grid from './Grid';
-import { FaReact, FaRegPlayCircle } from 'react-icons/fa';
-import { SiMapbox, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si';
-import { SiFastapi } from 'react-icons/si';
-import { SiShadcnui } from 'react-icons/si';
-import { BiQrScan } from 'react-icons/bi';
-import { MdColorLens } from 'react-icons/md';
-import { AiOutlineDownload } from 'react-icons/ai';
-import { TbBrandFramerMotion } from 'react-icons/tb';
-import WeatherApp from '../assets/WeatherApp.png';
-import QrCode from '../assets/QrCode.png';
-import SocialMedia from '../assets/SocialMedia.png';
-import smartlanguageconverter from '../assets/smartlanguageconverter.png';
-
+import SecName from "./SecName";
+import { motion } from "framer-motion";
+import { GrProjects } from "react-icons/gr";
+import { AnimatePresence } from "framer-motion";
+import Transition from "./Transition";
+import Grid from "./Grid";
+import { FaReact, FaRegPlayCircle } from "react-icons/fa";
+import {
+  SiLaravel,
+  SiMapbox,
+  SiMysql,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+} from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
+import { SiShadcnui } from "react-icons/si";
+import { BiQrScan } from "react-icons/bi";
+import { MdColorLens } from "react-icons/md";
+import { AiOutlineDownload, AiOutlineFilePdf } from "react-icons/ai";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import WeatherApp from "../assets/WeatherApp.png";
+import QrCode from "../assets/QrCode.png";
+import SocialMedia from "../assets/SocialMedia.png";
+import smartlanguageconverter from "../assets/smartlanguageconverter.png";
+import airesumebuilder from "../assets/airesumebuilder.png";
 const data = [
   {
     id: 1,
-    serviceName: 'WEATHER APP',
+    serviceName: "WEATHER APP",
     tools: [
-      FaReact, 
-      SiTailwindcss, 
-      SiShadcnui, 
-      SiFastapi, 
-      SiTypescript, 
-      SiMapbox, 
-      SiVercel
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
+      SiFastapi,
+      SiTypescript,
+      SiMapbox,
+      SiVercel,
     ],
-    link: 'https://github.com/khalid-tourhzaoui/WEATHER-APP',
+    link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
     imgUrl: WeatherApp,
   },
   {
     id: 2,
-    serviceName: 'QR CODE GENERATOR',
+    serviceName: "QR CODE GENERATOR",
     tools: [
-      FaReact, 
-      SiTailwindcss, 
-      SiShadcnui,  
-      SiTypescript, 
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
+      SiTypescript,
       BiQrScan,
       MdColorLens,
       AiOutlineDownload,
-      SiVercel
+      SiVercel,
     ],
-    link: 'https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR',
+    link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
     imgUrl: QrCode,
   },
   {
     id: 3,
-    serviceName: 'Social Media Downloader',
+    serviceName: "Social Media Downloader",
     tools: [
-      FaReact, 
-      SiTailwindcss, 
-      SiShadcnui,  
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
       AiOutlineDownload,
       SiFastapi,
       TbBrandFramerMotion,
       SiVercel,
     ],
-    link: 'https://github.com/khalid-tourhzaoui/social-media-downloader',
+    link: "https://github.com/khalid-tourhzaoui/social-media-downloader",
     imgUrl: SocialMedia,
   },
   {
     id: 4,
-    serviceName: 'Smart Language Converter',
+    serviceName: "Smart Language Converter",
     tools: [
-      FaReact, 
-      SiTailwindcss, 
-      SiShadcnui,  
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
       SiVercel,
       FaRegPlayCircle,
       SiTypescript,
       SiFastapi,
     ],
-    link: 'https://smartlanguageconverter.vercel.app/',
+    link: "https://smartlanguageconverter.vercel.app/",
     imgUrl: smartlanguageconverter,
+  },
+  {
+    id: 5,
+    serviceName: "AI-RESUME-BUILDER",
+    tools: [
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
+      SiLaravel,
+      AiOutlineFilePdf,
+      SiMysql,
+      
+    ],
+    link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
+    imgUrl: airesumebuilder,
   },
 ];
 

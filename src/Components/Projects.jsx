@@ -24,6 +24,7 @@ import QrCode from "../assets/QrCode.png";
 import SocialMedia from "../assets/SocialMedia.png";
 import smartlanguageconverter from "../assets/smartlanguageconverter.png";
 import airesumebuilder from "../assets/airesumebuilder.png";
+import ailegalplateform from "../assets/ailegalplateform.png";
 const data = [
   {
     id: 1,
@@ -100,6 +101,20 @@ const data = [
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
     imgUrl: airesumebuilder,
+  },
+  {
+    id: 5,
+    serviceName: "AI-LEGAL-PALTEFORM",
+    tools: [
+      FaReact,
+      SiTailwindcss,
+      SiShadcnui,
+      SiTypescript,
+      SiFastapi,
+      SiVercel,
+    ],
+    link: "https://github.com/khalid-tourhzaoui/legal-ai-platform",
+    imgUrl: ailegalplateform,
   },
 ];
 

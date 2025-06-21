@@ -1,5 +1,5 @@
 import { stagger, useAnimate } from 'framer-motion';
-import MyCV from '../assets/docs/CV-KHALID-TOURHZAOUI.pdf';
+import MyCV from '../assets/docs/CVKHALIDTOURHZAOUI.pdf';
 import { motion } from 'framer-motion';
 
 export default function Resume() {

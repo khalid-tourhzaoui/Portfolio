@@ -40,8 +40,8 @@ export default function Service() {
       <Transition key={1} />
       <div
         key={2}
-        className="cursor-custom relative pt-8 flex flex-col space-y-5 mt-8 md:mt-0 items-center 
-        md:w-4/5 lg:w-3/4 xl:w-3/5 pl-6 pr-4 md:pl-0 w-full h-full md:h-full md:pt-14 md:pb-12 pb-10 overflow-hidden"
+        className="cursor-custom relative pt-28 md:pt-32 flex flex-col space-y-5 mt-8 md:mt-0 items-center 
+        md:w-4/5 lg:w-3/4 xl:w-3/5 pl-6 pr-4 md:pl-0 w-full h-full md:h-full md:pb-12 pb-10 overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -1,74 +1,105 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavElements } from './NavElements.jsx';
 import ScrollButton from './ScrollButton.jsx';
 import BurgerMenu from './BurgerMenu';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Menu() {
   const [active, setActive] = useState(false);
   const location = useLocation();
-  const [okay, setOkay] = useState(false);
-  const divRef = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleVisibility = () => {
-      if (divRef.current) {
-        const rect = divRef.current.getBoundingClientRect();
-        setOkay(
-          rect.top + rect.height == 0 
-        );
-      }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
     };
 
-    handleVisibility(); // Check visibility initially
-    window.addEventListener('resize', handleVisibility);
-    window.addEventListener('scroll', handleVisibility);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize', handleVisibility);
-      window.removeEventListener('scroll', handleVisibility);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const mappedData = NavElements.map(elem => {
+  const mappedDataDesktop = NavElements.map((elem) => {
+    const isActive = location.pathname === elem.path;
+    
+    return (
+      <Link
+        key={elem.id}
+        to={elem.path}
+        className="relative group"
+      >
+        <motion.div
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300
+            ${isActive 
+              ? 'text-purple-400' 
+              : 'text-slate-300 hover:text-white'
+            }`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {/* Icon */}
+          <motion.div 
+            className="text-xl"
+            animate={isActive ? { rotate: [0, -10, 10, -10, 0] } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            {elem.icon}
+          </motion.div>
+          
+          {/* Name */}
+          <span className="font-medium capitalize text-sm md:text-base">
+            {elem.name}
+          </span>
+
+          {/* Active indicator line */}
+          <AnimatePresence>
+            {isActive && (
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-full"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                exit={{ scaleX: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            )}
+          </AnimatePresence>
+
+          {/* Hover background */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-cyan-600/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"
+          />
+        </motion.div>
+      </Link>
+    );
+  });
+
+  const mappedDataMobile = NavElements.map((elem) => {
+    const isActive = location.pathname === elem.path;
+    
     return (
       <div
-        className="group relative flex "
-        onClick={() => setActive(pv => !pv)}
+        className="group relative flex"
+        onClick={() => setActive(false)}
         key={elem.id}
-        title={elem.name}
       >
         <Link
           className={`${
-            location.pathname === elem.path
-              ? 'text-primary1 hover:text-primary1 '
-              : 'text-slate-300 md:text-white hover:text-primary1 transition-all duration-300'
-          } md:drop-shadow-back flex`}
+            isActive
+              ? 'text-purple-400'
+              : 'text-slate-300 hover:text-purple-400 transition-all duration-300'
+          } flex items-center gap-3 text-xl py-2`}
           to={elem.path}
         >
           {elem.icon}
-
-          <div
-            className={`${
-              location.pathname === elem.path
-                ? 'text-primary1'
-                : 'text-slate-300'
-            } md:hidden md:absolute  right-12 top-0 w-max md:text-black font-bold px-3 py-0.5 capitalize md:bg-slate-300 text-xl rounded-md md:group-hover:block`}
-          >
-            {elem.name}
-          </div>
-
-          <div
-            className="absolute hidden w-0 h-0 
-              border-t-[9px] border-t-transparent
-              border-l-[12px] border-l-slate-300
-              border-b-[9px] border-b-transparent
-              top-1.5 right-10 rounded-sm md:group-hover:block"
-          ></div>
+          <span className="capitalize font-medium">{elem.name}</span>
         </Link>
       </div>
     );
@@ -77,24 +108,43 @@ export default function Menu() {
   return (
     <>
       <ScrollButton />
-      <div
-        ref={divRef}
-        className={`hidden md:block fixed md:top-[27%] md:w-fit md:right-6 z-20 transition-all duration-300`}
-      >
-        <div
-          className="flex justify-around font-customFont 
-          text-white px-3 py-6 w-screen text-3xl bg-secondary1 md:flex-col md:w-max md:space-y-8 md:rounded-full ring-2 -mb-1 ring-secondary2 md:backdrop-blur-sm backdrop-blur-[5px] shadow-shad shadow-primary3"
-        >
-          {mappedData}
-        </div>
-      </div>
-      {okay && (
-       
-          <BurgerMenu active={active} setActive={() => setActive(pv => !pv)}>
-            {mappedData}
-          </BurgerMenu>
       
-      )}
+      {/* Desktop Menu - Positionné à droite pour ne pas chevaucher le logo */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className={`hidden md:block fixed top-0 right-0 z-50 transition-all duration-300
+          ${scrolled ? 'py-3 pr-6' : 'py-5 pr-6'}`}
+      >
+        <motion.nav
+          className={`flex items-center justify-center gap-2 
+            backdrop-blur-xl bg-slate-900/80 rounded-2xl 
+            border transition-all duration-300
+            ${scrolled 
+              ? 'border-white/10 shadow-lg shadow-purple-500/10' 
+              : 'border-white/5'
+            }`}
+          style={{
+            boxShadow: scrolled ? '0 8px 32px rgba(139, 92, 246, 0.15)' : 'none'
+          }}
+        >
+          {/* Navigation Links */}
+          <div className="flex items-center gap-1 px-2 py-2">
+            {mappedDataDesktop}
+          </div>
+
+          {/* Decorative element */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl opacity-0 hover:opacity-20 transition-opacity duration-300 -z-10 blur-xl" />
+        </motion.nav>
+      </motion.div>
+
+      {/* Mobile Menu - Burger */}
+      <div className="md:hidden">
+        <BurgerMenu active={active} setActive={() => setActive(pv => !pv)}>
+          {mappedDataMobile}
+        </BurgerMenu>
+      </div>
     </>
   );
 }

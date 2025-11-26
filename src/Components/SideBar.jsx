@@ -39,8 +39,8 @@ const Header = () => {
     <>
       <motion.div
         ref={divRef}
-        className="hidden md:flex flex-col justify-between space-y-6 items-center rounded-3xl 
-        md:fixed px-9 py-6 mt-24 mb-8 md:top-16 md:left-5 md:px-4 md:w-2/6 
+        className="hidden md:flex flex-col justify-between space-y-4 items-center rounded-3xl 
+        md:fixed px-9 py-6 mt-24 mb-8 md:top-1 md:left-5 md:px-4 md:w-2/6 
         lg:w-1/3 lg:left-7 xl:w-1/4 xl:left-28 xl:py-8
         bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-900/95 
         backdrop-blur-xl border border-white/10 shadow-2xl

@@ -51,8 +51,8 @@ export default function Contact() {
       <div 
         key={2} 
         ref={containerRef}
-        className="cursor-custom relative pt-20 flex flex-col space-y-14 mt-16 md:mt-0 items-center 
-        md:w-3/5 pl-10 pr-5 md:pl-0 w-full h-full md:h-screen md:pt-32 md:pb-0 pb-12 overflow-hidden"
+        className="cursor-custom relative pt-8 flex flex-col space-y-10 mt-8 md:mt-0 items-center 
+        md:w-3/5 pl-10 pr-5 md:pl-0 w-full h-full md:h-screen md:pt-20 md:pb-0 pb-12 overflow-hidden"
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -126,7 +126,7 @@ export default function Contact() {
 
         {/* Section name with enhanced styling */}
         <motion.div 
-          className="self-start -mt-9 flex justify-start"
+          className="self-start mt-0 flex justify-start"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -150,7 +150,7 @@ export default function Contact() {
         {/* Enhanced title with word-by-word animation */}
         <div className="text-white self-start relative z-10">
           <motion.div
-            className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight"
+            className="text-xl md:text-2xl lg:text-4xl font-bold uppercase leading-tight"
             initial="hidden"
             animate="show"
             variants={staggerContainer}

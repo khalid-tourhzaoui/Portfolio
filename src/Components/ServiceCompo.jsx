@@ -46,9 +46,9 @@ const ServiceCard = ({ service, index }) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const springConfig = { stiffness: 150, damping: 15 };
-  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [5, -5]), springConfig);
-  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-5, 5]), springConfig);
+  const springConfig = { stiffness: 120, damping: 20 };
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [2, -2]), springConfig);
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-2, 2]), springConfig);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -72,18 +72,18 @@ const ServiceCard = ({ service, index }) => {
 
   return (
     <motion.div
-      className="relative group w-full md:w-4/5"
-      initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      viewport={{ once: true, margin: "-100px" }}
+      className="relative group w-full"
+      initial={{ opacity: 0, x: -60, filter: 'blur(10px)' }}
+      whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+      viewport={{ once: true, margin: "-30px" }}
       transition={{ 
-        duration: 0.8, 
-        delay: index * 0.15,
+        duration: 0.6, 
+        delay: index * 0.1,
         ease: [0.25, 0.4, 0.25, 1]
       }}
     >
       <motion.div
-        className="relative"
+        className="relative h-full"
         style={{
           rotateX,
           rotateY,
@@ -95,10 +95,10 @@ const ServiceCard = ({ service, index }) => {
       >
         {/* Glowing background effect */}
         <motion.div
-          className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-3xl blur-xl opacity-0 
-          group-hover:opacity-30 transition-opacity duration-500`}
+          className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-xl blur-lg opacity-0 
+          group-hover:opacity-40 transition-opacity duration-500`}
           animate={isHovered ? {
-            scale: [1, 1.05, 1],
+            scale: [1, 1.02, 1],
           } : {}}
           transition={{
             duration: 2,
@@ -108,116 +108,96 @@ const ServiceCard = ({ service, index }) => {
 
         {/* Main card */}
         <div
-          className="relative backdrop-blur-xl bg-gradient-to-br from-slate-900/90 via-slate-800/80 to-slate-900/90 
-          rounded-3xl p-8 border border-white/10 
+          className="relative h-full backdrop-blur-xl bg-gradient-to-br from-slate-900/90 via-slate-800/80 to-slate-900/90 
+          rounded-xl p-5 border border-white/10 
           hover:border-white/20 transition-all duration-500 overflow-hidden
-          shadow-2xl hover:shadow-3xl"
+          shadow-xl hover:shadow-2xl"
         >
           {/* Animated gradient overlay */}
           <motion.div
-            className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+            className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
           />
 
           {/* Mesh pattern background */}
-          <div className="absolute inset-0 opacity-[0.03]"
+          <div className="absolute inset-0 opacity-[0.02]"
             style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
+              backgroundSize: '24px 24px'
             }}
           />
 
-          {/* Floating particles */}
-          {isHovered && [...Array(6)].map((_, i) => (
+          {/* Content container with 3D effect - Horizontal Layout */}
+          <div className="relative z-10 flex flex-row gap-4 items-center h-full" 
+            style={{ transform: 'translateZ(30px)' }}>
+            
+            {/* Icon section */}
             <motion.div
-              key={i}
-              className={`absolute w-1 h-1 bg-${service.glowColor}-400 rounded-full`}
-              initial={{ 
-                x: Math.random() * 100 + '%', 
-                y: Math.random() * 100 + '%',
-                scale: 0 
+              className="flex-shrink-0"
+              animate={isHovered ? { 
+                rotate: [0, -5, 5, -5, 0],
+                scale: 1.05
+              } : { 
+                rotate: 0,
+                scale: 1
               }}
-              animate={{
-                y: [null, (Math.random() - 0.5) * 100 + '%'],
-                x: [null, (Math.random() - 0.5) * 100 + '%'],
-                scale: [0, 1, 0],
-                opacity: [0, 1, 0]
+              transition={{ 
+                duration: 0.5,
+                ease: "easeInOut"
               }}
-              transition={{
-                duration: 2 + Math.random(),
-                repeat: Infinity,
-                delay: i * 0.2
-              }}
-            />
-          ))}
+            >
+              {/* Icon glow */}
+              <motion.div
+                className={`absolute -inset-2 bg-gradient-to-r ${service.gradient} rounded-xl blur-xl`}
+                animate={isHovered ? {
+                  opacity: [0.2, 0.5, 0.2],
+                } : { opacity: 0 }}
+                transition={{
+                  duration: 2,
+                  repeat: isHovered ? Infinity : 0,
+                }}
+              />
+              
+              {/* Icon background */}
+              <div className={`relative p-3 rounded-lg bg-gradient-to-br ${service.gradient} shadow-lg`}>
+                <Icon className="w-6 h-6 text-white" strokeWidth={2} />
+              </div>
+            </motion.div>
 
-          {/* Content container with 3D effect */}
-          <div className="relative z-10 flex flex-col space-y-4" style={{ transform: 'translateZ(50px)' }}>
-            {/* Header with icon */}
-            <div className="flex items-start justify-between">
+            {/* Text content */}
+            <div className="flex-1 flex flex-col space-y-2">
+              {/* Title */}
               <motion.h3
-                className="font-bold text-2xl text-white leading-tight"
-                animate={isHovered ? { x: 8 } : { x: 0 }}
+                className="font-bold text-lg text-white leading-tight"
+                animate={isHovered ? { x: 3 } : { x: 0 }}
                 transition={{ duration: 0.3 }}
               >
                 {service.serviceName}
               </motion.h3>
 
-              {/* Animated icon container */}
-              <motion.div
-                className={`relative flex-shrink-0`}
-                animate={isHovered ? { 
-                  rotate: [0, -10, 10, -10, 0],
-                  scale: 1.1
-                } : { 
-                  rotate: 0,
-                  scale: 1
-                }}
-                transition={{ 
-                  duration: 0.5,
-                  ease: "easeInOut"
-                }}
+              {/* Description */}
+              <motion.p
+                className="text-slate-300 leading-relaxed text-sm"
+                animate={isHovered ? { x: 3 } : { x: 0 }}
+                transition={{ duration: 0.3, delay: 0.05 }}
               >
-                {/* Icon glow */}
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-2xl blur-xl`}
-                  animate={isHovered ? {
-                    opacity: [0.3, 0.6, 0.3],
-                  } : { opacity: 0 }}
-                  transition={{
-                    duration: 2,
-                    repeat: isHovered ? Infinity : 0,
-                  }}
-                />
-                
-                {/* Icon background */}
-                <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg`}>
-                  <Icon className="w-7 h-7 text-white" strokeWidth={2} />
-                </div>
-              </motion.div>
+                {service.description}
+              </motion.p>
             </div>
-
-            {/* Description */}
-            <motion.p
-              className="text-slate-300 leading-relaxed text-[15px]"
-              animate={isHovered ? { x: 8 } : { x: 0 }}
-              transition={{ duration: 0.3, delay: 0.05 }}
-            >
-              {service.description}
-            </motion.p>
-
-            {/* Hover indicator line */}
-            <motion.div
-              className={`h-1 bg-gradient-to-r ${service.gradient} rounded-full`}
-              initial={{ width: 0 }}
-              animate={isHovered ? { width: '100%' } : { width: 0 }}
-              transition={{ duration: 0.4 }}
-            />
           </div>
 
+          {/* Hover indicator line */}
+          <motion.div
+            className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${service.gradient}`}
+            initial={{ scaleX: 0 }}
+            animate={isHovered ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.4 }}
+            style={{ transformOrigin: 'left' }}
+          />
+
           {/* Corner decoration */}
-          <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden rounded-tr-3xl">
+          <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-xl pointer-events-none">
             <motion.div
-              className={`absolute -top-16 -right-16 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-10`}
+              className={`absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br ${service.gradient} opacity-10`}
               animate={isHovered ? { 
                 rotate: 360,
                 scale: [1, 1.2, 1]
@@ -229,10 +209,10 @@ const ServiceCard = ({ service, index }) => {
             />
           </div>
 
-          {/* Bottom shine effect */}
+          {/* Top shine effect */}
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent"
-            animate={isHovered ? { opacity: [0, 0.5, 0] } : { opacity: 0 }}
+            className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent"
+            animate={isHovered ? { opacity: [0, 0.3, 0] } : { opacity: 0 }}
             transition={{ duration: 2, repeat: isHovered ? Infinity : 0 }}
           />
         </div>
@@ -243,7 +223,7 @@ const ServiceCard = ({ service, index }) => {
 
 export default function ServiceCompo() {
   return (
-    <div className="flex flex-col space-y-12 h-full px-4 py-8">
+    <div className="flex flex-col gap-3 w-full">
       {services.map((service, index) => (
         <ServiceCard key={service.id} service={service} index={index} />
       ))}

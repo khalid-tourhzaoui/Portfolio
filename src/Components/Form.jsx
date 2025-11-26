@@ -3,9 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import FloatingNotif from './FloatingNotif';
 import { BiCommentError } from 'react-icons/bi';
-
 import { PiWarningCircleFill } from 'react-icons/pi';
-import { FiX } from 'react-icons/fi';
+import { FiX, FiUser, FiMail, FiMessageSquare, FiSend } from 'react-icons/fi';
 import { AnimatePresence, motion } from 'framer-motion';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -27,7 +26,7 @@ const Form = () => {
   const [userSub, setUserSub] = useState(false);
   const [capVal, setCapVal] = useState(null);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
-  const [send, setSend] = useState('Send Message!');
+  const [send, setSend] = useState('Send Message');
   const [errorNotif, setErrorNotif] = useState(false);
 
   const [focus, setFocus] = useState({
@@ -48,17 +47,19 @@ const Form = () => {
 
     return (
       <motion.div
-        initial={{ x: 80 }}
-        animate={{ x: 0 }}
+        initial={{ x: 80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         exit={{ opacity: 0, x: 100 }}
         transition={{
-          duration: 0.9,
+          duration: 0.5,
           ease: 'easeOut',
           type: 'spring',
-          stiffness: 40,
+          stiffness: 60,
         }}
-        className={`px-2 py-3 fixed top-3 right-2 z-50 flex space-x-2 items-start rounded text-sm shadow-lg text-white  pointer-events-auto ${
-          !errorNotif ? 'bg-primary3' : 'bg-red-500'
+        className={`px-4 py-3 fixed top-4 right-4 z-50 flex space-x-3 items-center rounded-xl text-sm shadow-2xl text-white pointer-events-auto backdrop-blur-xl border ${
+          !errorNotif 
+            ? 'bg-gradient-to-r from-purple-600/90 to-pink-600/90 border-purple-400/50' 
+            : 'bg-gradient-to-r from-red-600/90 to-red-500/90 border-red-400/50'
         }`}
       >
         {children}
@@ -125,28 +126,18 @@ const Form = () => {
       capVal != null
     ) {
       setSend('Sending...');
-      setTimeout(() => setSend('Send Message!'), 1000);
-      // emailjs
-      //   .sendForm(
-      //     'service_3b2jgcf',
-      //     'template_3sun9v7',
-      //     form.current,
-      //     {
-      //       publicKey: 'sA_P3nSKIOHL1Z_mt',
-      //     },
-      //   )
+      setTimeout(() => setSend('Send Message'), 1000);
       emailjs
-      .sendForm(
-        'service_m6zqb38',
-        'template_atk9df3',
-        form.current,
-        {
-          publicKey: 'sA_P3nSKIOHL1Z_mt',
-        },
-      )
+        .sendForm(
+          'service_m6zqb38',
+          'template_atk9df3',
+          form.current,
+          {
+            publicKey: 'sA_P3nSKIOHL1Z_mt',
+          },
+        )
         .then(
           () => {
-            // console.log('SUCCESS!');
             reset();
             setIsNotifOpen(true);
             setErrorNotif(false);
@@ -181,52 +172,50 @@ const Form = () => {
       {userSub && (
         <AnimatePresence>
           <Notification>
-            <div className="inline-block text-xl">
+            <div className="text-2xl">
               <PiWarningCircleFill />
             </div>
-
-            <div>Please fill in all the required fields</div>
-            <div>
-              <button
-                onClick={() => setUserSub(false)}
-                className="ml-auto mt-0.5 transition-all duration-300  hover:text-gray-950 hover:scale-150 "
-              >
-                <FiX className="duration-500" />
-              </button>
-            </div>
+            <div className="font-medium">Please fill in all the required fields</div>
+            <button
+              onClick={() => setUserSub(false)}
+              className="ml-2 transition-all duration-200 hover:scale-110 hover:rotate-90"
+            >
+              <FiX className="text-lg" />
+            </button>
           </Notification>
         </AnimatePresence>
       )}
       {errorNotif && (
         <AnimatePresence>
           <Notification>
-            <div className="inline-block text-xl">
+            <div className="text-2xl">
               <BiCommentError />
             </div>
-
-            <div>Email not sent , please try later</div>
-            <div>
-              <button
-                onClick={() => setErrorNotif(false)}
-                className="ml-auto mt-0.5 transition-all duration-300  hover:text-gray-950 hover:scale-150 "
-              >
-                <FiX className="duration-500" />
-              </button>
-            </div>
+            <div className="font-medium">Email not sent, please try later</div>
+            <button
+              onClick={() => setErrorNotif(false)}
+              className="ml-2 transition-all duration-200 hover:scale-110 hover:rotate-90"
+            >
+              <FiX className="text-lg" />
+            </button>
           </Notification>
         </AnimatePresence>
       )}
 
-      <form className="space-y-8 md:space-y-6 " onSubmit={sub} ref={form}>
+      <form className="space-y-4" onSubmit={sub} ref={form}>
+        {/* Name & Email Row */}
         <motion.div
-          className={`flex items-center justify-center space-x-10 text-white ${
-            focus.username || focus.email ? 'backdrop-blur-[3px]' : ''
-          }`}
-          initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
-          <div className="relative w-full">
+          {/* Name Input */}
+          <div className="relative group">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-purple-400 transition-colors">
+              <FiUser className="text-lg" />
+            </div>
             <input
               id="username"
               value={userName}
@@ -235,24 +224,30 @@ const Form = () => {
               type="text"
               onFocus={() => handleFocus('username')}
               onBlur={() => handleBlur('username')}
-              className={`border-b border-gray-300 py-1 focus:border-b-2 focus:border-primary2 transition-colors focus:outline-none peer bg-inherit w-full ${
-                errors.username ? 'border-red-500' : ''
-              }`}
+              placeholder="Your Name"
+              className={`w-full pl-11 pr-4 py-3 bg-white/5 border rounded-xl
+                text-white placeholder:text-gray-500 
+                focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent
+                transition-all duration-300
+                ${errors.username ? 'border-red-500 ring-2 ring-red-500/20' : 'border-white/10 hover:border-white/20'}
+              `}
             />
-            <label
-              htmlFor="username"
-              className={`absolute left-0 cursor-text transition-all ${
-                userName !== '' ? '-top-4 text-sm text-primary2 ' : 'top-1'
-              } peer-focus:text-sm peer-focus:-top-4 peer-focus:text-primary2 `}
-            >
-              Name
-            </label>
             {errors.username && (
-              <p className="text-red-500 text-xs">* UserName is required</p>
+              <motion.p 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-red-400 text-xs mt-1.5 ml-1"
+              >
+                * Name is required
+              </motion.p>
             )}
           </div>
 
-          <div className="relative w-full">
+          {/* Email Input */}
+          <div className="relative group">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-purple-400 transition-colors">
+              <FiMail className="text-lg" />
+            </div>
             <input
               id="email"
               value={userEmail}
@@ -261,32 +256,37 @@ const Form = () => {
               type="text"
               onFocus={() => handleFocus('email')}
               onBlur={() => handleBlur('email')}
-              className={`border-b border-gray-300 py-1 focus:border-b-2 focus:border-primary2  transition-colors focus:outline-none peer bg-inherit w-full ${
-                errors.email ? 'border-red-500' : ''
-              }`}
+              placeholder="your.email@example.com"
+              className={`w-full pl-11 pr-4 py-3 bg-white/5 border rounded-xl
+                text-white placeholder:text-gray-500
+                focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent
+                transition-all duration-300
+                ${errors.email ? 'border-red-500 ring-2 ring-red-500/20' : 'border-white/10 hover:border-white/20'}
+              `}
             />
-            <label
-              htmlFor="email"
-              className={`absolute left-0 cursor-text transition-all ${
-                userEmail !== '' ? '-top-4 text-sm text-primary2 ' : 'top-1'
-              } peer-focus:text-sm peer-focus:-top-4 peer-focus:text-primary2 `}
-            >
-              Email
-            </label>
             {errors.email && (
-              <p className="text-red-500 text-xs"> * {errors.email}</p>
+              <motion.p 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-red-400 text-xs mt-1.5 ml-1"
+              >
+                * {errors.email}
+              </motion.p>
             )}
           </div>
         </motion.div>
 
+        {/* Subject Input */}
         <motion.div
-          className={`flex flex-col items-center justify-center text-white ${
-            focus.subject ? 'backdrop-blur-[3px]' : ''
-          }`}
-          initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.7 }}
+          className="relative group"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
         >
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-purple-400 transition-colors">
+            <FiMessageSquare className="text-lg" />
+          </div>
           <input
             id="subject"
             value={userSubject}
@@ -295,90 +295,133 @@ const Form = () => {
             type="text"
             onFocus={() => handleFocus('subject')}
             onBlur={() => handleBlur('subject')}
-            className={`border-b border-gray-300 py-1 focus:border-b-2 focus:border-primary2  transition-colors focus:outline-none peer bg-inherit w-full ${
-              errors.subject ? 'border-red-500' : ''
-            }`}
+            placeholder="Subject"
+            className={`w-full pl-11 pr-4 py-3 bg-white/5 border rounded-xl
+              text-white placeholder:text-gray-500
+              focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent
+              transition-all duration-300
+              ${errors.subject ? 'border-red-500 ring-2 ring-red-500/20' : 'border-white/10 hover:border-white/20'}
+            `}
           />
-          <label
-            htmlFor="subject"
-            className={`absolute left-0 cursor-text transition-all ${
-              userSubject !== '' ? '-top-4 text-sm text-primary2 ' : 'top-1'
-            } peer-focus:text-sm peer-focus:-top-4 peer-focus:text-primary2 `}
-          >
-            Subject
-          </label>
           {errors.subject && (
-            <p className="self-start text-red-500 text-xs">
+            <motion.p 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-400 text-xs mt-1.5 ml-1"
+            >
               * Subject is required
-            </p>
+            </motion.p>
           )}
         </motion.div>
 
+        {/* Message Textarea */}
         <motion.div
-          className={`flex items-center justify-center flex-col text-white ${
-            focus.message ? 'backdrop-blur-[3px]' : ''
-          }`}
-          initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.7 }}
+          className="relative group"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           <textarea
             id="message"
             name="message"
-            rows={3}
+            rows={5}
             value={userText}
             onChange={e => handleChange(e, setUserText, 'message')}
             onFocus={() => handleFocus('message')}
             onBlur={() => handleBlur('message')}
-            className={`border-b border-gray-300 py-1 focus:border-b-2 focus:border-primary2  transition-colors focus:outline-none peer bg-inherit w-full ${
-              errors.message ? 'border-red-500' : ''
-            }`}
-          ></textarea>
-          <label
-            htmlFor="message"
-            className={`absolute left-0 cursor-text transition-all ${
-              userText !== '' ? '-top-4 text-sm text-primary2 ' : 'top-1'
-            } peer-focus:text-sm peer-focus:-top-4 peer-focus:text-primary2 `}
-          >
-            Message
-          </label>
+            placeholder="Your message here..."
+            className={`w-full px-4 py-3 bg-white/5 border rounded-xl
+              text-white placeholder:text-gray-500 resize-none
+              focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent
+              transition-all duration-300
+              ${errors.message ? 'border-red-500 ring-2 ring-red-500/20' : 'border-white/10 hover:border-white/20'}
+            `}
+          />
           {errors.message && (
-            <div className="self-start text-red-500 text-xs">
+            <motion.p 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-400 text-xs mt-1.5 ml-1"
+            >
               * Message is required
-            </div>
+            </motion.p>
           )}
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{ duration: 0.7 }}
+
+        {/* ReCAPTCHA */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex justify-center md:justify-start"
         >
           <ReCAPTCHA
             sitekey={PUBLIC_kEY}
             onChange={capVal => setCapVal(capVal)}
             theme="dark"
           />
-        </motion.div>
+        </motion.div> */}
+
+        {/* Buttons */}
         <motion.div
-          className="flex justify-start space-x-7"
-          initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          transition={{
-            duration: 0.7,
-            ease: [0.42, 0, 0.58, 1],
-          }}
+          className="flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
         >
+          {/* Send Button */}
           <motion.button
             type="submit"
-            className="backdrop-blur-md after:backdrop-blur-md before:backdrop-blur-md  group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 border-primary1 shadow-shad hover:shadow-primary3 hover:border-primary5 hover:ring-2 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left hover:decoration-2 bg-transparent relative bg-neutral-800 pl-3 h-14 w-56 border-2 text-left p-1 text-gray-50 text-base font-bold rounded-lg overflow-hidden before:absolute before:w-10 before:h-10 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-red-700 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-16 after:h-16 after:content[''] after:bg-primary2 hover:text-white after:right-8 after:top-3 after:rounded-full after:blur-lg"
+            disabled={send === 'Sending...'}
+            className="relative group px-8 py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 
+              text-white font-semibold rounded-xl overflow-hidden
+              hover:shadow-lg hover:shadow-purple-500/50 
+              transition-all duration-300
+              disabled:opacity-50 disabled:cursor-not-allowed
+              flex items-center justify-center gap-2"
+            whileHover={{ scale: send === 'Sending...' ? 1 : 1.02 }}
+            whileTap={{ scale: send === 'Sending...' ? 1 : 0.98 }}
           >
-            {send}
+            {/* Animated background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            {/* Button content */}
+            <span className="relative flex items-center gap-2">
+              {send === 'Sending...' ? (
+                <>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                  />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <FiSend className="text-lg" />
+                  {send}
+                </>
+              )}
+            </span>
           </motion.button>
-          <div className="max-w-32 hover:ring hover:ring-primary3 bg-primary2 font-bold  shadow-shad hover:shadow-primary3 rounded-lg items-center justify-center flex border-primary2 hover:bg-primary4 text-primary5 hover:text-white duration-300 cursor-pointer active:scale-[0.98]">
-            <button type="reset" onClick={reset} className="px-7 py-2">
-              Reset
-            </button>
-          </div>
+
+          {/* Reset Button */}
+          <motion.button
+            type="reset"
+            onClick={reset}
+            className="px-8 py-3.5 bg-white/5 border border-white/10 
+              text-white font-semibold rounded-xl
+              hover:bg-white/10 hover:border-white/20
+              transition-all duration-300
+              flex items-center justify-center"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Reset
+          </motion.button>
         </motion.div>
       </form>
       <FloatingNotif isOpen={isNotifOpen} setIsOpen={setIsNotifOpen} />

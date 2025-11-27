@@ -120,7 +120,7 @@ export default function Service() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <SecName secName="service">
+          {/* <SecName secName="service">
             <motion.div
               animate={{ 
                 rotate: [0, 360],
@@ -133,7 +133,7 @@ export default function Service() {
             >
               <SiHyperskill />
             </motion.div>
-          </SecName>
+          </SecName> */}
         </motion.div>
 
         {/* Enhanced title with word-by-word animation */}

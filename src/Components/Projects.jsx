@@ -228,7 +228,7 @@ export default function Projects() {
         </div>
 
         {/* Section name with enhanced styling */}
-        <motion.div
+        {/* <motion.div
           className="self-start flex justify-start relative z-10"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -248,7 +248,7 @@ export default function Projects() {
               <GrProjects />
             </motion.div>
           </SecName>
-        </motion.div>
+        </motion.div> */}
 
         {/* Enhanced title with word-by-word animation */}
         <div className="text-white self-start relative z-10 w-full">

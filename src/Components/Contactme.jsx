@@ -125,7 +125,7 @@ export default function Contact() {
         </div>
 
         {/* Section name with enhanced styling */}
-        <motion.div 
+        {/* <motion.div 
           className="self-start mt-0 flex justify-start"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ export default function Contact() {
               <Mail className='text-xl' />
             </motion.div>
           </SecName>
-        </motion.div>
+        </motion.div> */}
 
         {/* Enhanced title with word-by-word animation */}
         <div className="text-white self-start relative z-10">

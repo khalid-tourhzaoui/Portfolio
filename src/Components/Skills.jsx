@@ -1,9 +1,10 @@
+// ==================== Skills.jsx ====================
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SecName from './SecName';
 import { SiHyperskill } from 'react-icons/si';
 import { Sparkles } from 'lucide-react';
-import { SkillsPart } from './SkillsPart'; // Make sure this import is correct
+import { SkillsPart } from './SkillsPart';
 
 const Categories = ['Skills', 'Certificates'];
 
@@ -31,9 +32,9 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
         >
           <div className="text-center space-y-4">
-            <Sparkles className="w-16 h-16 text-purple-400 mx-auto" />
-            <h2 className="text-3xl font-bold text-white">Coming Soon</h2>
-            <p className="text-slate-400">Certificates section is under construction</p>
+            <Sparkles className="w-16 h-16 text-orange-600 mx-auto" />
+            <h2 className="text-3xl font-bold text-gray-800">Coming Soon</h2>
+            <p className="text-gray-600">Certificates section is under construction</p>
           </div>
         </motion.div>
       );
@@ -42,10 +43,10 @@ export default function Skills() {
 
   return (
     <div className="cursor-custom pt-8 self-start flex flex-col space-y-8 items-center md:w-full md:pl-0 w-full h-full relative">
-      {/* Background elements */}
+      {/* Background elements - Orange theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 right-10 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl"
+          className="absolute top-20 right-10 w-72 h-72 bg-orange-600/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -56,7 +57,7 @@ export default function Skills() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-10 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-10 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.5, 0.3],
@@ -86,18 +87,18 @@ export default function Skills() {
 
       {/* Content Container */}
       <motion.div
-        className="text-white space-y-8 self-start flex justify-center w-full flex-col items-start relative z-10"
+        className="text-gray-800 space-y-8 self-start flex justify-center w-full flex-col items-start relative z-10"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        {/* Category Tabs */}
+        {/* Category Tabs - Orange theme */}
         <div className="flex justify-start space-x-8 md:space-x-16 relative">
           {Categories.map((category, index) => (
             <motion.button
               key={category}
               className={`relative text-xl md:text-2xl font-semibold transition-all duration-300 pb-2
-              ${active === category ? 'text-white' : 'text-slate-400 hover:text-slate-300'}`}
+              ${active === category ? 'text-orange-600' : 'text-gray-400 hover:text-gray-600'}`}
               onClick={() => setActive(category)}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -107,9 +108,9 @@ export default function Skills() {
             >
               {category}
               
-              {/* Active indicator line */}
+              {/* Active indicator line - Orange gradient */}
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
+                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-600 to-red-600 rounded-full"
                 initial={{ width: 0 }}
                 animate={{
                   width: active === category ? '100%' : '0%',
@@ -117,10 +118,10 @@ export default function Skills() {
                 transition={{ duration: 0.3 }}
               />
 
-              {/* Glow effect when active */}
+              {/* Glow effect when active - Orange */}
               {active === category && (
                 <motion.div
-                  className="absolute -inset-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg blur-xl -z-10"
+                  className="absolute -inset-2 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg blur-xl -z-10"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
@@ -130,7 +131,7 @@ export default function Skills() {
               {/* Hover effect line */}
               {active !== category && (
                 <motion.div
-                  className="absolute bottom-0 left-0 h-px bg-slate-600 rounded-full"
+                  className="absolute bottom-0 left-0 h-px bg-gray-300 rounded-full"
                   initial={{ width: '0%' }}
                   whileHover={{ width: '50%' }}
                   transition={{ duration: 0.3 }}
@@ -139,11 +140,11 @@ export default function Skills() {
             </motion.button>
           ))}
 
-          {/* Background sliding indicator */}
+          {/* Background sliding indicator - Orange */}
           <motion.div
-            className="absolute bottom-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
+            className="absolute bottom-0 h-1 bg-gradient-to-r from-orange-600 to-red-600 rounded-full"
             animate={{
-              x: active === 'Skills' ? 0 : 120, // Adjust these values based on your tab widths
+              x: active === 'Skills' ? 0 : 120,
               width: active === 'Skills' ? 80 : 120,
             }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}

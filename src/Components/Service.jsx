@@ -1,10 +1,8 @@
-import SecName from './SecName';
 import { motion } from 'framer-motion';
-import { SiHyperskill } from 'react-icons/si';
 import ServiceCompo from './ServiceCompo';
 import { AnimatePresence } from 'framer-motion';
 import Transition from './Transition';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Target } from 'lucide-react';
 
 const staggerContainer = {
   hidden: { opacity: 0, x: 100 },
@@ -47,7 +45,7 @@ export default function Service() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Gradient orbs */}
           <motion.div
-            className="absolute top-1/4 -left-32 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl"
+            className="absolute top-1/4 -left-32 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               x: [0, 50, 0],
@@ -60,7 +58,7 @@ export default function Service() {
             }}
           />
           <motion.div
-            className="absolute top-2/3 -right-32 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl"
+            className="absolute top-2/3 -right-32 w-80 h-80 bg-red-600/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.3, 1],
               x: [0, -50, 0],
@@ -70,6 +68,17 @@ export default function Service() {
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut",
+            }}
+          />
+
+          {/* Orange gradient mesh */}
+          <div className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `
+                linear-gradient(45deg, #ea580c 1px, transparent 1px),
+                linear-gradient(135deg, #ea580c 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
             }}
           />
 
@@ -96,45 +105,22 @@ export default function Service() {
                 delay: Math.random() * 2,
               }}
             >
-              <Sparkles className="w-3 h-3 text-blue-400" />
+              <Sparkles className="w-3 h-3 text-orange-400" />
             </motion.div>
           ))}
 
           {/* Grid pattern */}
           <div 
-            className="absolute inset-0 opacity-[0.02]"
+            className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage: `
-                linear-gradient(to right, white 1px, transparent 1px),
-                linear-gradient(to bottom, white 1px, transparent 1px)
+                linear-gradient(to right, #ea580c 1px, transparent 1px),
+                linear-gradient(to bottom, #ea580c 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px'
             }}
           />
         </div>
-
-        {/* Section name with enhanced styling */}
-        <motion.div 
-          className="self-start mt-0 flex justify-start relative z-10"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {/* <SecName secName="service">
-            <motion.div
-              animate={{ 
-                rotate: [0, 360],
-              }}
-              transition={{ 
-                duration: 3,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            >
-              <SiHyperskill />
-            </motion.div>
-          </SecName> */}
-        </motion.div>
 
         {/* Enhanced title with word-by-word animation */}
         <div className="text-white self-start relative z-10 w-full">
@@ -144,14 +130,16 @@ export default function Service() {
             animate="show"
             variants={staggerContainer}
           >
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
+            <div className="flex flex-wrap gap-x-3 gap-y-1 items-center">
+              <Target className="w-6 h-6 md:w-7 md:h-7 text-orange-500 mr-2" />
+              
               {words.map((word, wordIndex) => (
                 <motion.span
                   key={wordIndex}
                   className={`inline-block ${
                     word === 'Specialities' 
-                      ? 'bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'
-                      : ''
+                      ? 'bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 bg-clip-text text-transparent'
+                      : 'text-white'
                   }`}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -175,7 +163,7 @@ export default function Service() {
                       animate="visible"
                       whileHover={{
                         y: -5,
-                        color: word === 'Specialities' ? '#a855f7' : '#fff',
+                        color: word === 'Specialities' ? '#f59e0b' : '#ea580c',
                         transition: { duration: 0.2 }
                       }}
                     >
@@ -188,7 +176,7 @@ export default function Service() {
 
             {/* Animated underline */}
             <motion.div
-              className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full mt-3"
+              className="h-1 bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 rounded-full mt-3"
               initial={{ width: 0, opacity: 0 }}
               animate={{ width: '30%', opacity: 1 }}
               transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
@@ -197,7 +185,7 @@ export default function Service() {
 
           {/* Glowing effect behind text */}
           <motion.div
-            className="absolute -inset-3 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-2xl -z-10"
+            className="absolute -inset-3 bg-gradient-to-r from-orange-600/20 via-amber-600/20 to-red-600/20 blur-2xl -z-10"
             animate={{
               opacity: [0.3, 0.6, 0.3],
             }}
@@ -209,19 +197,31 @@ export default function Service() {
           />
         </div>
 
+        {/* Description text */}
+        <motion.p
+          className="text-orange-100 self-start text-sm md:text-base max-w-2xl leading-relaxed relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          Explore my core expertise areas where I combine technical skills with creative solutions 
+          to deliver exceptional results. Each service is tailored to meet specific needs with 
+          precision and innovation.
+        </motion.p>
+
         {/* Service cards container */}
         <motion.div 
           className="w-full relative z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
         >
           <ServiceCompo />
         </motion.div>
 
         {/* Decorative floating elements */}
         <motion.div
-          className="absolute top-1/4 right-8 w-10 h-10 border-2 border-blue-400/20 rounded-lg"
+          className="absolute top-1/4 right-8 w-10 h-10 border-2 border-orange-400/20 rounded-lg"
           animate={{ 
             rotate: 360,
             y: [0, -20, 0]
@@ -232,7 +232,7 @@ export default function Service() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 left-8 w-6 h-6 border-2 border-purple-400/20 rounded-full"
+          className="absolute bottom-1/3 left-8 w-6 h-6 border-2 border-red-400/20 rounded-full"
           animate={{ 
             rotate: -360,
             y: [0, 20, 0]
@@ -242,6 +242,21 @@ export default function Service() {
             y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
           }}
         />
+
+        {/* Stats badge */}
+        <motion.div
+          className="absolute bottom-8 right-8 px-4 py-2 rounded-full bg-gradient-to-r from-orange-100 via-amber-100 to-red-100 border border-orange-200 shadow-lg"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+        >
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-xs font-medium text-gray-800">
+              4 Specialities • 100% Quality
+            </span>
+          </div>
+        </motion.div>
       </div>
     </AnimatePresence>
   );

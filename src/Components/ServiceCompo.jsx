@@ -9,8 +9,9 @@ const services = [
     description:
       'Transforming ideas into engaging digital experiences. From intuitive interfaces to robust functionalities, each project is designed to captivate and align with your business goals.',
     icon: Code2,
-    gradient: 'from-purple-600 to-blue-600',
-    glowColor: 'purple',
+    gradient: 'from-orange-600 via-amber-600 to-red-600',
+    bgLight: 'from-orange-50 via-amber-50 to-red-100',
+    borderLight: 'border-orange-200/30',
   },
   {
     id: 2,
@@ -18,8 +19,9 @@ const services = [
     description:
       'Specializing in reliable hosting solutions for static websites and dynamic web applications. Ensure your online presence is secure, scalable, and always accessible with tailored hosting expertise.',
     icon: Server,
-    gradient: 'from-pink-600 to-rose-600',
-    glowColor: 'pink',
+    gradient: 'from-red-600 via-orange-600 to-amber-600',
+    bgLight: 'from-red-50 via-orange-50 to-amber-100',
+    borderLight: 'border-red-200/30',
   },
   {
     id: 3,
@@ -27,8 +29,9 @@ const services = [
     description:
       'Proficient in tackling algorithmic challenges with a strategic approach. Leveraging in-depth knowledge to analyze, design, and implement effective solutions that optimize efficiency and performance in software development.',
     icon: Lightbulb,
-    gradient: 'from-amber-600 to-orange-600',
-    glowColor: 'orange',
+    gradient: 'from-amber-600 via-orange-600 to-red-600',
+    bgLight: 'from-amber-50 via-orange-50 to-red-100',
+    borderLight: 'border-amber-200/30',
   },
   {
     id: 4,
@@ -36,8 +39,9 @@ const services = [
     description:
       'I specialize in managing databases and designing scalable systems that prioritize security and performance. My focus is on handling complex data setups to ensure businesses operate efficiently and effectively.',
     icon: Database,
-    gradient: 'from-emerald-600 to-teal-600',
-    glowColor: 'emerald',
+    gradient: 'from-orange-600 to-red-600',
+    bgLight: 'from-orange-50 to-red-100',
+    borderLight: 'border-orange-200/30',
   },
 ];
 
@@ -108,10 +112,13 @@ const ServiceCard = ({ service, index }) => {
 
         {/* Main card */}
         <div
-          className="relative h-full backdrop-blur-xl bg-gradient-to-br from-slate-900/90 via-slate-800/80 to-slate-900/90 
-          rounded-xl p-5 border border-white/10 
-          hover:border-white/20 transition-all duration-500 overflow-hidden
-          shadow-xl hover:shadow-2xl"
+          className={`relative h-full backdrop-blur-xl rounded-xl p-5 border overflow-hidden
+          transition-all duration-500
+          shadow-xl hover:shadow-2xl
+          bg-gradient-to-br ${service.bgLight}
+          border-white/10
+          hover:border-orange-400/30
+          `}
         >
           {/* Animated gradient overlay */}
           <motion.div
@@ -119,9 +126,9 @@ const ServiceCard = ({ service, index }) => {
           />
 
           {/* Mesh pattern background */}
-          <div className="absolute inset-0 opacity-[0.02]"
+          <div className="absolute inset-0 opacity-[0.03]"
             style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, #ea580c 1px, transparent 0)`,
               backgroundSize: '24px 24px'
             }}
           />
@@ -158,7 +165,7 @@ const ServiceCard = ({ service, index }) => {
               />
               
               {/* Icon background */}
-              <div className={`relative p-3 rounded-lg bg-gradient-to-br ${service.gradient} shadow-lg`}>
+              <div className={`relative p-3 rounded-lg bg-gradient-to-br ${service.gradient} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
                 <Icon className="w-6 h-6 text-white" strokeWidth={2} />
               </div>
             </motion.div>
@@ -167,7 +174,7 @@ const ServiceCard = ({ service, index }) => {
             <div className="flex-1 flex flex-col space-y-2">
               {/* Title */}
               <motion.h3
-                className="font-bold text-lg text-white leading-tight"
+                className="font-bold text-lg leading-tight text-gray-900 group-hover:text-orange-700 transition-colors duration-300"
                 animate={isHovered ? { x: 3 } : { x: 0 }}
                 transition={{ duration: 0.3 }}
               >
@@ -176,7 +183,7 @@ const ServiceCard = ({ service, index }) => {
 
               {/* Description */}
               <motion.p
-                className="text-slate-300 leading-relaxed text-sm"
+                className="leading-relaxed text-sm text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
                 animate={isHovered ? { x: 3 } : { x: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 }}
               >
@@ -211,9 +218,16 @@ const ServiceCard = ({ service, index }) => {
 
           {/* Top shine effect */}
           <motion.div
-            className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent"
+            className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-400 to-transparent"
             animate={isHovered ? { opacity: [0, 0.3, 0] } : { opacity: 0 }}
             transition={{ duration: 2, repeat: isHovered ? Infinity : 0 }}
+          />
+
+          {/* Bottom shine effect */}
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-400 to-transparent"
+            animate={isHovered ? { opacity: [0, 0.3, 0] } : { opacity: 0 }}
+            transition={{ duration: 2, repeat: isHovered ? Infinity : 0, delay: 0.5 }}
           />
         </div>
       </motion.div>
@@ -223,7 +237,7 @@ const ServiceCard = ({ service, index }) => {
 
 export default function ServiceCompo() {
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex flex-col gap-4 w-full">
       {services.map((service, index) => (
         <ServiceCard key={service.id} service={service} index={index} />
       ))}

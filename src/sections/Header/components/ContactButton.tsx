@@ -18,7 +18,7 @@ export const ContactButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="relative text-white text-sm font-semibold items-center bg-orange-500 shadow-[rgba(0,0,0,0.95)_3px_6px_0px_0px] box-border caret-transparent hidden shrink-0 h-11 justify-center leading-5 px-[18px] rounded-[3.35544e+07px] md:flex md:text-base md:absolute md:right-3 lg:text-lg lg:leading-7 hover:bg-orange-600 transition-colors"
+      className="hidden md:flex items-center justify-center text-white text-sm lg:text-base font-semibold bg-orange-500 shadow-[rgba(0,0,0,0.95)_3px_6px_0px_0px] h-10 lg:h-11 px-4 lg:px-5 rounded-full hover:bg-orange-600 transition-colors shrink-0"
     >
       Contact me
     </button>

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { LaunchModal } from "./components/LaunchModal";
 import { Header } from "./sections/Header";
+import { Main } from "./components/Main";
 export const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [playMusic, setPlayMusic] = useState(false);
@@ -9,7 +10,10 @@ export const App = () => {
 
   useEffect(() => {
     if (playMusic && audioRef.current) {
-      audioRef.current.play();
+      // Ajouter une gestion d'erreur pour l'autoplay
+      audioRef.current.play().catch(error => {
+        console.error("Erreur lors de la lecture audio:", error);
+      });
     } else if (audioRef.current) {
       audioRef.current.pause();
     }
@@ -38,12 +42,13 @@ export const App = () => {
             )}
             <audio
               ref={audioRef}
-              src="/assets/game-CmnNFalC.mp3"
+              src="/src/assets/FACE_TO_FACE.mp3"
               preload="auto"
               loop
               className="box-border caret-transparent hidden"
             ></audio>
             <Header />
+            <Main/>
           </div>
         </div>
       </body>

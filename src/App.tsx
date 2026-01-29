@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { LaunchModal } from "./components/LaunchModal";
 import { Header } from "./sections/Header";
-
 export const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [playMusic, setPlayMusic] = useState(false);
@@ -30,6 +30,12 @@ export const App = () => {
       <body className="text-zinc-800 text-base not-italic normal-nums font-normal accent-auto bg-yellow-100 box-border caret-transparent block h-full tracking-[normal] leading-[25.6px] list-outside list-disc pointer-events-auto scroll-smooth text-start indent-[0px] normal-case visible overflow-hidden border-separate font-press_start_2p">
         <div className="bg-yellow-100 box-border caret-transparent h-full scroll-smooth">
           <div className="relative box-border caret-transparent font-ui_sans_serif">
+            {showModal && (
+              <LaunchModal
+                onEnterWithMusic={handleEnterWithMusic}
+                onEnterWithoutMusic={handleEnterWithoutMusic}
+              />
+            )}
             <audio
               ref={audioRef}
               src="/assets/game-CmnNFalC.mp3"

@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { LaunchModal } from "./components/LaunchModal";
 import { Header } from "./sections/Header";
 import { Main } from "./components/Main";
+import { Footer } from "./sections/FooterSection";
 export const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [playMusic, setPlayMusic] = useState(false);
@@ -49,6 +50,7 @@ export const App = () => {
             ></audio>
             <Header />
             <Main/>
+            <Footer/>
           </div>
         </div>
       </body>

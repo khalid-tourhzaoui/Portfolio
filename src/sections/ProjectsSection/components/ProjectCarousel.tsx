@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { IconType } from "react-icons";
-import {
-  FaReact,
-  FaRegPlayCircle,
-} from "react-icons/fa";
+import { FaReact, FaRegPlayCircle } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiShadcnui,
@@ -19,6 +16,14 @@ import { BiQrScan } from "react-icons/bi";
 import { MdColorLens } from "react-icons/md";
 import { AiOutlineDownload, AiOutlineFilePdf } from "react-icons/ai";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import {
+  Sparkles,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Zap,
+  Package,
+} from "lucide-react";
 
 interface Project {
   id: number;
@@ -34,7 +39,8 @@ const projects: Project[] = [
   {
     id: 1,
     serviceName: "WEATHER APP",
-    description: "Comprehensive weather application with real-time data, air quality monitoring, and 5-day forecasts powered by OpenWeather API.",
+    description:
+      "Comprehensive weather application with real-time data, air quality monitoring, and 5-day forecasts powered by OpenWeather API.",
     tools: [
       FaReact,
       SiNextdotjs,
@@ -45,7 +51,8 @@ const projects: Project[] = [
       SiVercel,
     ],
     link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
-    imgUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
     features: [
       "Real-time weather data with air quality index (AQI)",
       "Interactive Mapbox integration for weather visualization",
@@ -55,7 +62,8 @@ const projects: Project[] = [
   {
     id: 2,
     serviceName: "QR CODE GENERATOR",
-    description: "Modern QR code generator with customization options including colors, logos, and multiple download formats.",
+    description:
+      "Modern QR code generator with customization options including colors, logos, and multiple download formats.",
     tools: [
       FaReact,
       SiTailwindcss,
@@ -67,7 +75,8 @@ const projects: Project[] = [
       SiVercel,
     ],
     link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
-    imgUrl: "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
     features: [
       "Customizable QR codes with color options",
       "Logo embedding and style variations",
@@ -77,7 +86,8 @@ const projects: Project[] = [
   {
     id: 3,
     serviceName: "Social Media Downloader",
-    description: "Universal media downloader supporting multiple platforms with high-quality video and audio extraction capabilities.",
+    description:
+      "Universal media downloader supporting multiple platforms with high-quality video and audio extraction capabilities.",
     tools: [
       FaReact,
       SiTailwindcss,
@@ -88,7 +98,8 @@ const projects: Project[] = [
       SiVercel,
     ],
     link: "https://github.com/khalid-tourhzaoui/social-media-downloader",
-    imgUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
     features: [
       "Multi-platform support (YouTube, Instagram, TikTok)",
       "High-quality video and audio downloads",
@@ -98,7 +109,8 @@ const projects: Project[] = [
   {
     id: 4,
     serviceName: "Smart Language Converter",
-    description: "AI-powered language translation and text-to-speech converter with support for multiple languages and dialects.",
+    description:
+      "AI-powered language translation and text-to-speech converter with support for multiple languages and dialects.",
     tools: [
       FaReact,
       SiTailwindcss,
@@ -109,7 +121,8 @@ const projects: Project[] = [
       SiFastapi,
     ],
     link: "https://smartlanguageconverter.vercel.app/",
-    imgUrl: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
     features: [
       "Real-time text translation with AI processing",
       "Text-to-speech functionality with natural voices",
@@ -119,7 +132,8 @@ const projects: Project[] = [
   {
     id: 5,
     serviceName: "AI-RESUME-BUILDER",
-    description: "Intelligent resume builder with AI-powered content suggestions, multiple templates, and PDF export functionality.",
+    description:
+      "Intelligent resume builder with AI-powered content suggestions, multiple templates, and PDF export functionality.",
     tools: [
       FaReact,
       SiTailwindcss,
@@ -129,7 +143,8 @@ const projects: Project[] = [
       SiMysql,
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-    imgUrl: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
     features: [
       "AI-powered content suggestions and optimization",
       "Multiple professional templates with customization",
@@ -139,7 +154,8 @@ const projects: Project[] = [
   {
     id: 6,
     serviceName: "AI-LEGAL-PLATFORM",
-    description: "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh).",
+    description:
+      "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh).",
     tools: [
       FaReact,
       SiNextdotjs,
@@ -150,7 +166,8 @@ const projects: Project[] = [
       SiVercel,
     ],
     link: "https://github.com/khalid-tourhzaoui/legal-ai-platform",
-    imgUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+    imgUrl:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
     features: [
       "AI-powered legal assistance for Moroccan law",
       "Multilingual support (Arabic, French, Amazigh)",
@@ -200,19 +217,7 @@ export const ProjectCarousel = () => {
         aria-label="Previous project"
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 xl:-translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-white border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <svg
-          className="w-5 h-5 xl:w-6 xl:h-6 text-zinc-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={3}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
+        <ChevronLeft className="w-6 h-6 xl:w-7 xl:h-7 text-zinc-800 stroke-[3]" />
       </button>
 
       <button
@@ -221,19 +226,7 @@ export const ProjectCarousel = () => {
         aria-label="Next project"
         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 xl:translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-white border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <svg
-          className="w-5 h-5 xl:w-6 xl:h-6 text-zinc-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={3}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+        <ChevronRight className="w-6 h-6 xl:w-7 xl:h-7 text-zinc-800 stroke-[3]" />
       </button>
 
       {/* Main Card */}
@@ -244,12 +237,15 @@ export const ProjectCarousel = () => {
             <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-red-400 border-2 border-zinc-800 rounded-full" />
             <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-yellow-400 border-2 border-zinc-800 rounded-full" />
             <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-green-500 border-2 border-zinc-800 rounded-full" />
-            <span className="hidden sm:block text-xs font-black uppercase tracking-wider ml-3">
+            <span className="hidden sm:flex items-center gap-2 text-xs font-black uppercase tracking-wider ml-3">
+              <Sparkles className="w-3.5 h-3.5" />
               Retro Project Window
             </span>
           </div>
-          <div className="text-[10px] sm:text-xs text-zinc-500 font-mono">
-            Arrow keys • Click dots
+          <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-zinc-500 font-mono">
+            <ChevronLeft className="w-3 h-3" />
+            <ChevronRight className="w-3 h-3" />
+            <span>Navigate</span>
           </div>
         </div>
 
@@ -281,9 +277,12 @@ export const ProjectCarousel = () => {
             {/* Details */}
             <div className="flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 uppercase tracking-tight leading-tight mb-3">
-                  {currentProject.serviceName}
-                </h3>
+                <div className="flex items-center gap-3 mb-3">
+                  <Zap className="w-7 h-7 sm:w-8 sm:h-8 text-orange-500 fill-orange-500" />
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 uppercase tracking-tight leading-tight">
+                    {currentProject.serviceName}
+                  </h3>
+                </div>
 
                 {/* Description */}
                 <p className="text-sm sm:text-base text-zinc-700 leading-relaxed mb-4">
@@ -291,29 +290,45 @@ export const ProjectCarousel = () => {
                 </p>
 
                 {/* Tools/Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {currentProject.tools.map((Tool, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-yellow-50 transition-colors"
-                      title={Tool.name}
-                    >
-                      <Tool className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </div>
-                  ))}
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Package className="w-4 h-4 text-zinc-600" />
+                    <span className="text-xs font-black uppercase tracking-wider text-zinc-600">
+                      Tech Stack
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {currentProject.tools.map((Tool, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-yellow-50 transition-colors"
+                        title={Tool.name}
+                      >
+                        <Tool className="w-4 h-4 sm:w-5 sm:h-5" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Features List */}
-                <ul className="space-y-2 mb-6">
-                  {currentProject.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-zinc-500 border-2 border-zinc-800 rounded-sm mt-1.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base font-semibold leading-relaxed">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Sparkles className="w-4 h-4 text-zinc-600" />
+                    <span className="text-xs font-black uppercase tracking-wider text-zinc-600">
+                      Key Features
+                    </span>
+                  </div>
+                  <ul className="space-y-2">
+                    {currentProject.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Zap className="w-4 h-4 text-orange-500 fill-orange-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm sm:text-base font-semibold leading-relaxed">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               {/* View Project Button */}
@@ -325,19 +340,7 @@ export const ProjectCarousel = () => {
                   className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-black uppercase bg-white border-[3px] border-zinc-800 rounded-lg shadow-[0px_4px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_2px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all"
                 >
                   <span>View Project</span>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -353,19 +356,7 @@ export const ProjectCarousel = () => {
               disabled={isAnimating}
               className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <svg
-                className="w-3 h-3 sm:w-4 sm:h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              <ChevronLeft className="w-4 h-4 stroke-[3]" />
               <span className="hidden sm:inline">Prev</span>
             </button>
             <button
@@ -374,19 +365,7 @@ export const ProjectCarousel = () => {
               className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="hidden sm:inline">Next</span>
-              <svg
-                className="w-3 h-3 sm:w-4 sm:h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <ChevronRight className="w-4 h-4 stroke-[3]" />
             </button>
           </div>
 

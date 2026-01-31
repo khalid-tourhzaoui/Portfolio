@@ -4,8 +4,8 @@ import { Gamepad2, Code2, Sparkles } from "lucide-react";
 
 export const ProjectsContent = () => {
   return (
-    <div className="relative w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
-      <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+    <div className="relative  w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="text-center mb-10 sm:mb-12 lg:mb-10">
         {/* Title with Icons */}
         <div className="flex items-center justify-center gap-4 mb-4">
           <Gamepad2 
@@ -31,7 +31,7 @@ export const ProjectsContent = () => {
         {/* Subtitle with Icon */}
         <div className="flex items-center justify-center gap-2">
           <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-          <p className="text-zinc-500 text-sm sm:text-base font-mono leading-relaxed">
+          <p className="text-zinc-100 text-sm sm:text-base font-mono leading-relaxed">
             Showcasing my work with a retro game twist
           </p>
           <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Gamepad2, Hammer, Zap, Clapperboard, Settings, Package, Trophy, Star, Circle, ChevronRight, Code2, Database, Wrench } from "lucide-react";
+import { Gamepad2, Hammer, Zap, Settings, Package, Trophy, Star, Circle, ChevronRight, Database, Wrench } from "lucide-react";
 
 type SkillCategory = "foundations" | "frontend" | "backend" | "database" | "tools";
 
@@ -186,7 +186,7 @@ export const SkillsContent = () => {
   const currentSkill = skillsData[activeCategory];
 
   return (
-    <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
+    <div className="relative max-w-7xl mx-auto px-4 py-4 sm:px-6 sm:py-10 lg:px-10 lg:py-10">
       {/* Title Section */}
       <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <div className="flex items-center justify-center gap-3 mb-4">

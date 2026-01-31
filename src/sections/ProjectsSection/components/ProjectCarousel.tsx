@@ -298,15 +298,18 @@ export const ProjectCarousel = () => {
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {currentProject.tools.map((Tool, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-yellow-50 transition-colors"
-                        title={Tool.name}
-                      >
-                        <Tool className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </div>
-                    ))}
+                    {currentProject.tools.map((Tool, index) => {
+                      const ToolComponent = Tool as React.ComponentType<{ className: string }>;
+                      return (
+                        <div
+                          key={index}
+                          className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-yellow-50 transition-colors"
+                          title={Tool.name}
+                        >
+                          <ToolComponent className="w-4 h-4 sm:w-5 sm:h-5" />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 

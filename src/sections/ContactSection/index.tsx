@@ -63,12 +63,12 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen py-6 sm:py-8 md:py-10 lg:py-12 overflow-hidden">
+    <section className="relative flex items-center justify-center min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <ContactBackground />
       
       <div className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         {/* Header Section */}
-        <div className="text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Zap className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-yellow-400" />
             <h1 
@@ -219,6 +219,24 @@ export function ContactSection() {
                     Reset
                   </button>
                 </div>
+
+                {/* Quick Contact Badges */}
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-3 sm:pt-4 border-t-3 sm:border-t-4 border-zinc-800">
+                  <a
+                    href="mailto:khalidtourhzaoui@gmail.com"
+                    className="flex-1 bg-gradient-to-r from-red-400 to-pink-400 hover:from-red-500 hover:to-pink-500 text-white font-black text-xs sm:text-sm py-2.5 sm:py-3 rounded-lg border-2 sm:border-3 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
+                  >
+                    <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    Quick Email
+                  </a>
+                  <a
+                    href="#"
+                    className="flex-1 bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white font-black text-xs sm:text-sm py-2.5 sm:py-3 rounded-lg border-2 sm:border-3 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
+                  >
+                    <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    Discord DM
+                  </a>
+                </div>
               </form>
             </div>
           </div>
@@ -244,6 +262,9 @@ export function ContactSection() {
                         alt="Khalid Khalid Profile"
                         className="w-full h-full object-cover"
                       />
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 bg-green-500 border-2 sm:border-3 border-zinc-800 rounded-full px-2 sm:px-3 py-0.5 sm:py-1">
+                      <span className="text-[10px] sm:text-xs font-black text-white">ONLINE</span>
                     </div>
                   </div>
 
@@ -271,13 +292,32 @@ export function ContactSection() {
                 </div>
 
                 {/* Bio */}
-                <div className="bg-yellow-50 border-2 sm:border-3 border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-2 sm:mb-3">
+                <div className="bg-yellow-50 border-2 sm:border-3 border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
                   <div className="flex items-start gap-2 sm:gap-3">
                     <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 flex-shrink-0 mt-1" />
                     <p className="text-xs sm:text-sm leading-relaxed text-zinc-700 font-semibold">
-                      22-year-old junior web developer, passionate and versatile. Proficient in front-end and back-end technologies (React, Laravel, Spring Boot). Ready for new challenges and innovative projects! 🚀
+                      Fast learner with strong problem-solving skills and attention to detail. 
+                      I enjoy collaborating on challenging projects and am always eager to explore 
+                      new technologies. Available for freelance work, internships, and full-time opportunities.
                     </p>
                   </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <a 
+                    href="https://khalid-tourhzaoui.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-yellow-100 hover:bg-yellow-200 text-zinc-800 font-black text-xs sm:text-sm py-3 sm:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
+                  >
+                    <Rocket className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    Portfolio
+                  </a>
+                  <button className="bg-yellow-100 hover:bg-yellow-200 text-zinc-800 font-black text-xs sm:text-sm py-3 sm:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2">
+                    <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    Resume
+                  </button>
                 </div>
               </div>
             </div>
@@ -311,7 +351,7 @@ export function ContactSection() {
 
                   {/* LinkedIn */}
                   <a
-                    href="https://www.linkedin.com/in/khalid-tourhzaoui/"
+                    href="https://linkedin.com/in/khalid-tourhzaoui"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center justify-center bg-blue-600 hover:bg-blue-700 border-2 sm:border-3 border-blue-800 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"
@@ -322,7 +362,7 @@ export function ContactSection() {
 
                   {/* Resume Download */}
                   <a
-                    href="../../assets/MyResume.pdf"
+                    href="/assets/resume.pdf"
                     download="Khalid_Khalid_Resume.pdf"
                     className="group flex items-center justify-center bg-orange-500 hover:bg-orange-600 border-2 sm:border-3 border-orange-700 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"
                     title="Download Resume"
@@ -332,7 +372,7 @@ export function ContactSection() {
 
                   {/* Instagram */}
                   <a
-                    href="https://www.instagram.com/the_re_khalid/"
+                    href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center justify-center bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 border-2 sm:border-3 border-purple-800 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"

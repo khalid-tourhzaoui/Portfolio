@@ -1,3 +1,4 @@
+import { AboutSection } from "../sections/AboutSection";
 import { ContactSection } from "../sections/ContactSection";
 import { ExperienceSection } from "../sections/ExperienceSection";
 import { HeroSection } from "../sections/HeroSection";
@@ -7,6 +8,7 @@ export const HomePage = () => {
   return (
     <>
       <HeroSection />
+      <AboutSection />
       <SkillsSection/>
       <ExperienceSection />
       <ProjectsSection />

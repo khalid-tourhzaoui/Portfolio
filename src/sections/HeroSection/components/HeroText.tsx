@@ -20,10 +20,9 @@ export const HeroText = () => {
       </h1>
 
       <p className="text-sm sm:text-base lg:text-lg text-zinc-700 leading-relaxed max-w-xl mb-8">
-        I'm a 22-year-old full stack web developer, passionate and versatile. I
-        develop comprehensive and high-performance web applications using React,
-        Laravel, and Spring Boot. Conscientious, creative, and
-        solution-oriented.
+        Building modern web experiences with clean code and creative solutions. 
+        Specialized in React, Laravel, and Spring Boot. Let's turn your ideas 
+        into reality with powerful, scalable applications.
       </p>
 
       <div className="flex flex-wrap items-center gap-3 mb-6">

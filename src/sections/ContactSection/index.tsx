@@ -63,7 +63,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative bg-emerald-800 rounded-t-[48px] sm:rounded-t-[64px] lg:rounded-t-[72px] flex items-center justify-center min-h-screen py-6 sm:py-8 md:py-10 lg:py-12 overflow-hidden">
       <ContactBackground />
       
       <div className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
@@ -82,7 +82,7 @@ export function ContactSection() {
             </h1>
             <Zap className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-yellow-400" />
           </div>
-          <p className="text-zinc-500 text-xs sm:text-sm md:text-base leading-5 mt-3 font-mono flex items-center justify-center gap-2 flex-wrap">
+          <p className="text-zinc-100 text-xs sm:text-sm md:text-base leading-5 mt-3 font-mono flex items-center justify-center gap-2 flex-wrap">
             <Target className="w-4 h-4" />
             Insert coin to establish connection • Tiflet, Morocco
             <Target className="w-4 h-4" />
@@ -90,7 +90,7 @@ export function ContactSection() {
           
           {/* Status Bar */}
           <div className="flex items-center justify-center gap-2 mt-4">
-            <span className="text-xs text-zinc-500 font-mono">Status:</span>
+            <span className="text-xs text-zinc-100 font-mono">Status:</span>
             <div className="flex gap-1.5">
               <span className="w-3 h-3 bg-green-500 border-2 border-zinc-800 rounded-full animate-pulse"></span>
               <span className="w-3 h-3 bg-yellow-400 border-2 border-zinc-800 rounded-full"></span>
@@ -219,24 +219,6 @@ export function ContactSection() {
                     Reset
                   </button>
                 </div>
-
-                {/* Quick Contact Badges */}
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-3 sm:pt-4 border-t-3 sm:border-t-4 border-zinc-800">
-                  <a
-                    href="mailto:khalidtourhzaoui@gmail.com"
-                    className="flex-1 bg-gradient-to-r from-red-400 to-pink-400 hover:from-red-500 hover:to-pink-500 text-white font-black text-xs sm:text-sm py-2.5 sm:py-3 rounded-lg border-2 sm:border-3 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
-                  >
-                    <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    Quick Email
-                  </a>
-                  <a
-                    href="#"
-                    className="flex-1 bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 text-white font-black text-xs sm:text-sm py-2.5 sm:py-3 rounded-lg border-2 sm:border-3 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
-                  >
-                    <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    Discord DM
-                  </a>
-                </div>
               </form>
             </div>
           </div>
@@ -262,9 +244,6 @@ export function ContactSection() {
                         alt="Khalid Khalid Profile"
                         className="w-full h-full object-cover"
                       />
-                    </div>
-                    <div className="absolute -bottom-2 -right-2 bg-green-500 border-2 sm:border-3 border-zinc-800 rounded-full px-2 sm:px-3 py-0.5 sm:py-1">
-                      <span className="text-[10px] sm:text-xs font-black text-white">ONLINE</span>
                     </div>
                   </div>
 
@@ -292,7 +271,7 @@ export function ContactSection() {
                 </div>
 
                 {/* Bio */}
-                <div className="bg-yellow-50 border-2 sm:border-3 border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
+                <div className="bg-yellow-50 border-2 sm:border-3 border-zinc-800 rounded-lg sm:rounded-xl p-2 sm:p-2 mb-2 sm:mb-1">
                   <div className="flex items-start gap-2 sm:gap-3">
                     <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 flex-shrink-0 mt-1" />
                     <p className="text-xs sm:text-sm leading-relaxed text-zinc-700 font-semibold">
@@ -301,23 +280,6 @@ export function ContactSection() {
                       new technologies. Available for freelance work, internships, and full-time opportunities.
                     </p>
                   </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                  <a 
-                    href="https://khalid-tourhzaoui.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-yellow-100 hover:bg-yellow-200 text-zinc-800 font-black text-xs sm:text-sm py-3 sm:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2"
-                  >
-                    <Rocket className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    Portfolio
-                  </a>
-                  <button className="bg-yellow-100 hover:bg-yellow-200 text-zinc-800 font-black text-xs sm:text-sm py-3 sm:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-0.5 transition-all duration-150 flex items-center justify-center gap-2">
-                    <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    Resume
-                  </button>
                 </div>
               </div>
             </div>

@@ -201,7 +201,7 @@ export const ExperienceContent = () => {
           </h2>
           <Zap className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-yellow-400" />
         </div>
-        <p className="text-zinc-500 text-xs sm:text-sm md:text-base leading-5 mt-3 font-mono flex items-center justify-center gap-2">
+        <p className="text-zinc-100 text-xs sm:text-sm md:text-base leading-5 mt-3 font-mono flex items-center justify-center gap-2">
           <Target className="w-4 h-4" />
           Analog switchboard • CRT boot dossier
           <Target className="w-4 h-4" />

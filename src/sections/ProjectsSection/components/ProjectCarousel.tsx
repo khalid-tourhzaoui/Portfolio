@@ -1,21 +1,4 @@
 import { useState } from "react";
-import { IconType } from "react-icons";
-import { FaReact, FaRegPlayCircle } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiShadcnui,
-  SiFastapi,
-  SiTypescript,
-  SiMapbox,
-  SiVercel,
-  SiLaravel,
-  SiMysql,
-  SiNextdotjs,
-} from "react-icons/si";
-import { BiQrScan } from "react-icons/bi";
-import { MdColorLens } from "react-icons/md";
-import { AiOutlineDownload, AiOutlineFilePdf } from "react-icons/ai";
-import { TbBrandFramerMotion } from "react-icons/tb";
 import {
   Sparkles,
   ExternalLink,
@@ -23,13 +6,29 @@ import {
   ChevronRight,
   Zap,
   Package,
+  Cloud,
+  QrCode,
+  Download,
+  Languages,
+  FileText,
+  Scale,
+  Paintbrush,
+  Database,
+  Code2,
+  Globe,
+  Layers,
+  Server,
+  Smartphone,
+  Layout,
+  Palette,
+  GitBranch,
 } from "lucide-react";
 
 interface Project {
   id: number;
   serviceName: string;
   description: string;
-  tools: IconType[];
+  tools: { icon: React.ReactNode; name: string }[];
   link: string;
   imgUrl: string;
   features: string[];
@@ -42,13 +41,13 @@ const projects: Project[] = [
     description:
       "Comprehensive weather application with real-time data, air quality monitoring, and 5-day forecasts powered by OpenWeather API.",
     tools: [
-      FaReact,
-      SiNextdotjs,
-      SiTailwindcss,
-      SiShadcnui,
-      SiTypescript,
-      SiMapbox,
-      SiVercel,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
     imgUrl:
@@ -65,14 +64,14 @@ const projects: Project[] = [
     description:
       "Modern QR code generator with customization options including colors, logos, and multiple download formats.",
     tools: [
-      FaReact,
-      SiTailwindcss,
-      SiShadcnui,
-      SiTypescript,
-      BiQrScan,
-      MdColorLens,
-      AiOutlineDownload,
-      SiVercel,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <QrCode className="w-4 h-4 sm:w-5 sm:h-5" />, name: "QR Scan" },
+      { icon: <Palette className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Colors" },
+      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
     imgUrl:
@@ -89,13 +88,13 @@ const projects: Project[] = [
     description:
       "Universal media downloader supporting multiple platforms with high-quality video and audio extraction capabilities.",
     tools: [
-      FaReact,
-      SiTailwindcss,
-      SiShadcnui,
-      AiOutlineDownload,
-      SiFastapi,
-      TbBrandFramerMotion,
-      SiVercel,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "FastAPI" },
+      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/social-media-downloader",
     imgUrl:
@@ -112,13 +111,13 @@ const projects: Project[] = [
     description:
       "AI-powered language translation and text-to-speech converter with support for multiple languages and dialects.",
     tools: [
-      FaReact,
-      SiTailwindcss,
-      SiShadcnui,
-      SiVercel,
-      FaRegPlayCircle,
-      SiTypescript,
-      SiFastapi,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Audio" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "FastAPI" },
     ],
     link: "https://smartlanguageconverter.vercel.app/",
     imgUrl:
@@ -135,12 +134,12 @@ const projects: Project[] = [
     description:
       "Intelligent resume builder with AI-powered content suggestions, multiple templates, and PDF export functionality.",
     tools: [
-      FaReact,
-      SiTailwindcss,
-      SiShadcnui,
-      SiLaravel,
-      AiOutlineFilePdf,
-      SiMysql,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
+      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
     imgUrl:
@@ -157,13 +156,13 @@ const projects: Project[] = [
     description:
       "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh).",
     tools: [
-      FaReact,
-      SiNextdotjs,
-      SiTailwindcss,
-      SiShadcnui,
-      SiTypescript,
-      TbBrandFramerMotion,
-      SiVercel,
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/legal-ai-platform",
     imgUrl:
@@ -210,46 +209,42 @@ export const ProjectCarousel = () => {
 
   return (
     <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Navigation Arrows - Desktop Only */}
       <button
         onClick={prevProject}
         disabled={isAnimating}
         aria-label="Previous project"
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 xl:-translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-white border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 xl:-translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-gradient-to-br from-orange-400 to-orange-500 border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <ChevronLeft className="w-6 h-6 xl:w-7 xl:h-7 text-zinc-800 stroke-[3]" />
+        <ChevronLeft className="w-6 h-6 xl:w-7 xl:h-7 text-white stroke-[3]" />
       </button>
 
       <button
         onClick={nextProject}
         disabled={isAnimating}
         aria-label="Next project"
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 xl:translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-white border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 xl:translate-x-16 z-10 hidden lg:flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-gradient-to-br from-orange-400 to-orange-500 border-4 border-zinc-800 rounded-full shadow-[0px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[3px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <ChevronRight className="w-6 h-6 xl:w-7 xl:h-7 text-zinc-800 stroke-[3]" />
+        <ChevronRight className="w-6 h-6 xl:w-7 xl:h-7 text-white stroke-[3]" />
       </button>
 
-      {/* Main Card */}
-      <div className="relative bg-white border-[5px] border-zinc-800 rounded-2xl shadow-[0px_10px_0px_0px_rgba(42,42,42,1)] overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-yellow-100 border-b-[5px] border-zinc-800">
+      <div className="relative bg-gradient-to-br from-orange-50 to-yellow-50 border-[5px] border-zinc-800 rounded-2xl shadow-[0px_10px_0px_0px_rgba(42,42,42,1)] overflow-hidden">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-400 to-orange-500 border-b-[5px] border-zinc-800">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-red-400 border-2 border-zinc-800 rounded-full" />
-            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-yellow-400 border-2 border-zinc-800 rounded-full" />
-            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-green-500 border-2 border-zinc-800 rounded-full" />
-            <span className="hidden sm:flex items-center gap-2 text-xs font-black uppercase tracking-wider ml-3">
+            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-red-500 border-2 border-zinc-800 rounded-full" />
+            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-yellow-300 border-2 border-zinc-800 rounded-full" />
+            <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-green-400 border-2 border-zinc-800 rounded-full" />
+            <span className="hidden sm:flex items-center gap-2 text-xs font-black uppercase tracking-wider ml-3 text-white">
               <Sparkles className="w-3.5 h-3.5" />
               Retro Project Window
             </span>
           </div>
-          <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-zinc-500 font-mono">
+          <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-white/80 font-mono">
             <ChevronLeft className="w-3 h-3" />
             <ChevronRight className="w-3 h-3" />
             <span>Navigate</span>
           </div>
         </div>
 
-        {/* Scanline Effect */}
         <div
           className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-[0.06] z-10"
           style={{
@@ -258,15 +253,13 @@ export const ProjectCarousel = () => {
           }}
         />
 
-        {/* Content */}
         <div className="relative p-4 sm:p-6 lg:p-8">
           <div
             className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 transition-opacity duration-500 ${
               isAnimating ? "opacity-0" : "opacity-100"
             }`}
           >
-            {/* Image */}
-            <div className="relative bg-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
+            <div className="relative bg-gradient-to-br from-orange-100 to-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
               <img
                 src={currentProject.imgUrl}
                 alt={currentProject.serviceName}
@@ -274,50 +267,43 @@ export const ProjectCarousel = () => {
               />
             </div>
 
-            {/* Details */}
             <div className="flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <Zap className="w-7 h-7 sm:w-8 sm:h-8 text-orange-500 fill-orange-500" />
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 uppercase tracking-tight leading-tight">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-600 uppercase tracking-tight leading-tight">
                     {currentProject.serviceName}
                   </h3>
                 </div>
 
-                {/* Description */}
                 <p className="text-sm sm:text-base text-zinc-700 leading-relaxed mb-4">
                   {currentProject.description}
                 </p>
 
-                {/* Tools/Tech Stack */}
                 <div className="mb-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Package className="w-4 h-4 text-zinc-600" />
-                    <span className="text-xs font-black uppercase tracking-wider text-zinc-600">
+                    <Package className="w-4 h-4 text-orange-600" />
+                    <span className="text-xs font-black uppercase tracking-wider text-orange-600">
                       Tech Stack
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {currentProject.tools.map((Tool, index) => {
-                      const ToolComponent = Tool as React.ComponentType<{ className: string }>;
-                      return (
-                        <div
-                          key={index}
-                          className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-yellow-50 transition-colors"
-                          title={Tool.name}
-                        >
-                          <ToolComponent className="w-4 h-4 sm:w-5 sm:h-5" />
-                        </div>
-                      );
-                    })}
+                    {currentProject.tools.map((tool, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-white border-2 border-zinc-800 rounded-lg hover:bg-orange-50 transition-colors text-zinc-800"
+                        title={tool.name}
+                      >
+                        {tool.icon}
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Features List */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-4 h-4 text-zinc-600" />
-                    <span className="text-xs font-black uppercase tracking-wider text-zinc-600">
+                    <Sparkles className="w-4 h-4 text-orange-600" />
+                    <span className="text-xs font-black uppercase tracking-wider text-orange-600">
                       Key Features
                     </span>
                   </div>
@@ -325,7 +311,7 @@ export const ProjectCarousel = () => {
                     {currentProject.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <Zap className="w-4 h-4 text-orange-500 fill-orange-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm sm:text-base font-semibold leading-relaxed">
+                        <span className="text-sm sm:text-base font-semibold leading-relaxed text-zinc-700">
                           {feature}
                         </span>
                       </li>
@@ -334,13 +320,12 @@ export const ProjectCarousel = () => {
                 </div>
               </div>
 
-              {/* View Project Button */}
               <div>
                 <a
                   href={currentProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-black uppercase bg-white border-[3px] border-zinc-800 rounded-lg shadow-[0px_4px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_2px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all"
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-black uppercase bg-gradient-to-br from-orange-400 to-orange-500 text-white border-[3px] border-zinc-800 rounded-lg shadow-[0px_4px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_2px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all"
                 >
                   <span>View Project</span>
                   <ExternalLink className="w-4 h-4" />
@@ -350,14 +335,12 @@ export const ProjectCarousel = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-yellow-100 border-t-[5px] border-zinc-800">
-          {/* Navigation Buttons */}
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-400 to-orange-500 border-t-[5px] border-zinc-800">
           <div className="flex items-center gap-2">
             <button
               onClick={prevProject}
               disabled={isAnimating}
-              className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed text-zinc-800"
             >
               <ChevronLeft className="w-4 h-4 stroke-[3]" />
               <span className="hidden sm:inline">Prev</span>
@@ -365,14 +348,13 @@ export const ProjectCarousel = () => {
             <button
               onClick={nextProject}
               disabled={isAnimating}
-              className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed text-zinc-800"
             >
               <span className="hidden sm:inline">Next</span>
               <ChevronRight className="w-4 h-4 stroke-[3]" />
             </button>
           </div>
 
-          {/* Dot Indicators */}
           <div className="flex items-center gap-2">
             {projects.map((_, index) => (
               <button
@@ -382,8 +364,8 @@ export const ProjectCarousel = () => {
                 aria-label={`Go to project ${index + 1}`}
                 className={`w-3 h-3 sm:w-3.5 sm:h-3.5 border-2 border-zinc-800 rounded-full transition-all ${
                   index === currentIndex
-                    ? "bg-zinc-800 scale-110"
-                    : "bg-white hover:bg-gray-200"
+                    ? "bg-white scale-110"
+                    : "bg-white/40 hover:bg-white/70"
                 } disabled:cursor-not-allowed`}
               />
             ))}

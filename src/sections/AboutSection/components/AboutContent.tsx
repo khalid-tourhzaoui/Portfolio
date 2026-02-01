@@ -1,11 +1,8 @@
 import { 
   Zap, 
-  Target, 
-  Rocket, 
+  Target,  
   Palette, 
   Wrench,
-  Sparkles,
-  Gauge,
   Database,
   Plug,
   Code2,
@@ -171,10 +168,6 @@ export function AboutContent() {
                 alt="Khalid Developer Character"
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-emerald-500 border-2 sm:border-3 border-zinc-800 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1.5 sm:gap-2 shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]">
-                <span className="bg-emerald-400 h-2 w-2 sm:h-3 sm:w-3 rounded-full animate-pulse"></span>
-                <span className="text-white text-[10px] sm:text-xs font-black uppercase">AVAILABLE FOR WORK</span>
-              </div>
             </div>
 
             {/* Available for Work Footer */}

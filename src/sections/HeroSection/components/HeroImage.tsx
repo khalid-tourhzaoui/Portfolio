@@ -8,7 +8,7 @@ export const HeroImage = () => {
             <div className="absolute inset-4 border-4 border-orange-500 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-yellow-100">
               <img
                 alt="profile"
-                src="https://c.animaapp.com/mkydohemo8pbIw/assets/profile-D8-g5WhZ.png"
+                src="/src/assets/profile-D8-g5WhZ.png"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />
             </div>

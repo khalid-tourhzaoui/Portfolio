@@ -6,12 +6,9 @@ import {
   ChevronRight,
   Zap,
   Package,
-  Cloud,
   QrCode,
   Download,
-  Languages,
   FileText,
-  Scale,
   Paintbrush,
   Database,
   Code2,
@@ -21,7 +18,6 @@ import {
   Smartphone,
   Layout,
   Palette,
-  GitBranch,
 } from "lucide-react";
 
 interface Project {

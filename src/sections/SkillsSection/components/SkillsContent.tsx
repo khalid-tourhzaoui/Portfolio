@@ -193,9 +193,7 @@ export const SkillsContent = () => {
 
   const currentSkill = skillsData[activeCategory];
 
-  // Animation de la barre de progression lors du changement de catégorie
   useEffect(() => {
-    // Réinitialiser toutes les barres à 0
     setAnimatedProgress({
       foundations: 0,
       frontend: 0,
@@ -204,7 +202,6 @@ export const SkillsContent = () => {
       tools: 0,
     });
 
-    // Animer la barre active après un court délai
     const timer = setTimeout(() => {
       setAnimatedProgress(prev => ({
         ...prev,
@@ -215,7 +212,6 @@ export const SkillsContent = () => {
     return () => clearTimeout(timer);
   }, [activeCategory]);
 
-  // Obtenir la couleur active pour les boutons de filtre
   const getActiveColor = () => {
     const colorMap = {
       foundations: "from-orange-400 to-orange-500",
@@ -229,7 +225,6 @@ export const SkillsContent = () => {
 
   return (
     <div className="relative max-w-7xl mx-auto px-4 py-4 sm:px-6 sm:py-10 lg:px-10 lg:py-10">
-      {/* Title Section */}
       <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <div className="flex items-center justify-center gap-3 mb-4">
           <Gamepad2 className="w-8 h-8 sm:w-10 sm:h-10 text-orange-500 animate-pulse" strokeWidth={2.5} />
@@ -251,7 +246,6 @@ export const SkillsContent = () => {
         </p>
       </div>
 
-      {/* Filter Tabs */}
       <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sm:gap-4 sm:mb-10">
         {filters.map((filter) => {
           const isActive = activeCategory === filter.id;
@@ -280,7 +274,6 @@ export const SkillsContent = () => {
                 }
               `}
             >
-              {/* Corner Decorations - Only on Active */}
               {isActive && (
                 <>
                   <div className="absolute -left-1 -top-1 w-3 h-3 bg-white/60 rounded-sm" />
@@ -290,10 +283,8 @@ export const SkillsContent = () => {
                 </>
               )}
 
-              {/* Icon */}
               <span className="relative z-10">{filter.icon}</span>
 
-              {/* Label - Full on Desktop, Short on Mobile */}
               <span className="hidden sm:inline relative z-10">{filter.label}</span>
               <span className="inline sm:hidden relative z-10">{filter.shortLabel}</span>
             </button>
@@ -301,12 +292,9 @@ export const SkillsContent = () => {
         })}
       </div>
 
-      {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-        {/* Main Card - Left Side */}
         <div className="lg:col-span-8">
           <div className="relative bg-white rounded-2xl sm:rounded-3xl border-[6px] border-zinc-800 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] overflow-hidden">
-            {/* Scanline Effect */}
             <div
               className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-[0.03] z-0"
               style={{
@@ -315,9 +303,7 @@ export const SkillsContent = () => {
               }}
             />
 
-            {/* Content */}
             <div className="relative z-10 p-6 sm:p-8 lg:p-10">
-              {/* Header */}
               <div className="flex items-center gap-4 mb-6 pb-4 border-b-4 border-zinc-200">
                 <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-yellow-100 rounded-2xl border-4 border-zinc-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]">
                   {currentSkill.icon}
@@ -333,7 +319,6 @@ export const SkillsContent = () => {
                 </div>
               </div>
 
-              {/* Equipment Section */}
               <div className="mb-6">
                 <div className="flex items-center gap-2 text-zinc-600 text-sm font-black uppercase tracking-wide mb-3">
                   <Package className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -362,7 +347,6 @@ export const SkillsContent = () => {
                 </div>
               </div>
 
-              {/* Achievements Section */}
               <div>
                 <div className="flex items-center gap-2 text-zinc-600 text-sm font-black uppercase tracking-wide mb-3">
                   <Trophy className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -397,7 +381,6 @@ export const SkillsContent = () => {
           </div>
         </div>
 
-        {/* Sidebar - Right Side */}
         <div className="lg:col-span-4">
           <div className="space-y-4 sm:space-y-5">
             {Object.values(skillsData).map((skill) => {
@@ -410,7 +393,7 @@ export const SkillsContent = () => {
                   onClick={() => setActiveCategory(skill.category)}
                   className={`
                     w-full text-left relative group
-                    p-2 sm:p-3
+                    p-4 sm:p-5
                     rounded-2xl
                     border-4 border-zinc-800
                     transition-all duration-300
@@ -421,7 +404,6 @@ export const SkillsContent = () => {
                     }
                   `}
                 >
-                  {/* Active Indicator - Small squares in corners */}
                   {isActive && (
                     <>
                       <div className="absolute -left-1 -top-1 w-2 h-2 bg-white/60 rounded-sm" />
@@ -431,7 +413,6 @@ export const SkillsContent = () => {
                     </>
                   )}
 
-                  {/* Header */}
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <div className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 ${isActive ? 'bg-white text-zinc-800' : 'bg-yellow-100 text-zinc-800'} rounded-xl border-2 border-zinc-800`}>
@@ -447,13 +428,11 @@ export const SkillsContent = () => {
                       </div>
                     </div>
                     
-                    {/* Arrow - Only visible on active */}
                     {isActive && (
                       <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white animate-pulse" strokeWidth={3} />
                     )}
                   </div>
 
-                  {/* Progress Bar */}
                   <div className="relative">
                     <div className={`h-2 sm:h-2.5 rounded-full ${skill.progressBgColor} overflow-hidden border-2 border-zinc-800`}>
                       <div

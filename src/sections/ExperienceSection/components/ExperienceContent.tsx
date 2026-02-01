@@ -186,7 +186,6 @@ export const ExperienceContent = () => {
 
   return (
     <div className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-      {/* Header */}
       <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         <div className="flex items-center justify-center gap-3 mb-4">
           <Zap className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-yellow-400" />
@@ -207,7 +206,6 @@ export const ExperienceContent = () => {
           <Target className="w-4 h-4" />
         </p>
 
-        {/* Tabs */}
         <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
           <button
             onClick={() => handleTabChange("work")}
@@ -235,7 +233,6 @@ export const ExperienceContent = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-        {/* Left Panel - Switchboard */}
         <div className="bg-yellow-50 border-4 sm:border-6 md:border-8 border-zinc-800 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-[rgba(0,0,0,0.9)_0px_8px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_10px_0px_0px] md:shadow-[rgba(0,0,0,0.9)_0px_12px_0px_0px] overflow-hidden flex flex-col">
           <div className="bg-white border-b-4 sm:border-b-6 md:border-b-8 border-zinc-800 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 flex items-center justify-between flex-shrink-0">
             <div className="flex items-center gap-2">
@@ -283,7 +280,6 @@ export const ExperienceContent = () => {
           </div>
         </div>
 
-        {/* Right Panel - CRT Monitor */}
         <div className="bg-zinc-100 border-4 sm:border-6 md:border-8 border-zinc-800 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-[rgba(0,0,0,0.9)_0px_8px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_10px_0px_0px] md:shadow-[rgba(0,0,0,0.9)_0px_12px_0px_0px] overflow-hidden flex flex-col">
           <div className="bg-white border-b-4 sm:border-b-6 md:border-b-8 border-zinc-800 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 flex items-center justify-between flex-shrink-0">
             <div className="flex items-center gap-1.5 sm:gap-2">
@@ -302,7 +298,6 @@ export const ExperienceContent = () => {
           </div>
 
           <div className="relative bg-gradient-to-b from-zinc-50 to-zinc-100 p-3 sm:p-4 md:p-6 lg:p-8 flex-grow">
-            {/* CRT Scanline Effect */}
             <div 
               className="absolute inset-0 pointer-events-none" 
               style={{
@@ -311,7 +306,6 @@ export const ExperienceContent = () => {
             ></div>
 
             <div className="relative z-10">
-              {/* Job/Education Card */}
               <div className="bg-yellow-100 border-3 sm:border-4 border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 mb-3 sm:mb-4 md:mb-6 shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_6px_0px_0px]">
                 <div className="flex items-center gap-2 mb-2">
                   {selectedItem.type === "work" ? (
@@ -341,7 +335,6 @@ export const ExperienceContent = () => {
                 </div>
               </div>
 
-              {/* Company/School Name Large */}
               <div className="flex items-center gap-3 mb-3 sm:mb-4 md:mb-6">
                 {React.createElement(selectedItem.icon, {
                   className: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-orange-500 flex-shrink-0"
@@ -351,7 +344,6 @@ export const ExperienceContent = () => {
                 </h3>
               </div>
 
-              {/* Description */}
               <div className="flex items-start gap-2 mb-3 sm:mb-4 md:mb-6">
                 <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm md:text-base leading-relaxed text-zinc-700">
@@ -359,7 +351,6 @@ export const ExperienceContent = () => {
                 </p>
               </div>
 
-              {/* Achievements */}
               <div className="mb-3 sm:mb-4 md:mb-6">
                 <div className="flex items-center gap-2 mb-2 sm:mb-3">
                   <Target className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
@@ -379,7 +370,6 @@ export const ExperienceContent = () => {
                 </ul>
               </div>
 
-              {/* Tags */}
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />

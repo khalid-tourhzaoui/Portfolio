@@ -1,6 +1,6 @@
 export const HeroImage = () => {
   return (
-    <div className="flex items-center justify-center lg:justify-end">
+    <div className="flex items-center justify-center lg:justify-end pb-12 md:pb-16 lg:pb-0">
       <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[550px]">
         <div className="relative aspect-[3/4] w-full">
           <div className="absolute inset-0 bg-zinc-800 rounded-3xl transform translate-x-2 translate-y-2"></div>

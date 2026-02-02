@@ -169,7 +169,7 @@ export function AboutContent() {
 
             <div className="relative bg-zinc-600/50">
               <img
-                src="/src/assets/about-C0vwj3CE.jfif"
+                src="/public/assets/about-C0vwj3CE.jfif"
                 alt="Khalid Developer Character"
                 className="w-full h-auto object-cover"
               />

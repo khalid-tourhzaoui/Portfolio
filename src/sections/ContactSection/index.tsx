@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
+import emailjs from '@emailjs/browser';
 import { 
   Mail, 
   Send, 
@@ -21,35 +22,82 @@ import {
   Phone,
   MapPin,
   FileDown,
-  MessageCircleMore
+  MessageCircleMore,
+  XCircle
 } from "lucide-react";
 import { ContactBackground } from "./ContactBackground";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export function ContactSection() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsError(false);
     
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setIsSubmitting(false);
+    try {
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      
+      if (!serviceID || !templateID || !publicKey) {
+        throw new Error("Configuration EmailJS manquante. Vérifiez vos variables d'environnement.");
+      }
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
+
+      const response = await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams,
+        publicKey
+      );
+
+      console.log("Message envoyé avec succès!", response);
       setIsSuccess(true);
       
       setTimeout(() => {
         setIsSuccess(false);
         setFormData({ name: "", email: "", message: "" });
       }, 3000);
-    }, 1500);
+      
+    } catch (error) {
+      console.error("Erreur lors de l'envoi:", error);
+      setIsError(true);
+      
+      if (error instanceof Error) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage("Échec de l'envoi. Veuillez réessayer.");
+      }
+      
+      setTimeout(() => {
+        setIsError(false);
+      }, 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -58,6 +106,7 @@ export function ContactSection() {
 
   const handleReset = () => {
     setFormData({ name: "", email: "", message: "" });
+    setIsError(false);
   };
 
   return (
@@ -127,6 +176,14 @@ export function ContactSection() {
                     <CheckCircle2 className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 text-white mb-4 animate-bounce" />
                     <p className="text-white font-black text-xl sm:text-2xl uppercase">Message Sent!</p>
                     <p className="text-white/80 text-xs sm:text-sm mt-2">+15 XP gained 🎮</p>
+                  </div>
+                )}
+
+                {isError && (
+                  <div className="absolute inset-0 bg-red-500/90 flex flex-col items-center justify-center z-20 rounded-b-xl sm:rounded-b-2xl px-4">
+                    <XCircle className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 text-white mb-4 animate-pulse" />
+                    <p className="text-white font-black text-xl sm:text-2xl uppercase">Error!</p>
+                    <p className="text-white/80 text-xs sm:text-sm mt-2 text-center">{errorMessage}</p>
                   </div>
                 )}
 
@@ -209,6 +266,7 @@ export function ContactSection() {
             </div>
           </div>
 
+          {/* Section Developer Card et Social Connect - inchangée */}
           <div className="space-y-4 sm:space-y-6">
             <div className="bg-white border-4 sm:border-6 md:border-8 border-zinc-800 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-[rgba(0,0,0,0.9)_0px_8px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_10px_0px_0px] md:shadow-[rgba(0,0,0,0.9)_0px_12px_0px_0px] overflow-hidden hover:shadow-[rgba(0,0,0,0.9)_0px_12px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_14px_0px_0px] md:hover:shadow-[rgba(0,0,0,0.9)_0px_16px_0px_0px] transition-all duration-200">
               <div className="bg-gradient-to-r from-orange-400 to-yellow-400 border-b-4 sm:border-b-6 md:border-b-8 border-zinc-800 px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4">
@@ -223,7 +281,7 @@ export function ContactSection() {
                   <div className="relative">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 border-4 sm:border-6 border-zinc-800 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden transform hover:rotate-6 transition-transform">
                       <img 
-                        src="/public/assets/profile-BppvMIsH.jpg"
+                        src="/assets/profile-BppvMIsH.jpg"
                         alt="Khalid Khalid Profile"
                         className="w-full h-full object-cover"
                       />
@@ -301,7 +359,7 @@ export function ContactSection() {
                   </a>
 
                   <a
-                    href='/src/assets/MyResume.pdf'
+                    href='/assets/MyResume.pdf'
                     download="Khalid_Khalid_Resume.pdf"
                     className="group flex items-center justify-center bg-orange-500 hover:bg-orange-600 border-2 sm:border-3 border-orange-700 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"
                     title="Download Resume"

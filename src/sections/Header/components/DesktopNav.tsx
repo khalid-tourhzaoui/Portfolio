@@ -97,6 +97,17 @@ export const DesktopNav = () => {
     },
   ];
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    if (href) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
   return (
     <nav className="hidden md:flex items-center">
       <ul className="flex items-center gap-4 lg:gap-6 xl:gap-8">
@@ -104,6 +115,7 @@ export const DesktopNav = () => {
           <li key={item.href}>
             <a
               href={item.href}
+              onClick={handleClick}
               className="group flex items-center gap-2 text-sm lg:text-base font-medium text-zinc-500 hover:text-orange-500 transition-all duration-300 whitespace-nowrap relative"
             >
               <span className="group-hover:scale-110 transition-transform duration-300">

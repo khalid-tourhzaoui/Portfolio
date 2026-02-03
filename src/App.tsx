@@ -4,6 +4,7 @@ import { LaunchModal } from "./components/LaunchModal";
 import { Header } from "./sections/Header";
 import { Main } from "./components/Main";
 import { Footer } from "./sections/FooterSection";
+
 export const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [playMusic, setPlayMusic] = useState(false);
@@ -11,14 +12,21 @@ export const App = () => {
 
   useEffect(() => {
     if (playMusic && audioRef.current) {
-      // Ajouter une gestion d'erreur pour l'autoplay
-      audioRef.current.play().catch(error => {
+      audioRef.current.play().catch((error) => {
         console.error("Erreur lors de la lecture audio:", error);
       });
     } else if (audioRef.current) {
       audioRef.current.pause();
     }
   }, [playMusic]);
+
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, []);
 
   const handleEnterWithMusic = () => {
     setPlayMusic(true);
@@ -49,8 +57,8 @@ export const App = () => {
               className="box-border caret-transparent hidden"
             ></audio>
             <Header />
-            <Main/>
-            <Footer/>
+            <Main />
+            <Footer />
           </div>
         </div>
       </body>

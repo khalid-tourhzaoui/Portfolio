@@ -110,7 +110,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative bg-emerald-800 rounded-t-[48px] sm:rounded-t-[64px] lg:rounded-t-[72px] flex items-center justify-center min-h-screen py-6 sm:py-8 md:py-10 lg:py-12 overflow-hidden">
+    <section id="contact" className="relative bg-emerald-800 rounded-t-[48px] sm:rounded-t-[64px] lg:rounded-t-[72px] flex items-center justify-center min-h-screen py-6 sm:py-8 md:py-10 lg:py-12 overflow-hidden">
       <ContactBackground />
       
       <div className="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">

@@ -19,7 +19,9 @@ import {
   Layout,
   Palette,
   Video,
-  Languages
+  Languages,
+  Brain,
+  Wand2
 } from "lucide-react";
 
 interface Project {
@@ -65,6 +67,39 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    serviceName: "JOUSKA AI - CONTENT CREATION",
+    description:
+      "Intelligent AI-powered content creation platform with article generation, blog title suggestions, AI image generation, background removal, and resume analysis powered by OpenAI GPT-4 and DALL-E.",
+    tools: [
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Boot" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OpenAI" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <Wand2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "DALL-E" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "JWT" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/jouska-ai",
+    imgUrl: "/public/assets/jouska-project/image_n_1.png",
+    images: [
+      "/public/assets/jouska-project/image_n_1.png",
+      "/public/assets/jouska-project/image_n_2.png",
+      "/public/assets/jouska-project/image_n_3.png",
+      "/public/assets/jouska-project/image_n_4.png",
+      "/public/assets/jouska-project/image_n_5.png",
+      "/public/assets/jouska-project/image_n_6.png",
+    ],
+    features: [
+      "AI article generation with customizable tone and SEO optimization",
+      "Blog title generator with 10+ creative suggestions per request",
+      "DALL-E 3 image generation and intelligent background removal",
+      "Resume analysis with scoring, strengths detection, and improvement suggestions",
+      "Secure authentication with JWT and comprehensive creation management dashboard"
+    ],
+  },
+  {
+    id: 3,
     serviceName: "AI-LEGAL-PLATFORM",
     description:
       "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh) powered by OpenAI.",
@@ -91,145 +126,175 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 3,
-    serviceName: "SMART LANGUAGE CONVERTER",
-    description:
-      "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Translation" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-    ],
-    link: "https://text-translate-ai.vercel.app/",
-    imgUrl:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1484935558426-cd0213f0127b?w=800&h=600&fit=crop"
-    ],
-    features: [
-      "Real-time translation with speech recognition and TTS",
-      "File upload and URL content extraction for translation",
-      "Favorites system with local storage for saved translations",
-    ],
-  },
-  {
     id: 4,
-    serviceName: "ADVANCED WEATHER APP",
+    serviceName: "SMTPP - MEDICAL MANAGEMENT",
     description:
-      "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
+      "Integrated application for managing occupational health and professional pathology activities at CHUIS hospital. Features risk mapping, medical visits, training management, and comprehensive statistics for work accidents and occupational diseases.",
     tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-    ],
-    link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
-    imgUrl:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop"
-    ],
-    features: [
-      "Real-time weather with air quality index and UV metrics",
-      "Interactive Mapbox integration for weather visualization",
-      "5-day forecast with hourly details and pollution data",
-    ],
-  },
-  {
-    id: 5,
-    serviceName: "AI-RESUME-BUILDER",
-    description:
-      "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
-      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
-      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
-    ],
-    link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-    imgUrl:
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
-    ],
-    features: [
-      "AI-powered content suggestions with real-time preview",
-      "Social authentication (Google, GitHub, Facebook)",
-      "Multiple templates with PDF export and folder management",
-    ],
-  },
-  {
-    id: 6,
-    serviceName: "SOCIAL MEDIA DOWNLOADER",
-    description:
-      "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
-    tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer Motion" },
-      { icon: <Video className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Video API" },
-      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
-      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "RapidAPI" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-    ],
-    link: "https://socialmediadownload.vercel.app/",
-    imgUrl:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop"
-    ],
-    features: [
-      "Multi-platform support (Instagram, TikTok, YouTube, Facebook, Twitter)",
-      "Intelligent URL validation and platform detection",
-      "Modern animations with Framer Motion and responsive design",
-    ],
-  },
-  {
-    id: 7,
-    serviceName: "QR CODE GENERATOR",
-    description:
-      "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <QrCode className="w-4 h-4 sm:w-5 sm:h-5" />, name: "QR Scan" },
-      { icon: <Palette className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Colors" },
-      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
     ],
-    link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
-    imgUrl:
-      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+    link: "https://github.com/khalid-tourhzaoui/laravel-react-smtpp-tailadmin",
+    imgUrl: "/public/assets/smtpp-project/image_n_6.png",
     images: [
-      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop"
+      "/public/assets/smtpp-project/image_n_6.png",
+      "/public/assets/smtpp-project/image_n_1.png",
+      "/public/assets/smtpp-project/image_n_2.png",
+      "/public/assets/smtpp-project/image_n_3.png",
+      "/public/assets/smtpp-project/image_n_4.png",
+      "/public/assets/smtpp-project/image_n_5.png",
     ],
     features: [
-      "Customizable QR codes with color options",
-      "Logo embedding and style variations",
-      "Export in multiple formats (PNG, SVG, PDF)",
+      "Professional risk mapping and workplace assessment system",
+      "Medical visits management with aptitude certificate generation",
+      "Training, accidents, and occupational diseases tracking with analytics",
     ],
   },
+  // {
+  //   id: 5,
+  //   serviceName: "SMART LANGUAGE CONVERTER",
+  //   description:
+  //     "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
+  //   tools: [
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+  //     { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+  //     { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+  //     { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Translation" },
+  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+  //   ],
+  //   link: "https://text-translate-ai.vercel.app/",
+  //   imgUrl:
+  //     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1484935558426-cd0213f0127b?w=800&h=600&fit=crop"
+  //   ],
+  //   features: [
+  //     "Real-time translation with speech recognition and TTS",
+  //     "File upload and URL content extraction for translation",
+  //     "Favorites system with local storage for saved translations",
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   serviceName: "ADVANCED WEATHER APP",
+  //   description:
+  //     "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
+  //   tools: [
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+  //     { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+  //     { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
+  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+  //   ],
+  //   link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
+  //   imgUrl:
+  //     "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop"
+  //   ],
+  //   features: [
+  //     "Real-time weather with air quality index and UV metrics",
+  //     "Interactive Mapbox integration for weather visualization",
+  //     "5-day forecast with hourly details and pollution data",
+  //   ],
+  // },
+  // {
+  //   id: 7,
+  //   serviceName: "AI-RESUME-BUILDER",
+  //   description:
+  //     "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
+  //   tools: [
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
+  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
+  //     { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
+  //     { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+  //   ],
+  //   link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
+  //   imgUrl:
+  //     "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+  //   ],
+  //   features: [
+  //     "AI-powered content suggestions with real-time preview",
+  //     "Social authentication (Google, GitHub, Facebook)",
+  //     "Multiple templates with PDF export and folder management",
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   serviceName: "SOCIAL MEDIA DOWNLOADER",
+  //   description:
+  //     "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
+  //   tools: [
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+  //     { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer Motion" },
+  //     { icon: <Video className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Video API" },
+  //     { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
+  //     { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "RapidAPI" },
+  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+  //   ],
+  //   link: "https://socialmediadownload.vercel.app/",
+  //   imgUrl:
+  //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop"
+  //   ],
+  //   features: [
+  //     "Multi-platform support (Instagram, TikTok, YouTube, Facebook, Twitter)",
+  //     "Intelligent URL validation and platform detection",
+  //     "Modern animations with Framer Motion and responsive design",
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   serviceName: "QR CODE GENERATOR",
+  //   description:
+  //     "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",
+  //   tools: [
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+  //     { icon: <QrCode className="w-4 h-4 sm:w-5 sm:h-5" />, name: "QR Scan" },
+  //     { icon: <Palette className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Colors" },
+  //     { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
+  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+  //   ],
+  //   link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
+  //   imgUrl:
+  //     "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop"
+  //   ],
+  //   features: [
+  //     "Customizable QR codes with color options",
+  //     "Logo embedding and style variations",
+  //     "Export in multiple formats (PNG, SVG, PDF)",
+  //   ],
+  // },
 ];
 
 export const ProjectCarousel = () => {
@@ -406,7 +471,7 @@ export const ProjectCarousel = () => {
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <Zap className="w-7 h-7 sm:w-8 sm:h-8 text-orange-500 fill-orange-500" />
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-600 uppercase tracking-tight leading-tight">
+                  <h3 className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-orange-600 uppercase tracking-tight leading-tight">
                     {currentProject.serviceName}
                   </h3>
                 </div>

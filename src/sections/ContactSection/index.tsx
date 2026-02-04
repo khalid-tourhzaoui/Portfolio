@@ -281,7 +281,7 @@ export function ContactSection() {
                   <div className="relative">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 border-4 sm:border-6 border-zinc-800 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden transform hover:rotate-6 transition-transform">
                       <img 
-                        src="/assets/profile-BppvMIsH.jpg"
+                        src="/public/assets/profile-BppvMIsH.jpg"
                         alt="Khalid Khalid Profile"
                         className="w-full h-full object-cover"
                       />

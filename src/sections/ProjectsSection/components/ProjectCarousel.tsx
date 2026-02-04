@@ -18,6 +18,8 @@ import {
   Smartphone,
   Layout,
   Palette,
+  Video,
+  Languages
 } from "lucide-react";
 
 interface Project {
@@ -27,15 +29,100 @@ interface Project {
   tools: { icon: React.ReactNode; name: string }[];
   link: string;
   imgUrl: string;
+  images?: string[]; // Nouvelles images pour le slider
   features: string[];
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    serviceName: "WEATHER APP",
+    serviceName: "PORTFOLIO-GAMING",
     description:
-      "Comprehensive weather application with real-time data, air quality monitoring, and 5-day forecasts powered by OpenWeather API.",
+      "Modern portfolio application with retro gaming/RPG inspired interface, featuring character cards, XP system, interactive switchboard navigation, and terminal-style contact form.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React Router" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://khalid-tourhzaoui.vercel.app/",
+    imgUrl: "/public/assets/portfolio-project/image_n_1.png",
+    images: [
+      "/public/assets/portfolio-project/image_n_1.png",
+      "/public/assets/portfolio-project/image_n_2.png",
+      "/public/assets/portfolio-project/image_n_3.png",
+      "/public/assets/portfolio-project/image_n_4.png",
+      "/public/assets/portfolio-project/image_n_5.png",
+    ],
+    features: [
+      "Unique gaming/RPG interface with character stats and XP system",
+      "Interactive switchboard navigation and terminal-style components",
+      "Fully responsive design with smooth animations and transitions",
+    ],
+  },
+  {
+    id: 2,
+    serviceName: "AI-LEGAL-PLATFORM",
+    description:
+      "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh) powered by OpenAI.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OpenAI" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://legal-ai-morocco.vercel.app/",
+    imgUrl: "/public/assets/ai-legal-project/image_n_1.png",
+    images: [
+      "/public/assets/ai-legal-project/image_n_2.png",
+      "/public/assets/ai-legal-project/image_n_1.png",
+      "/public/assets/ai-legal-project/image_n_3.png"
+    ],
+    features: [
+      "AI-powered legal assistance specialized for Moroccan law",
+      "Multilingual interface (Arabic, French, Amazigh)",
+      "Document viewer with templates and download options",
+    ],
+  },
+  {
+    id: 3,
+    serviceName: "SMART LANGUAGE CONVERTER",
+    description:
+      "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Translation" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://text-translate-ai.vercel.app/",
+    imgUrl:
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484935558426-cd0213f0127b?w=800&h=600&fit=crop"
+    ],
+    features: [
+      "Real-time translation with speech recognition and TTS",
+      "File upload and URL content extraction for translation",
+      "Favorites system with local storage for saved translations",
+    ],
+  },
+  {
+    id: 4,
+    serviceName: "ADVANCED WEATHER APP",
+    description:
+      "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
@@ -48,17 +135,77 @@ const projects: Project[] = [
     link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
     imgUrl:
       "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop"
+    ],
     features: [
-      "Real-time weather data with air quality index (AQI)",
+      "Real-time weather with air quality index and UV metrics",
       "Interactive Mapbox integration for weather visualization",
-      "5-day forecast with UV index and pollution metrics",
+      "5-day forecast with hourly details and pollution data",
     ],
   },
   {
-    id: 2,
+    id: 5,
+    serviceName: "AI-RESUME-BUILDER",
+    description:
+      "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
+      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
+    imgUrl:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+    ],
+    features: [
+      "AI-powered content suggestions with real-time preview",
+      "Social authentication (Google, GitHub, Facebook)",
+      "Multiple templates with PDF export and folder management",
+    ],
+  },
+  {
+    id: 6,
+    serviceName: "SOCIAL MEDIA DOWNLOADER",
+    description:
+      "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer Motion" },
+      { icon: <Video className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Video API" },
+      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "RapidAPI" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://socialmediadownload.vercel.app/",
+    imgUrl:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop"
+    ],
+    features: [
+      "Multi-platform support (Instagram, TikTok, YouTube, Facebook, Twitter)",
+      "Intelligent URL validation and platform detection",
+      "Modern animations with Framer Motion and responsive design",
+    ],
+  },
+  {
+    id: 7,
     serviceName: "QR CODE GENERATOR",
     description:
-      "Modern QR code generator with customization options including colors, logos, and multiple download formats.",
+      "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
@@ -72,107 +219,22 @@ const projects: Project[] = [
     link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
     imgUrl:
       "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop"
+    ],
     features: [
       "Customizable QR codes with color options",
       "Logo embedding and style variations",
       "Export in multiple formats (PNG, SVG, PDF)",
     ],
   },
-  {
-    id: 3,
-    serviceName: "Social Media Downloader",
-    description:
-      "Universal media downloader supporting multiple platforms with high-quality video and audio extraction capabilities.",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-      { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
-      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "FastAPI" },
-      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-    ],
-    link: "https://github.com/khalid-tourhzaoui/social-media-downloader",
-    imgUrl:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-    features: [
-      "Multi-platform support (YouTube, Instagram, TikTok)",
-      "High-quality video and audio downloads",
-      "Fast API backend with smooth animations",
-    ],
-  },
-  {
-    id: 4,
-    serviceName: "Smart Language Converter",
-    description:
-      "AI-powered language translation and text-to-speech converter with support for multiple languages and dialects.",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Audio" },
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "FastAPI" },
-    ],
-    link: "https://smartlanguageconverter.vercel.app/",
-    imgUrl:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-    features: [
-      "Real-time text translation with AI processing",
-      "Text-to-speech functionality with natural voices",
-      "Support for multiple languages and dialects",
-    ],
-  },
-  {
-    id: 5,
-    serviceName: "AI-RESUME-BUILDER",
-    description:
-      "Intelligent resume builder with AI-powered content suggestions, multiple templates, and PDF export functionality.",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
-      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
-      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
-    ],
-    link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-    imgUrl:
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-    features: [
-      "AI-powered content suggestions and optimization",
-      "Multiple professional templates with customization",
-      "PDF export with ATS-friendly formatting",
-    ],
-  },
-  {
-    id: 6,
-    serviceName: "AI-LEGAL-PLATFORM",
-    description:
-      "Legal AI platform for Moroccan law providing instant legal assistance, document templates, and multilingual support (Arabic, French, Amazigh).",
-    tools: [
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer" },
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-    ],
-    link: "https://github.com/khalid-tourhzaoui/legal-ai-platform",
-    imgUrl:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
-    features: [
-      "AI-powered legal assistance for Moroccan law",
-      "Multilingual support (Arabic, French, Amazigh)",
-      "Document templates with preview and download",
-    ],
-  },
 ];
 
 export const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleTransition = (callback: () => void) => {
@@ -185,12 +247,14 @@ export const ProjectCarousel = () => {
   const nextProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev + 1) % projects.length);
+      setCurrentImageIndex(0); // Reset image index when changing project
     });
   };
 
   const prevProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+      setCurrentImageIndex(0); // Reset image index when changing project
     });
   };
 
@@ -198,10 +262,24 @@ export const ProjectCarousel = () => {
     if (index === currentIndex || isAnimating) return;
     handleTransition(() => {
       setCurrentIndex(index);
+      setCurrentImageIndex(0); // Reset image index when changing project
     });
   };
 
   const currentProject = projects[currentIndex];
+  const projectImages = currentProject.images || [currentProject.imgUrl];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % projectImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   return (
     <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,14 +333,75 @@ export const ProjectCarousel = () => {
               isAnimating ? "opacity-0" : "opacity-100"
             }`}
           >
-            <div className="relative bg-gradient-to-br from-orange-100 to-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
-              <img
-                src={currentProject.imgUrl}
-                alt={currentProject.serviceName}
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-              />
+            {/* Image Slider Section */}
+            <div className="space-y-3">
+              {/* Main Image */}
+              <div className="relative bg-gradient-to-br from-orange-100 to-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
+                <img
+                  src={projectImages[currentImageIndex]}
+                  alt={`${currentProject.serviceName} - Image ${currentImageIndex + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-300"
+                />
+                
+                {/* Image Navigation Arrows */}
+                {projectImages.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-white/90 border-2 border-zinc-800 rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all opacity-0 group-hover:opacity-100"
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-800 stroke-[3]" />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-white/90 border-2 border-zinc-800 rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all opacity-0 group-hover:opacity-100"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-800 stroke-[3]" />
+                    </button>
+                  </>
+                )}
+
+                {/* Image Counter */}
+                {projectImages.length > 1 && (
+                  <div className="absolute bottom-3 right-3 px-3 py-1.5 bg-zinc-800/90 border-2 border-white rounded-lg">
+                    <span className="text-xs sm:text-sm font-bold text-white">
+                      {currentImageIndex + 1} / {projectImages.length}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Thumbnail Gallery */}
+              {projectImages.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                  {projectImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToImage(index)}
+                      className={`relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 border-3 rounded-lg overflow-hidden transition-all ${
+                        index === currentImageIndex
+                          ? "border-orange-500 scale-105 shadow-[0px_4px_0px_0px_rgba(249,115,22,1)]"
+                          : "border-zinc-800 hover:border-orange-300 shadow-[0px_3px_0px_0px_rgba(42,42,42,1)]"
+                      }`}
+                      aria-label={`View image ${index + 1}`}
+                    >
+                      <img
+                        src={img}
+                        alt={`Thumbnail ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                      {index === currentImageIndex && (
+                        <div className="absolute inset-0 bg-orange-500/20 border-2 border-orange-500" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
+            {/* Project Details Section */}
             <div className="flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-3">
@@ -368,6 +507,16 @@ export const ProjectCarousel = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </div>
   );
 };

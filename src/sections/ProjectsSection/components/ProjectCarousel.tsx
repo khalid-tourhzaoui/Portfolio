@@ -95,7 +95,6 @@ const projects: Project[] = [
       "Blog title generator with 10+ creative suggestions per request",
       "DALL-E 3 image generation and intelligent background removal",
       "Resume analysis with scoring, strengths detection, and improvement suggestions",
-      "Secure authentication with JWT and comprehensive creation management dashboard"
     ],
   },
   {
@@ -155,8 +154,38 @@ const projects: Project[] = [
       "Training, accidents, and occupational diseases tracking with analytics",
     ],
   },
+  {
+    id: 5,
+    serviceName: "TONTINE MANAGEMENT SYSTEM",
+    description:
+      "Comprehensive tontine (daret) management platform with participant tracking, automated payment reminders, notifications system, and real-time analytics dashboard powered by Laravel and React.",
+    tools: [
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/laravel-react-tontine-tailadmin",
+    imgUrl: "/public/assets/tontine-project/image_n_1.png",
+    images: [
+      "/public/assets/tontine-project/image_n_1.png",
+      "/public/assets/tontine-project/image_n_2.png",
+      "/public/assets/tontine-project/image_n_3.png",
+      "/public/assets/tontine-project/image_n_4.png",
+      "/public/assets/tontine-project/image_n_5.png",
+      "/public/assets/tontine-project/image_n_6.png",
+    ],
+    features: [
+      "Multi-tontine creation with customizable cycles, amounts, and participant management",
+      "Automated email reminders, delay notifications, and in-app notification system",
+      "Analytics dashboard with metrics, charts, and demographic visualizations",
+    ],
+  },
   // {
-  //   id: 5,
+  //   id: 6,
   //   serviceName: "SMART LANGUAGE CONVERTER",
   //   description:
   //     "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
@@ -184,7 +213,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 6,
+  //   id: 7,
   //   serviceName: "ADVANCED WEATHER APP",
   //   description:
   //     "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
@@ -212,7 +241,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 7,
+  //   id: 8,
   //   serviceName: "AI-RESUME-BUILDER",
   //   description:
   //     "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
@@ -239,7 +268,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 8,
+  //   id: 9,
   //   serviceName: "SOCIAL MEDIA DOWNLOADER",
   //   description:
   //     "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
@@ -267,7 +296,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 9,
+  //   id: 10,
   //   serviceName: "QR CODE GENERATOR",
   //   description:
   //     "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",
@@ -347,7 +376,7 @@ export const ProjectCarousel = () => {
   };
 
   return (
-    <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <button
         onClick={prevProject}
         disabled={isAnimating}

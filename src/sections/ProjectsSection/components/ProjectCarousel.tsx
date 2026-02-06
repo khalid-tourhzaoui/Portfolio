@@ -214,6 +214,33 @@ const projects: Project[] = [
       "Credit-based system with secure payment integration and JWT authentication",
     ],
   },
+  {
+    id: 7,
+    serviceName: "ADVANCED WEATHER APP",
+    description:
+      "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
+    imgUrl: "/public/assets/weather-project/image_n_1.png",
+    images: [
+      "/public/assets/weather-project/image_n_1.png",
+      "/public/assets/weather-project/image_n_2.png",
+      "/public/assets/weather-project/image_n_3.png",
+    ],
+    features: [
+      "Real-time weather with air quality index and UV metrics",
+      "Interactive Mapbox integration for weather visualization",
+      "5-day forecast with hourly details and pollution data",
+    ],
+  },
   // {
   //   id: 7,
   //   serviceName: "SMART LANGUAGE CONVERTER",
@@ -240,34 +267,6 @@ const projects: Project[] = [
   //     "Real-time translation with speech recognition and TTS",
   //     "File upload and URL content extraction for translation",
   //     "Favorites system with local storage for saved translations",
-  //   ],
-  // },
-  // {
-  //   id: 8,
-  //   serviceName: "ADVANCED WEATHER APP",
-  //   description:
-  //     "Comprehensive weather application with real-time data, air quality monitoring (AQI), UV index, 5-day forecasts, and interactive Mapbox integration powered by OpenWeather API.",
-  //   tools: [
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-  //     { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-  //     { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
-  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-  //   ],
-  //   link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
-  //   imgUrl:
-  //     "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop"
-  //   ],
-  //   features: [
-  //     "Real-time weather with air quality index and UV metrics",
-  //     "Interactive Mapbox integration for weather visualization",
-  //     "5-day forecast with hourly details and pollution data",
   //   ],
   // },
   // {

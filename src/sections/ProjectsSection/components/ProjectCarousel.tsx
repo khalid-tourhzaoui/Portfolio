@@ -241,34 +241,32 @@ const projects: Project[] = [
       "5-day forecast with hourly details and pollution data",
     ],
   },
-  // {
-  //   id: 7,
-  //   serviceName: "SMART LANGUAGE CONVERTER",
-  //   description:
-  //     "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
-  //   tools: [
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-  //     { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-  //     { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-  //     { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Translation" },
-  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-  //   ],
-  //   link: "https://text-translate-ai.vercel.app/",
-  //   imgUrl:
-  //     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1484935558426-cd0213f0127b?w=800&h=600&fit=crop"
-  //   ],
-  //   features: [
-  //     "Real-time translation with speech recognition and TTS",
-  //     "File upload and URL content extraction for translation",
-  //     "Favorites system with local storage for saved translations",
-  //   ],
-  // },
+  {
+    id: 8,
+    serviceName: "SMART LANGUAGE CONVERTER",
+    description:
+      "AI-powered translation app with real-time text translation, text-to-speech, speech recognition, file upload, and URL content extraction for seamless multilingual communication.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Groq AI" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://text-translate-ai.vercel.app/",
+    imgUrl: "/public/assets/translate-project/image_n_1.png",
+    images: [
+      "/public/assets/translate-project/image_n_1.png",
+      "/public/assets/translate-project/image_n_2.png",
+    ],
+    features: [
+      "Real-time AI translation with speech recognition and text-to-speech",
+      "File upload (TXT, RTF, DOC, DOCX) and URL content extraction",
+      "Support for 100+ languages with smart language detection",
+    ],
+  },
   // {
   //   id: 9,
   //   serviceName: "AI-RESUME-BUILDER",

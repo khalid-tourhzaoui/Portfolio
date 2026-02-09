@@ -267,8 +267,38 @@ const projects: Project[] = [
       "Support for 100+ languages with smart language detection",
     ],
   },
+  {
+    id: 9,
+    serviceName: "YOUTUBE SENTIMENT ANALYZER",
+    description:
+      "AI-powered sentiment analysis platform for YouTube comments with real-time data visualization, multilingual support, and comprehensive analytics dashboard using NLP and machine learning.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Flask" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Python" },
+      { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "NLP" },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "YouTube API" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/youtube-sentiment-app",
+    imgUrl: "/public/assets/youtube-sentiment-project/image_n_1.png",
+    images: [
+      "/public/assets/youtube-sentiment-project/image_n_1.png",
+      "/public/assets/youtube-sentiment-project/image_n_2.png",
+      "/public/assets/youtube-sentiment-project/image_n_3.png",
+      "/public/assets/youtube-sentiment-project/image_n_4.png",
+      "/public/assets/youtube-sentiment-project/image_n_5.png",
+    ],
+    features: [
+      "AI sentiment analysis with positive/negative/neutral classification using NLP",
+      "Interactive charts for sentiment distribution and language analytics",
+      "Real-time YouTube data extraction with video metadata and comment processing",
+    ],
+  },
   // {
-  //   id: 9,
+  //   id: 10,
   //   serviceName: "AI-RESUME-BUILDER",
   //   description:
   //     "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
@@ -295,7 +325,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 10,
+  //   id: 11,
   //   serviceName: "SOCIAL MEDIA DOWNLOADER",
   //   description:
   //     "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
@@ -323,7 +353,7 @@ const projects: Project[] = [
   //   ],
   // },
   // {
-  //   id: 11,
+  //   id: 12,
   //   serviceName: "QR CODE GENERATOR",
   //   description:
   //     "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",

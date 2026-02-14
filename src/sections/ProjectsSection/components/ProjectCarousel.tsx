@@ -297,90 +297,37 @@ const projects: Project[] = [
       "Real-time YouTube data extraction with video metadata and comment processing",
     ],
   },
-  // {
-  //   id: 10,
-  //   serviceName: "AI-RESUME-BUILDER",
-  //   description:
-  //     "Intelligent resume builder combining Laravel and React with AI-powered content suggestions, social authentication, multiple templates, and PDF export functionality.",
-  //   tools: [
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
-  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
-  //     { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF" },
-  //     { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
-  //   ],
-  //   link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-  //   imgUrl:
-  //     "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
-  //   ],
-  //   features: [
-  //     "AI-powered content suggestions with real-time preview",
-  //     "Social authentication (Google, GitHub, Facebook)",
-  //     "Multiple templates with PDF export and folder management",
-  //   ],
-  // },
-  // {
-  //   id: 11,
-  //   serviceName: "SOCIAL MEDIA DOWNLOADER",
-  //   description:
-  //     "Universal video downloader supporting Instagram, TikTok, YouTube, Facebook, and Twitter with intelligent URL validation and seamless user experience.",
-  //   tools: [
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-  //     { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Framer Motion" },
-  //     { icon: <Video className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Video API" },
-  //     { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
-  //     { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "RapidAPI" },
-  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-  //   ],
-  //   link: "https://socialmediadownload.vercel.app/",
-  //   imgUrl:
-  //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop"
-  //   ],
-  //   features: [
-  //     "Multi-platform support (Instagram, TikTok, YouTube, Facebook, Twitter)",
-  //     "Intelligent URL validation and platform detection",
-  //     "Modern animations with Framer Motion and responsive design",
-  //   ],
-  // },
-  // {
-  //   id: 12,
-  //   serviceName: "QR CODE GENERATOR",
-  //   description:
-  //     "Modern QR code generator with customization options including colors, logos, and multiple download formats (PNG, SVG, PDF).",
-  //   tools: [
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-  //     { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-  //     { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
-  //     { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-  //     { icon: <QrCode className="w-4 h-4 sm:w-5 sm:h-5" />, name: "QR Scan" },
-  //     { icon: <Palette className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Colors" },
-  //     { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Download" },
-  //     { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
-  //   ],
-  //   link: "https://github.com/khalid-tourhzaoui/QR-CODE-GENERATOR",
-  //   imgUrl:
-  //     "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
-  //   images: [
-  //     "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=800&h=600&fit=crop",
-  //     "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop"
-  //   ],
-  //   features: [
-  //     "Customizable QR codes with color options",
-  //     "Logo embedding and style variations",
-  //     "Export in multiple formats (PNG, SVG, PDF)",
-  //   ],
-  // },
+  {
+    id: 10,
+    serviceName: "AI RESUME BUILDER",
+    description:
+      "Full-stack intelligent resume builder powered by Laravel and React with Google Gemini AI integration for content generation, OAuth social authentication, brutalist design system, and comprehensive CV management with public/private sharing.",
+    tools: [
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Gemini AI" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF Export" },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OAuth" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
+    imgUrl: "/public/assets/ai-resume-project/image_n_1.png",
+    images: [
+      "/public/assets/ai-resume-project/image_n_1.png",
+      "/public/assets/ai-resume-project/image_n_2.png",
+      "/public/assets/ai-resume-project/image_n_3.png",
+      "/public/assets/ai-resume-project/image_n_4.png",
+      "/public/assets/ai-resume-project/image_n_5.png",
+      "/public/assets/ai-resume-project/image_n_6.png",
+    ],
+    features: [
+      "AI-powered content generation with Google Gemini for summaries and descriptions",
+      "OAuth authentication (Google/GitHub) with Laravel Socialite and complete user management",
+      "Brutalist design with real-time preview, PDF export, and public/private CV sharing system",
+    ],
+  },
 ];
 
 export const ProjectCarousel = () => {

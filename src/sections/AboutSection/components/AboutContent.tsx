@@ -10,7 +10,7 @@ import {
   FolderKanban,
   Send,
 } from "lucide-react";
-
+import aboutImage from '../../../../public/assets/about-C0vwj3CE.jfif';
 export function AboutContent() {
   const coreAbilities = [
     {
@@ -169,7 +169,7 @@ export function AboutContent() {
 
             <div className="relative bg-zinc-600/50">
               <img
-                src="/public/assets/about-C0vwj3CE.jfif"
+                src={aboutImage}
                 alt="Khalid Developer Character"
                 className="w-full h-auto object-cover"
               />

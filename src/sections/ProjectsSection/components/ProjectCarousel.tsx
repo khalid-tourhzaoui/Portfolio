@@ -21,6 +21,73 @@ import {
   Wand2
 } from "lucide-react";
 
+// Portfolio Project Images
+import portfolioImg1 from "../../../../public/assets/portfolio-project/image_n_1.png";
+import portfolioImg2 from "../../../../public/assets/portfolio-project/image_n_2.png";
+import portfolioImg3 from "../../../../public/assets/portfolio-project/image_n_3.png";
+import portfolioImg4 from "../../../../public/assets/portfolio-project/image_n_4.png";
+import portfolioImg5 from "../../../../public/assets/portfolio-project/image_n_5.png";
+
+// Jouska Project Images
+import jouskaImg1 from "../../../../public/assets/jouska-project/image_n_1.png";
+import jouskaImg2 from "../../../../public/assets/jouska-project/image_n_2.png";
+import jouskaImg3 from "../../../../public/assets/jouska-project/image_n_3.png";
+import jouskaImg4 from "../../../../public/assets/jouska-project/image_n_4.png";
+import jouskaImg5 from "../../../../public/assets/jouska-project/image_n_5.png";
+import jouskaImg6 from "../../../../public/assets/jouska-project/image_n_6.png";
+
+// AI Legal Project Images
+import aiLegalImg1 from "../../../../public/assets/ai-legal-project/image_n_1.png";
+import aiLegalImg2 from "../../../../public/assets/ai-legal-project/image_n_2.png";
+import aiLegalImg3 from "../../../../public/assets/ai-legal-project/image_n_3.png";
+
+// SMTPP Project Images
+import smtppImg1 from "../../../../public/assets/smtpp-project/image_n_6.png";
+import smtppImg2 from "../../../../public/assets/smtpp-project/image_n_1.png";
+import smtppImg3 from "../../../../public/assets/smtpp-project/image_n_2.png";
+import smtppImg4 from "../../../../public/assets/smtpp-project/image_n_3.png";
+import smtppImg5 from "../../../../public/assets/smtpp-project/image_n_4.png";
+import smtppImg6 from "../../../../public/assets/smtpp-project/image_n_5.png";
+
+// Tontine Project Images
+import tontineImg1 from "../../../../public/assets/tontine-project/image_n_1.png";
+import tontineImg2 from "../../../../public/assets/tontine-project/image_n_2.png";
+import tontineImg3 from "../../../../public/assets/tontine-project/image_n_3.png";
+import tontineImg4 from "../../../../public/assets/tontine-project/image_n_4.png";
+import tontineImg5 from "../../../../public/assets/tontine-project/image_n_5.png";
+import tontineImg6 from "../../../../public/assets/tontine-project/image_n_6.png";
+
+// BG Removal Project Images
+import bgRemovalImg1 from "../../../../public/assets/bg-removal-project/image_n_1.png";
+import bgRemovalImg2 from "../../../../public/assets/bg-removal-project/image_n_2.png";
+import bgRemovalImg3 from "../../../../public/assets/bg-removal-project/image_n_3.png";
+import bgRemovalImg4 from "../../../../public/assets/bg-removal-project/image_n_4.png";
+import bgRemovalImg5 from "../../../../public/assets/bg-removal-project/image_n_5.png";
+
+// Weather Project Images
+import weatherImg1 from "../../../../public/assets/weather-project/image_n_1.png";
+import weatherImg2 from "../../../../public/assets/weather-project/image_n_2.png";
+import weatherImg3 from "../../../../public/assets/weather-project/image_n_3.png";
+
+// Translate Project Images
+import translateImg1 from "../../../../public/assets/translate-project/image_n_1.png";
+import translateImg2 from "../../../../public/assets/translate-project/image_n_2.png";
+
+// YouTube Sentiment Project Images
+import youtubeImg1 from "../../../../public/assets/youtube-sentiment-project/image_n_1.png";
+import youtubeImg2 from "../../../../public/assets/youtube-sentiment-project/image_n_2.png";
+import youtubeImg3 from "../../../../public/assets/youtube-sentiment-project/image_n_3.png";
+import youtubeImg4 from "../../../../public/assets/youtube-sentiment-project/image_n_4.png";
+import youtubeImg5 from "../../../../public/assets/youtube-sentiment-project/image_n_5.png";
+
+// AI Resume Project Images
+import aiResumeImg1 from "../../../../public/assets/ai-resume-project/image_n_1.png";
+import aiResumeImg2 from "../../../../public/assets/ai-resume-project/image_n_2.png";
+import aiResumeImg3 from "../../../../public/assets/ai-resume-project/image_n_3.png";
+import aiResumeImg4 from "../../../../public/assets/ai-resume-project/image_n_4.png";
+import aiResumeImg5 from "../../../../public/assets/ai-resume-project/image_n_5.png";
+import aiResumeImg6 from "../../../../public/assets/ai-resume-project/image_n_6.png";
+
 interface Project {
   id: number;
   serviceName: string;
@@ -48,14 +115,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://khalid-tourhzaoui.vercel.app/",
-    imgUrl: "/assets/portfolio-project/image_n_1.png",
-    images: [
-      "/assets/portfolio-project/image_n_1.png",
-      "/assets/portfolio-project/image_n_2.png",
-      "/assets/portfolio-project/image_n_3.png",
-      "/assets/portfolio-project/image_n_4.png",
-      "/assets/portfolio-project/image_n_5.png",
-    ],
+    imgUrl: portfolioImg1,
+    images: [portfolioImg1, portfolioImg2, portfolioImg3, portfolioImg4, portfolioImg5],
     features: [
       "Unique gaming/RPG interface with character stats and XP system",
       "Interactive switchboard navigation and terminal-style components",
@@ -78,15 +139,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "JWT" },
     ],
     link: "https://github.com/khalid-tourhzaoui/jouska-ai",
-    imgUrl: "/assets/jouska-project/image_n_1.png",
-    images: [
-      "/assets/jouska-project/image_n_1.png",
-      "/assets/jouska-project/image_n_2.png",
-      "/assets/jouska-project/image_n_3.png",
-      "/assets/jouska-project/image_n_4.png",
-      "/assets/jouska-project/image_n_5.png",
-      "/assets/jouska-project/image_n_6.png",
-    ],
+    imgUrl: jouskaImg1,
+    images: [jouskaImg1, jouskaImg2, jouskaImg3, jouskaImg4, jouskaImg5, jouskaImg6],
     features: [
       "AI article generation with customizable tone and SEO optimization",
       "Blog title generator with 10+ creative suggestions per request",
@@ -109,12 +163,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://legal-ai-morocco.vercel.app/",
-    imgUrl: "/assets/ai-legal-project/image_n_1.png",
-    images: [
-      "/assets/ai-legal-project/image_n_1.png",
-      "/assets/ai-legal-project/image_n_2.png",
-      "/assets/ai-legal-project/image_n_3.png"
-    ],
+    imgUrl: aiLegalImg1,
+    images: [aiLegalImg1, aiLegalImg2, aiLegalImg3],
     features: [
       "AI-powered legal assistance specialized for Moroccan law",
       "Multilingual interface (Arabic, French, Amazigh)",
@@ -136,15 +186,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
     ],
     link: "https://github.com/khalid-tourhzaoui/laravel-react-smtpp-tailadmin",
-    imgUrl: "/assets/smtpp-project/image_n_6.png",
-    images: [
-      "/assets/smtpp-project/image_n_6.png",
-      "/assets/smtpp-project/image_n_1.png",
-      "/assets/smtpp-project/image_n_2.png",
-      "/assets/smtpp-project/image_n_3.png",
-      "/assets/smtpp-project/image_n_4.png",
-      "/assets/smtpp-project/image_n_5.png",
-    ],
+    imgUrl: smtppImg1,
+    images: [smtppImg1, smtppImg2, smtppImg3, smtppImg4, smtppImg5, smtppImg6],
     features: [
       "Professional risk mapping and workplace assessment system",
       "Medical visits management with aptitude certificate generation",
@@ -166,15 +209,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
     ],
     link: "https://github.com/khalid-tourhzaoui/laravel-react-tontine-tailadmin",
-    imgUrl: "/assets/tontine-project/image_n_1.png",
-    images: [
-      "/assets/tontine-project/image_n_1.png",
-      "/assets/tontine-project/image_n_2.png",
-      "/assets/tontine-project/image_n_3.png",
-      "/assets/tontine-project/image_n_4.png",
-      "/assets/tontine-project/image_n_5.png",
-      "/assets/tontine-project/image_n_6.png",
-    ],
+    imgUrl: tontineImg1,
+    images: [tontineImg1, tontineImg2, tontineImg3, tontineImg4, tontineImg5, tontineImg6],
     features: [
       "Multi-tontine creation with customizable cycles, amounts, and participant management",
       "Automated email reminders, delay notifications, and in-app notification system",
@@ -197,14 +233,8 @@ const projects: Project[] = [
       { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Multer" },
     ],
     link: "https://github.com/votre-username/bg-removal",
-    imgUrl: "/assets/bg-removal-project/image_n_1.png",
-    images: [
-      "/assets/bg-removal-project/image_n_1.png",
-      "/assets/bg-removal-project/image_n_2.png",
-      "/assets/bg-removal-project/image_n_3.png",
-      "/assets/bg-removal-project/image_n_4.png",
-      "/assets/bg-removal-project/image_n_5.png",
-    ],
+    imgUrl: bgRemovalImg1,
+    images: [bgRemovalImg1, bgRemovalImg2, bgRemovalImg3, bgRemovalImg4, bgRemovalImg5],
     features: [
       "AI-powered background removal with drag-and-drop upload",
       "Interactive before/after slider for result comparison",
@@ -226,12 +256,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
-    imgUrl: "/assets/weather-project/image_n_1.png",
-    images: [
-      "/assets/weather-project/image_n_1.png",
-      "/assets/weather-project/image_n_2.png",
-      "/assets/weather-project/image_n_3.png",
-    ],
+    imgUrl: weatherImg1,
+    images: [weatherImg1, weatherImg2, weatherImg3],
     features: [
       "Real-time weather with air quality index and UV metrics",
       "Interactive Mapbox integration for weather visualization",
@@ -253,11 +279,8 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://text-translate-ai.vercel.app/",
-    imgUrl: "/assets/translate-project/image_n_1.png",
-    images: [
-      "/assets/translate-project/image_n_1.png",
-      "/assets/translate-project/image_n_2.png",
-    ],
+    imgUrl: translateImg1,
+    images: [translateImg1, translateImg2],
     features: [
       "Real-time AI translation with speech recognition and text-to-speech",
       "File upload (TXT, RTF, DOC, DOCX) and URL content extraction",
@@ -280,14 +303,8 @@ const projects: Project[] = [
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
     ],
     link: "https://github.com/khalid-tourhzaoui/youtube-sentiment-app",
-    imgUrl: "/assets/youtube-sentiment-project/image_n_1.png",
-    images: [
-      "/assets/youtube-sentiment-project/image_n_1.png",
-      "/assets/youtube-sentiment-project/image_n_2.png",
-      "/assets/youtube-sentiment-project/image_n_3.png",
-      "/assets/youtube-sentiment-project/image_n_4.png",
-      "/assets/youtube-sentiment-project/image_n_5.png",
-    ],
+    imgUrl: youtubeImg1,
+    images: [youtubeImg1, youtubeImg2, youtubeImg3, youtubeImg4, youtubeImg5],
     features: [
       "AI sentiment analysis with positive/negative/neutral classification using NLP",
       "Interactive charts for sentiment distribution and language analytics",
@@ -310,15 +327,8 @@ const projects: Project[] = [
       { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OAuth" },
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-    imgUrl: "/assets/ai-resume-project/image_n_1.png",
-    images: [
-      "/assets/ai-resume-project/image_n_1.png",
-      "/assets/ai-resume-project/image_n_2.png",
-      "/assets/ai-resume-project/image_n_3.png",
-      "/assets/ai-resume-project/image_n_4.png",
-      "/assets/ai-resume-project/image_n_5.png",
-      "/assets/ai-resume-project/image_n_6.png",
-    ],
+    imgUrl: aiResumeImg1,
+    images: [aiResumeImg1, aiResumeImg2, aiResumeImg3, aiResumeImg4, aiResumeImg5, aiResumeImg6],
     features: [
       "AI-powered content generation with Google Gemini for summaries and descriptions",
       "OAuth authentication (Google/GitHub) with Laravel Socialite and complete user management",

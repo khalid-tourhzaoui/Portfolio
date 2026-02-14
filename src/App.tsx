@@ -4,7 +4,7 @@ import { LaunchModal } from "./components/LaunchModal";
 import { Header } from "./sections/Header";
 import { Main } from "./components/Main";
 import { Footer } from "./sections/FooterSection";
-
+import AudioMusic from "../public/assets/FACE_TO_FACE.mp3";
 export const App = () => {
   const [showModal, setShowModal] = useState(true);
   const [playMusic, setPlayMusic] = useState(false);
@@ -51,7 +51,7 @@ export const App = () => {
             )}
             <audio
               ref={audioRef}
-              src="/src/assets/FACE_TO_FACE.mp3"
+              src={AudioMusic}
               preload="auto"
               loop
               className="box-border caret-transparent hidden"

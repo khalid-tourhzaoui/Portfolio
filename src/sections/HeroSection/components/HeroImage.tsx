@@ -1,3 +1,4 @@
+import HeroThumbnail from '../../../../public/assets/profile-D8-g5WhZ.png';
 export const HeroImage = () => {
   return (
     <div className="flex items-center justify-center lg:justify-end pb-12 md:pb-16 lg:pb-0">
@@ -8,7 +9,7 @@ export const HeroImage = () => {
             <div className="absolute inset-4 border-4 border-orange-500 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-yellow-100">
               <img
                 alt="profile"
-                src="/public/assets/profile-D8-g5WhZ.png"
+                src={HeroThumbnail}
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />
             </div>

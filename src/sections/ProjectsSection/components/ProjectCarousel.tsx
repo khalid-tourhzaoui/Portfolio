@@ -48,13 +48,13 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://khalid-tourhzaoui.vercel.app/",
-    imgUrl: "../../../public/assets/portfolio-project/image_n_1.png",
+    imgUrl: "/assets/portfolio-project/image_n_1.png",
     images: [
-      "../../../public/assets/portfolio-project/image_n_1.png",
-      "../../../public/assets/portfolio-project/image_n_2.png",
-      "../../../public/assets/portfolio-project/image_n_3.png",
-      "../../../public/assets/portfolio-project/image_n_4.png",
-      "../../../public/assets/portfolio-project/image_n_5.png",
+      "/assets/portfolio-project/image_n_1.png",
+      "/assets/portfolio-project/image_n_2.png",
+      "/assets/portfolio-project/image_n_3.png",
+      "/assets/portfolio-project/image_n_4.png",
+      "/assets/portfolio-project/image_n_5.png",
     ],
     features: [
       "Unique gaming/RPG interface with character stats and XP system",
@@ -78,14 +78,14 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "JWT" },
     ],
     link: "https://github.com/khalid-tourhzaoui/jouska-ai",
-    imgUrl: "../../../public/assets/jouska-project/image_n_1.png",
+    imgUrl: "/assets/jouska-project/image_n_1.png",
     images: [
-      "../../../public/assets/jouska-project/image_n_1.png",
-      "../../../public/assets/jouska-project/image_n_2.png",
-      "../../../public/assets/jouska-project/image_n_3.png",
-      "../../../public/assets/jouska-project/image_n_4.png",
-      "../../../public/assets/jouska-project/image_n_5.png",
-      "../../../public/assets/jouska-project/image_n_6.png",
+      "/assets/jouska-project/image_n_1.png",
+      "/assets/jouska-project/image_n_2.png",
+      "/assets/jouska-project/image_n_3.png",
+      "/assets/jouska-project/image_n_4.png",
+      "/assets/jouska-project/image_n_5.png",
+      "/assets/jouska-project/image_n_6.png",
     ],
     features: [
       "AI article generation with customizable tone and SEO optimization",
@@ -109,11 +109,11 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://legal-ai-morocco.vercel.app/",
-    imgUrl: "../../../public/assets/ai-legal-project/image_n_1.png",
+    imgUrl: "/assets/ai-legal-project/image_n_1.png",
     images: [
-      "../../../public/assets/ai-legal-project/image_n_1.png",
-      "../../../public/assets/ai-legal-project/image_n_2.png",
-      "../../../public/assets/ai-legal-project/image_n_3.png"
+      "/assets/ai-legal-project/image_n_1.png",
+      "/assets/ai-legal-project/image_n_2.png",
+      "/assets/ai-legal-project/image_n_3.png"
     ],
     features: [
       "AI-powered legal assistance specialized for Moroccan law",
@@ -136,14 +136,14 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
     ],
     link: "https://github.com/khalid-tourhzaoui/laravel-react-smtpp-tailadmin",
-    imgUrl: "../../../public/assets/smtpp-project/image_n_6.png",
+    imgUrl: "/assets/smtpp-project/image_n_6.png",
     images: [
-      "../../../public/assets/smtpp-project/image_n_6.png",
-      "../../../public/assets/smtpp-project/image_n_1.png",
-      "../../../public/assets/smtpp-project/image_n_2.png",
-      "../../../public/assets/smtpp-project/image_n_3.png",
-      "../../../public/assets/smtpp-project/image_n_4.png",
-      "../../../public/assets/smtpp-project/image_n_5.png",
+      "/assets/smtpp-project/image_n_6.png",
+      "/assets/smtpp-project/image_n_1.png",
+      "/assets/smtpp-project/image_n_2.png",
+      "/assets/smtpp-project/image_n_3.png",
+      "/assets/smtpp-project/image_n_4.png",
+      "/assets/smtpp-project/image_n_5.png",
     ],
     features: [
       "Professional risk mapping and workplace assessment system",
@@ -166,14 +166,14 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "API REST" },
     ],
     link: "https://github.com/khalid-tourhzaoui/laravel-react-tontine-tailadmin",
-    imgUrl: "../../../public/assets/tontine-project/image_n_1.png",
+    imgUrl: "/assets/tontine-project/image_n_1.png",
     images: [
-      "../../../public/assets/tontine-project/image_n_1.png",
-      "../../../public/assets/tontine-project/image_n_2.png",
-      "../../../public/assets/tontine-project/image_n_3.png",
-      "../../../public/assets/tontine-project/image_n_4.png",
-      "../../../public/assets/tontine-project/image_n_5.png",
-      "../../../public/assets/tontine-project/image_n_6.png",
+      "/assets/tontine-project/image_n_1.png",
+      "/assets/tontine-project/image_n_2.png",
+      "/assets/tontine-project/image_n_3.png",
+      "/assets/tontine-project/image_n_4.png",
+      "/assets/tontine-project/image_n_5.png",
+      "/assets/tontine-project/image_n_6.png",
     ],
     features: [
       "Multi-tontine creation with customizable cycles, amounts, and participant management",
@@ -197,13 +197,13 @@ const projects: Project[] = [
       { icon: <Download className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Multer" },
     ],
     link: "https://github.com/votre-username/bg-removal",
-    imgUrl: "../../../public/assets/bg-removal-project/image_n_1.png",
+    imgUrl: "/assets/bg-removal-project/image_n_1.png",
     images: [
-      "../../../public/assets/bg-removal-project/image_n_1.png",
-      "../../../public/assets/bg-removal-project/image_n_2.png",
-      "../../../public/assets/bg-removal-project/image_n_3.png",
-      "../../../public/assets/bg-removal-project/image_n_4.png",
-      "../../../public/assets/bg-removal-project/image_n_5.png",
+      "/assets/bg-removal-project/image_n_1.png",
+      "/assets/bg-removal-project/image_n_2.png",
+      "/assets/bg-removal-project/image_n_3.png",
+      "/assets/bg-removal-project/image_n_4.png",
+      "/assets/bg-removal-project/image_n_5.png",
     ],
     features: [
       "AI-powered background removal with drag-and-drop upload",
@@ -226,11 +226,11 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://github.com/khalid-tourhzaoui/WEATHER-APP",
-    imgUrl: "../../../public/assets/weather-project/image_n_1.png",
+    imgUrl: "/assets/weather-project/image_n_1.png",
     images: [
-      "../../../public/assets/weather-project/image_n_1.png",
-      "../../../public/assets/weather-project/image_n_2.png",
-      "../../../public/assets/weather-project/image_n_3.png",
+      "/assets/weather-project/image_n_1.png",
+      "/assets/weather-project/image_n_2.png",
+      "/assets/weather-project/image_n_3.png",
     ],
     features: [
       "Real-time weather with air quality index and UV metrics",
@@ -253,10 +253,10 @@ const projects: Project[] = [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://text-translate-ai.vercel.app/",
-    imgUrl: "../../../public/assets/translate-project/image_n_1.png",
+    imgUrl: "/assets/translate-project/image_n_1.png",
     images: [
-      "../../../public/assets/translate-project/image_n_1.png",
-      "../../../public/assets/translate-project/image_n_2.png",
+      "/assets/translate-project/image_n_1.png",
+      "/assets/translate-project/image_n_2.png",
     ],
     features: [
       "Real-time AI translation with speech recognition and text-to-speech",
@@ -280,13 +280,13 @@ const projects: Project[] = [
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
     ],
     link: "https://github.com/khalid-tourhzaoui/youtube-sentiment-app",
-    imgUrl: "../../../public/assets/youtube-sentiment-project/image_n_1.png",
+    imgUrl: "/assets/youtube-sentiment-project/image_n_1.png",
     images: [
-      "../../../public/assets/youtube-sentiment-project/image_n_1.png",
-      "../../../public/assets/youtube-sentiment-project/image_n_2.png",
-      "../../../public/assets/youtube-sentiment-project/image_n_3.png",
-      "../../../public/assets/youtube-sentiment-project/image_n_4.png",
-      "../../../public/assets/youtube-sentiment-project/image_n_5.png",
+      "/assets/youtube-sentiment-project/image_n_1.png",
+      "/assets/youtube-sentiment-project/image_n_2.png",
+      "/assets/youtube-sentiment-project/image_n_3.png",
+      "/assets/youtube-sentiment-project/image_n_4.png",
+      "/assets/youtube-sentiment-project/image_n_5.png",
     ],
     features: [
       "AI sentiment analysis with positive/negative/neutral classification using NLP",
@@ -310,14 +310,14 @@ const projects: Project[] = [
       { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OAuth" },
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
-    imgUrl: "../../../public/assets/ai-resume-project/image_n_1.png",
+    imgUrl: "/assets/ai-resume-project/image_n_1.png",
     images: [
-      "../../../public/assets/ai-resume-project/image_n_1.png",
-      "../../../public/assets/ai-resume-project/image_n_2.png",
-      "../../../public/assets/ai-resume-project/image_n_3.png",
-      "../../../public/assets/ai-resume-project/image_n_4.png",
-      "../../../public/assets/ai-resume-project/image_n_5.png",
-      "../../../public/assets/ai-resume-project/image_n_6.png",
+      "/assets/ai-resume-project/image_n_1.png",
+      "/assets/ai-resume-project/image_n_2.png",
+      "/assets/ai-resume-project/image_n_3.png",
+      "/assets/ai-resume-project/image_n_4.png",
+      "/assets/ai-resume-project/image_n_5.png",
+      "/assets/ai-resume-project/image_n_6.png",
     ],
     features: [
       "AI-powered content generation with Google Gemini for summaries and descriptions",
@@ -342,14 +342,14 @@ export const ProjectCarousel = () => {
   const nextProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev + 1) % projects.length);
-      setCurrentImageIndex(0); // Reset image index when changing project
+      setCurrentImageIndex(0); 
     });
   };
 
   const prevProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-      setCurrentImageIndex(0); // Reset image index when changing project
+      setCurrentImageIndex(0); 
     });
   };
 
@@ -357,7 +357,7 @@ export const ProjectCarousel = () => {
     if (index === currentIndex || isAnimating) return;
     handleTransition(() => {
       setCurrentIndex(index);
-      setCurrentImageIndex(0); // Reset image index when changing project
+      setCurrentImageIndex(0); 
     });
   };
 

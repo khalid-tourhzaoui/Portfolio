@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import ContactImage from '../../../public/assets/profile-BppvMIsH.jpg'
 import { ContactBackground } from "./ContactBackground";
-
+import MyResume from "../../../public/assets/MyResume.pdf";
 interface FormData {
   name: string;
   email: string;
@@ -360,7 +360,7 @@ export function ContactSection() {
                   </a>
 
                   <a
-                    href='/assets/MyResume.pdf'
+                    href={MyResume}
                     download="Khalid_Khalid_Resume.pdf"
                     className="group flex items-center justify-center bg-orange-500 hover:bg-orange-600 border-2 sm:border-3 border-orange-700 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"
                     title="Download Resume"
@@ -369,7 +369,7 @@ export function ContactSection() {
                   </a>
 
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/the_re_khalid/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center justify-center bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 border-2 sm:border-3 border-purple-800 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"

@@ -359,7 +359,7 @@ export function ContactSection() {
                   </a>
 
                   <a
-                    href="../../../public/assets/MyResume.pdf"
+                    href="/public/MyResume.pdf"
                     download="Khalid_Khalid_Resume.pdf"
                     className="group flex items-center justify-center bg-orange-500 hover:bg-orange-600 border-2 sm:border-3 border-orange-700 rounded-lg p-2 sm:p-2.5 transition-all hover:scale-110 shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px] sm:hover:shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px]"
                     title="Download Resume"

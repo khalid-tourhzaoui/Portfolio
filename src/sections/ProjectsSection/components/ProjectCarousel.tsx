@@ -18,7 +18,8 @@ import {
   Layout,
   Languages,
   Brain,
-  Wand2
+  Wand2,
+  CreditCard,
 } from "lucide-react";
 
 // Portfolio Project Images
@@ -87,6 +88,19 @@ import aiResumeImg3 from "../../../../public/assets/ai-resume-project/image_n_3.
 import aiResumeImg4 from "../../../../public/assets/ai-resume-project/image_n_4.png";
 import aiResumeImg5 from "../../../../public/assets/ai-resume-project/image_n_5.png";
 import aiResumeImg6 from "../../../../public/assets/ai-resume-project/image_n_6.png";
+
+// marKoub Project Images
+import markoubImg1 from "../../../../public/assets/markoub-project/image_n_1.png";
+import markoubImg2 from "../../../../public/assets/markoub-project/image_n_2.png";
+import markoubImg3 from "../../../../public/assets/markoub-project/image_n_3.png";
+import markoubImg4 from "../../../../public/assets/markoub-project/image_n_4.png";
+import markoubImg5 from "../../../../public/assets/markoub-project/image_n_5.png";
+import markoubImg6 from "../../../../public/assets/markoub-project/image_n_6.png";
+import markoubImg7 from "../../../../public/assets/markoub-project/image_n_7.png";
+import markoubImg8 from "../../../../public/assets/markoub-project/image_n_8.png";
+import markoubImg9 from "../../../../public/assets/markoub-project/image_n_9.png";
+import markoubImg10 from "../../../../public/assets/markoub-project/image_n_10.png";
+import markoubImg11 from "../../../../public/assets/markoub-project/image_n_11.png";
 
 interface Project {
   id: number;
@@ -335,6 +349,42 @@ const projects: Project[] = [
       "Brutalist design with real-time preview, PDF export, and public/private CV sharing system",
     ],
   },
+  {
+    id: 11,
+    serviceName: "MARKOUB.MA - PLATFORM",
+    description:
+      "Full-stack Moroccan bus ticket reservation platform connecting travelers to partner carriers (CTM, Ghazala, Pullman…). Features real-time seat selection, 2-minute seat lock, Stripe payments, Art Déco PDF tickets with QR codes, and a multi-role admin dashboard.",
+    tools: [
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel 11" },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React 18" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
+      { icon: <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Stripe" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "jsPDF" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/laravel-react-markoub",
+    imgUrl: markoubImg1,
+    images: [
+      markoubImg1,
+      markoubImg2,
+      markoubImg3,
+      markoubImg4,
+      markoubImg5,
+      markoubImg6,
+      markoubImg7,
+      markoubImg8,
+      markoubImg9,
+      markoubImg10,
+      markoubImg11,
+    ],
+    features: [
+      "Interactive bus seat plan with real-time availability and 2-minute reservation lock",
+      "Stripe payment integration with instant confirmation emails and Art Déco PDF boarding passes",
+      "Multi-role dashboard (admin / chef / responsable / user) with analytics, revenue tracking, and full CRUD management",
+    ],
+  },
 ];
 
 export const ProjectCarousel = () => {
@@ -352,14 +402,14 @@ export const ProjectCarousel = () => {
   const nextProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev + 1) % projects.length);
-      setCurrentImageIndex(0); 
+      setCurrentImageIndex(0);
     });
   };
 
   const prevProject = () => {
     handleTransition(() => {
       setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-      setCurrentImageIndex(0); 
+      setCurrentImageIndex(0);
     });
   };
 
@@ -367,7 +417,7 @@ export const ProjectCarousel = () => {
     if (index === currentIndex || isAnimating) return;
     handleTransition(() => {
       setCurrentIndex(index);
-      setCurrentImageIndex(0); 
+      setCurrentImageIndex(0);
     });
   };
 
@@ -440,15 +490,13 @@ export const ProjectCarousel = () => {
           >
             {/* Image Slider Section */}
             <div className="space-y-3">
-              {/* Main Image */}
               <div className="relative bg-gradient-to-br from-orange-100 to-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
                 <img
                   src={projectImages[currentImageIndex]}
                   alt={`${currentProject.serviceName} - Image ${currentImageIndex + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300"
                 />
-                
-                {/* Image Navigation Arrows */}
+
                 {projectImages.length > 1 && (
                   <>
                     <button
@@ -468,7 +516,6 @@ export const ProjectCarousel = () => {
                   </>
                 )}
 
-                {/* Image Counter */}
                 {projectImages.length > 1 && (
                   <div className="absolute bottom-3 right-3 px-3 py-1.5 bg-zinc-800/90 border-2 border-white rounded-lg">
                     <span className="text-xs sm:text-sm font-bold text-white">
@@ -478,7 +525,6 @@ export const ProjectCarousel = () => {
                 )}
               </div>
 
-              {/* Thumbnail Gallery */}
               {projectImages.length > 1 && (
                 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                   {projectImages.map((img, index) => (

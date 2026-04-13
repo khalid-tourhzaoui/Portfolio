@@ -10,7 +10,7 @@ import {
   FolderKanban,
   Send,
 } from "lucide-react";
-import aboutImage from '../../../../public/assets/about-C0vwj3CE.jfif';
+import aboutImage from '../../../../public/assets/AboutPlayer.jpg';
 export function AboutContent() {
   const coreAbilities = [
     {

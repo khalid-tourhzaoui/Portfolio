@@ -282,14 +282,14 @@ export function ContactSection() {
                     <div className="w-24 h-24 sm:w-28 sm:h-28 border-4 sm:border-6 border-zinc-800 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden transform hover:rotate-6 transition-transform">
                       <img 
                         src={ContactImage}
-                        alt="Khalid Khalid Profile"
+                        alt="Khalid Tourhzaoui Profile"
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
 
                   <div className="flex-1 text-center sm:text-left">
-                    <h2 className="text-2xl sm:text-3xl font-black mb-2">Khalid Khalid</h2>
+                    <h2 className="text-2xl sm:text-3xl font-black mb-2">Khalid Tourhzaoui</h2>
                     <div className="flex items-center justify-center sm:justify-start gap-2 mb-3">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
                       <p className="text-base sm:text-lg text-zinc-600 font-bold">Web Developer</p>

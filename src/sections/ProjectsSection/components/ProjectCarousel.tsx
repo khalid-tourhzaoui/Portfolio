@@ -102,6 +102,15 @@ import markoubImg9 from "../../../../public/assets/markoub-project/image_n_9.png
 import markoubImg10 from "../../../../public/assets/markoub-project/image_n_10.png";
 import markoubImg11 from "../../../../public/assets/markoub-project/image_n_11.png";
 
+// Finance Tracker Project Images
+import financeImg1 from "../../../../public/assets/finance-tracker-project/image_n_1.png";
+import financeImg2 from "../../../../public/assets/finance-tracker-project/image_n_2.png";
+import financeImg3 from "../../../../public/assets/finance-tracker-project/image_n_3.png";
+import financeImg4 from "../../../../public/assets/finance-tracker-project/image_n_4.png";
+import financeImg5 from "../../../../public/assets/finance-tracker-project/image_n_5.png";
+import financeImg6 from "../../../../public/assets/finance-tracker-project/image_n_6.png";
+import financeImg7 from "../../../../public/assets/finance-tracker-project/image_n_7.png";
+
 interface Project {
   id: number;
   serviceName: string;
@@ -383,6 +392,30 @@ const projects: Project[] = [
       "Interactive bus seat plan with real-time availability and 2-minute reservation lock",
       "Stripe payment integration with instant confirmation emails and Art Déco PDF boarding passes",
       "Multi-role dashboard (admin / chef / responsable / user) with analytics, revenue tracking, and full CRUD management",
+    ],
+  },
+  {
+    id: 12,
+    serviceName: "PERSONAL FINANCE TRACKER",
+    description:
+      "Full-stack personal finance management application built with Spring Boot and React. Features complete transaction tracking, category management, monthly budgets with visual progress alerts, and a real-time dashboard — all wrapped in a cohesive emerald design system with dark mode support.",
+    tools: [
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Boot" },
+      { icon: <Code2  className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
+      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "JWT" },
+      { icon: <Zap    className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Security" },
+      { icon: <Globe  className="w-4 h-4 sm:w-5 sm:h-5" />, name: "REST API" },
+    ],
+    link: "https://github.com/khalid-tourhzaoui/personal-finance-tracker",
+    imgUrl: financeImg1,
+    images: [financeImg1, financeImg2, financeImg3, financeImg4, financeImg5, financeImg6, financeImg7],
+    features: [
+      "Complete transaction management with list/card toggle, multi-filter search, and real-time summary (balance, income, expenses)",
+      "Monthly budget system per category with 3-level visual progress alerts (green / orange / red) following YNAB/Mint international standards",
+      "Emerald design system with Diamond Pattern texture, full dark mode.",
     ],
   },
 ];

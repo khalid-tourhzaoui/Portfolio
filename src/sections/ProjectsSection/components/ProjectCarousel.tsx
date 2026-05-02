@@ -526,6 +526,8 @@ export const ProjectCarousel = () => {
               <div className="relative bg-gradient-to-br from-orange-100 to-yellow-100 border-4 border-zinc-800 rounded-xl overflow-hidden shadow-[0px_6px_0px_0px_rgba(42,42,42,1)] h-48 sm:h-64 lg:h-80 group">
                 <img
                   src={projectImages[currentImageIndex]}
+                  loading="lazy"
+                  decoding="async"
                   alt={`${currentProject.serviceName} - Image ${currentImageIndex + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300"
                 />
@@ -573,6 +575,8 @@ export const ProjectCarousel = () => {
                     >
                       <img
                         src={img}
+                        loading="lazy"
+                        decoding="async"
                         alt={`Thumbnail ${index + 1}`}
                         className="w-full h-full object-cover"
                       />

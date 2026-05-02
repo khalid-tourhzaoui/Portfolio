@@ -17,6 +17,8 @@ export const LaunchModal = (props: LaunchModalProps) => {
       <img
         src="https://c.animaapp.com/mkydohemo8pbIw/assets/icon-1.svg"
         alt="Icon"
+        loading="lazy"
+        decoding="async"
         className="absolute box-border caret-transparent h-full pointer-events-none w-full z-20 inset-0 animate-fade-in-icon"
       />
       <style>{`

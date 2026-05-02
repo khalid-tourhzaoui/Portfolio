@@ -30,17 +30,17 @@ import portfolioImg4 from "../../../../public/assets/portfolio-project/image_n_4
 import portfolioImg5 from "../../../../public/assets/portfolio-project/image_n_5.png";
 
 // Jouska Project Images
-import jouskaImg1 from "../../../../public/assets/jouska-project/image_n_1.png";
-import jouskaImg2 from "../../../../public/assets/jouska-project/image_n_2.png";
-import jouskaImg3 from "../../../../public/assets/jouska-project/image_n_3.png";
-import jouskaImg4 from "../../../../public/assets/jouska-project/image_n_4.png";
-import jouskaImg5 from "../../../../public/assets/jouska-project/image_n_5.png";
-import jouskaImg6 from "../../../../public/assets/jouska-project/image_n_6.png";
+import jouskaImg1 from "../../../../public/assets/jouska-project/image_n_1.webp";
+import jouskaImg2 from "../../../../public/assets/jouska-project/image_n_2.webp";
+import jouskaImg3 from "../../../../public/assets/jouska-project/image_n_3.webp";
+import jouskaImg4 from "../../../../public/assets/jouska-project/image_n_4.webp";
+import jouskaImg5 from "../../../../public/assets/jouska-project/image_n_5.webp";
+import jouskaImg6 from "../../../../public/assets/jouska-project/image_n_6.webp";
 
 // AI Legal Project Images
-import aiLegalImg1 from "../../../../public/assets/ai-legal-project/image_n_1.png";
-import aiLegalImg2 from "../../../../public/assets/ai-legal-project/image_n_2.png";
-import aiLegalImg3 from "../../../../public/assets/ai-legal-project/image_n_3.png";
+import aiLegalImg1 from "../../../../public/assets/ai-legal-project/image_n_1.webp";
+import aiLegalImg2 from "../../../../public/assets/ai-legal-project/image_n_2.webp";
+import aiLegalImg3 from "../../../../public/assets/ai-legal-project/image_n_3.webp";
 
 // SMTPP Project Images
 import smtppImg1 from "../../../../public/assets/smtpp-project/image_n_6.png";
@@ -82,12 +82,12 @@ import youtubeImg4 from "../../../../public/assets/youtube-sentiment-project/ima
 import youtubeImg5 from "../../../../public/assets/youtube-sentiment-project/image_n_5.png";
 
 // AI Resume Project Images
-import aiResumeImg1 from "../../../../public/assets/ai-resume-project/image_n_1.png";
-import aiResumeImg2 from "../../../../public/assets/ai-resume-project/image_n_2.png";
-import aiResumeImg3 from "../../../../public/assets/ai-resume-project/image_n_3.png";
-import aiResumeImg4 from "../../../../public/assets/ai-resume-project/image_n_4.png";
-import aiResumeImg5 from "../../../../public/assets/ai-resume-project/image_n_5.png";
-import aiResumeImg6 from "../../../../public/assets/ai-resume-project/image_n_6.png";
+import aiResumeImg1 from "../../../../public/assets/ai-resume-project/image_n_1.webp";
+import aiResumeImg2 from "../../../../public/assets/ai-resume-project/image_n_2.webp";
+import aiResumeImg3 from "../../../../public/assets/ai-resume-project/image_n_3.webp";
+import aiResumeImg4 from "../../../../public/assets/ai-resume-project/image_n_4.webp";
+import aiResumeImg5 from "../../../../public/assets/ai-resume-project/image_n_5.webp";
+import aiResumeImg6 from "../../../../public/assets/ai-resume-project/image_n_6.webp";
 
 // marKoub Project Images
 import markoubImg1 from "../../../../public/assets/markoub-project/image_n_1.png";

@@ -23,11 +23,11 @@ import {
 } from "lucide-react";
 
 // Portfolio Project Images
-import portfolioImg1 from "../../../../public/assets/portfolio-project/image_n_1.png";
-import portfolioImg2 from "../../../../public/assets/portfolio-project/image_n_2.png";
-import portfolioImg3 from "../../../../public/assets/portfolio-project/image_n_3.png";
-import portfolioImg4 from "../../../../public/assets/portfolio-project/image_n_4.png";
-import portfolioImg5 from "../../../../public/assets/portfolio-project/image_n_5.png";
+import portfolioImg1 from "../../../../public/assets/portfolio-project/image_n_1.webp";
+import portfolioImg2 from "../../../../public/assets/portfolio-project/image_n_2.webp";
+import portfolioImg3 from "../../../../public/assets/portfolio-project/image_n_3.webp";
+import portfolioImg4 from "../../../../public/assets/portfolio-project/image_n_4.webp";
+import portfolioImg5 from "../../../../public/assets/portfolio-project/image_n_5.webp";
 
 // Jouska Project Images
 import jouskaImg1 from "../../../../public/assets/jouska-project/image_n_1.webp";
@@ -43,43 +43,43 @@ import aiLegalImg2 from "../../../../public/assets/ai-legal-project/image_n_2.we
 import aiLegalImg3 from "../../../../public/assets/ai-legal-project/image_n_3.webp";
 
 // SMTPP Project Images
-import smtppImg1 from "../../../../public/assets/smtpp-project/image_n_6.png";
-import smtppImg2 from "../../../../public/assets/smtpp-project/image_n_1.png";
-import smtppImg3 from "../../../../public/assets/smtpp-project/image_n_2.png";
-import smtppImg4 from "../../../../public/assets/smtpp-project/image_n_3.png";
-import smtppImg5 from "../../../../public/assets/smtpp-project/image_n_4.png";
-import smtppImg6 from "../../../../public/assets/smtpp-project/image_n_5.png";
+import smtppImg1 from "../../../../public/assets/smtpp-project/image_n_6.webp";
+import smtppImg2 from "../../../../public/assets/smtpp-project/image_n_1.webp";
+import smtppImg3 from "../../../../public/assets/smtpp-project/image_n_2.webp";
+import smtppImg4 from "../../../../public/assets/smtpp-project/image_n_3.webp";
+import smtppImg5 from "../../../../public/assets/smtpp-project/image_n_4.webp";
+import smtppImg6 from "../../../../public/assets/smtpp-project/image_n_5.webp";
 
 // Tontine Project Images
-import tontineImg1 from "../../../../public/assets/tontine-project/image_n_1.png";
-import tontineImg2 from "../../../../public/assets/tontine-project/image_n_2.png";
-import tontineImg3 from "../../../../public/assets/tontine-project/image_n_3.png";
-import tontineImg4 from "../../../../public/assets/tontine-project/image_n_4.png";
-import tontineImg5 from "../../../../public/assets/tontine-project/image_n_5.png";
-import tontineImg6 from "../../../../public/assets/tontine-project/image_n_6.png";
+import tontineImg1 from "../../../../public/assets/tontine-project/image_n_1.webp";
+import tontineImg2 from "../../../../public/assets/tontine-project/image_n_2.webp";
+import tontineImg3 from "../../../../public/assets/tontine-project/image_n_3.webp";
+import tontineImg4 from "../../../../public/assets/tontine-project/image_n_4.webp";
+import tontineImg5 from "../../../../public/assets/tontine-project/image_n_5.webp";
+import tontineImg6 from "../../../../public/assets/tontine-project/image_n_6.webp";
 
 // BG Removal Project Images
-import bgRemovalImg1 from "../../../../public/assets/bg-removal-project/image_n_1.png";
-import bgRemovalImg2 from "../../../../public/assets/bg-removal-project/image_n_2.png";
-import bgRemovalImg3 from "../../../../public/assets/bg-removal-project/image_n_3.png";
-import bgRemovalImg4 from "../../../../public/assets/bg-removal-project/image_n_4.png";
-import bgRemovalImg5 from "../../../../public/assets/bg-removal-project/image_n_5.png";
+import bgRemovalImg1 from "../../../../public/assets/bg-removal-project/image_n_1.webp";
+import bgRemovalImg2 from "../../../../public/assets/bg-removal-project/image_n_2.webp";
+import bgRemovalImg3 from "../../../../public/assets/bg-removal-project/image_n_3.webp";
+import bgRemovalImg4 from "../../../../public/assets/bg-removal-project/image_n_4.webp";
+import bgRemovalImg5 from "../../../../public/assets/bg-removal-project/image_n_5.webp";
 
 // Weather Project Images
-import weatherImg1 from "../../../../public/assets/weather-project/image_n_1.png";
-import weatherImg2 from "../../../../public/assets/weather-project/image_n_2.png";
-import weatherImg3 from "../../../../public/assets/weather-project/image_n_3.png";
+import weatherImg1 from "../../../../public/assets/weather-project/image_n_1.webp";
+import weatherImg2 from "../../../../public/assets/weather-project/image_n_2.webp";
+import weatherImg3 from "../../../../public/assets/weather-project/image_n_3.webp";
 
 // Translate Project Images
-import translateImg1 from "../../../../public/assets/translate-project/image_n_1.png";
-import translateImg2 from "../../../../public/assets/translate-project/image_n_2.png";
+import translateImg1 from "../../../../public/assets/translate-project/image_n_1.webp";
+import translateImg2 from "../../../../public/assets/translate-project/image_n_2.webp";
 
 // YouTube Sentiment Project Images
-import youtubeImg1 from "../../../../public/assets/youtube-sentiment-project/image_n_1.png";
-import youtubeImg2 from "../../../../public/assets/youtube-sentiment-project/image_n_2.png";
-import youtubeImg3 from "../../../../public/assets/youtube-sentiment-project/image_n_3.png";
-import youtubeImg4 from "../../../../public/assets/youtube-sentiment-project/image_n_4.png";
-import youtubeImg5 from "../../../../public/assets/youtube-sentiment-project/image_n_5.png";
+import youtubeImg1 from "../../../../public/assets/youtube-sentiment-project/image_n_1.webp";
+import youtubeImg2 from "../../../../public/assets/youtube-sentiment-project/image_n_2.webp";
+import youtubeImg3 from "../../../../public/assets/youtube-sentiment-project/image_n_3.webp";
+import youtubeImg4 from "../../../../public/assets/youtube-sentiment-project/image_n_4.webp";
+import youtubeImg5 from "../../../../public/assets/youtube-sentiment-project/image_n_5.webp";
 
 // AI Resume Project Images
 import aiResumeImg1 from "../../../../public/assets/ai-resume-project/image_n_1.webp";
@@ -90,26 +90,26 @@ import aiResumeImg5 from "../../../../public/assets/ai-resume-project/image_n_5.
 import aiResumeImg6 from "../../../../public/assets/ai-resume-project/image_n_6.webp";
 
 // marKoub Project Images
-import markoubImg1 from "../../../../public/assets/markoub-project/image_n_1.png";
-import markoubImg2 from "../../../../public/assets/markoub-project/image_n_2.png";
-import markoubImg3 from "../../../../public/assets/markoub-project/image_n_3.png";
-import markoubImg4 from "../../../../public/assets/markoub-project/image_n_4.png";
-import markoubImg5 from "../../../../public/assets/markoub-project/image_n_5.png";
-import markoubImg6 from "../../../../public/assets/markoub-project/image_n_6.png";
-import markoubImg7 from "../../../../public/assets/markoub-project/image_n_7.png";
-import markoubImg8 from "../../../../public/assets/markoub-project/image_n_8.png";
-import markoubImg9 from "../../../../public/assets/markoub-project/image_n_9.png";
-import markoubImg10 from "../../../../public/assets/markoub-project/image_n_10.png";
-import markoubImg11 from "../../../../public/assets/markoub-project/image_n_11.png";
+import markoubImg1 from "../../../../public/assets/markoub-project/image_n_1.webp";
+import markoubImg2 from "../../../../public/assets/markoub-project/image_n_2.webp";
+import markoubImg3 from "../../../../public/assets/markoub-project/image_n_3.webp";
+import markoubImg4 from "../../../../public/assets/markoub-project/image_n_4.webp";
+import markoubImg5 from "../../../../public/assets/markoub-project/image_n_5.webp";
+import markoubImg6 from "../../../../public/assets/markoub-project/image_n_6.webp";
+import markoubImg7 from "../../../../public/assets/markoub-project/image_n_7.webp";
+import markoubImg8 from "../../../../public/assets/markoub-project/image_n_8.webp";
+import markoubImg9 from "../../../../public/assets/markoub-project/image_n_9.webp";
+import markoubImg10 from "../../../../public/assets/markoub-project/image_n_10.webp";
+import markoubImg11 from "../../../../public/assets/markoub-project/image_n_11.webp";
 
 // Finance Tracker Project Images
-import financeImg1 from "../../../../public/assets/finance-tracker-project/image_n_1.png";
-import financeImg2 from "../../../../public/assets/finance-tracker-project/image_n_2.png";
-import financeImg3 from "../../../../public/assets/finance-tracker-project/image_n_3.png";
-import financeImg4 from "../../../../public/assets/finance-tracker-project/image_n_4.png";
-import financeImg5 from "../../../../public/assets/finance-tracker-project/image_n_5.png";
-import financeImg6 from "../../../../public/assets/finance-tracker-project/image_n_6.png";
-import financeImg7 from "../../../../public/assets/finance-tracker-project/image_n_7.png";
+import financeImg1 from "../../../../public/assets/finance-tracker-project/image_n_1.webp";
+import financeImg2 from "../../../../public/assets/finance-tracker-project/image_n_2.webp";
+import financeImg3 from "../../../../public/assets/finance-tracker-project/image_n_3.webp";
+import financeImg4 from "../../../../public/assets/finance-tracker-project/image_n_4.webp";
+import financeImg5 from "../../../../public/assets/finance-tracker-project/image_n_5.webp";
+import financeImg6 from "../../../../public/assets/finance-tracker-project/image_n_6.webp";
+import financeImg7 from "../../../../public/assets/finance-tracker-project/image_n_7.webp";
 
 interface Project {
   id: number;
@@ -137,7 +137,7 @@ const projects: Project[] = [
       { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
-    link: "https://khalid-tourhzaoui.vercel.app/",
+    link: "https://khalidtourhzaoui.vercel.app/",
     imgUrl: portfolioImg1,
     images: [portfolioImg1, portfolioImg2, portfolioImg3, portfolioImg4, portfolioImg5],
     features: [

@@ -1,4 +1,4 @@
-import HeroThumbnail from "../../../../public/assets/HeroLogo.png";
+import HeroThumbnail from "../../../../public/assets/HeroLogo.webp";
 export const HeroImage = () => {
   return (
     <div className="flex items-center justify-center lg:justify-end pb-12 md:pb-16 lg:pb-0">

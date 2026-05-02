@@ -25,7 +25,7 @@ import {
   MessageCircleMore,
   XCircle
 } from "lucide-react";
-import ContactImage from '../../../public/assets/profile-BppvMIsH.jpg'
+import ContactImage from '../../../public/assets/profile-BppvMIsH.webp'
 import { ContactBackground } from "./ContactBackground";
 interface FormData {
   name: string;

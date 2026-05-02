@@ -170,6 +170,8 @@ export function AboutContent() {
             <div className="relative bg-zinc-600/50">
               <img
                 src={aboutImage}
+                loading="lazy"
+                decoding="async"
                 alt="Khalid Developer Character"
                 className="w-full h-auto object-cover"
               />

@@ -9,6 +9,8 @@ export const HeroImage = () => {
             <div className="absolute inset-4 border-4 border-orange-500 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-yellow-100">
               <img
                 alt="profile"
+                loading="lazy"
+                decoding="async"
                 src={HeroThumbnail}
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />

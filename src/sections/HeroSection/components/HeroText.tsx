@@ -12,7 +12,7 @@ export const HeroText = () => {
 
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
         <span className="text-zinc-800">Hi, I'm </span>
-        <span className="text-orange-500">Khalid</span>
+        <span className="text-orange-500">Khalid Tourhzaoui</span>
         <span className="text-zinc-800"> —</span>
         <br />
         <span className="text-yellow-400">Web</span>

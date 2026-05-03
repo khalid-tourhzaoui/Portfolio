@@ -52,9 +52,9 @@ export function ContactSection() {
     try {
       const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      // const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
       
-      if (!serviceID || !templateID || !publicKey) {
+      if (!serviceID || !templateID ) {
         throw new Error("Configuration EmailJS manquante. Vérifiez vos variables d'environnement.");
       }
       
@@ -68,7 +68,7 @@ export function ContactSection() {
         serviceID,
         templateID,
         templateParams,
-        publicKey
+        // publicKey
       );
 
       console.log("Message envoyé avec succès!", response);

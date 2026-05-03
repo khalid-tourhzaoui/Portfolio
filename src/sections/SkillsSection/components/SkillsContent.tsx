@@ -252,6 +252,7 @@ export const SkillsContent = () => {
           
           return (
             <button
+              aria-label={`Select ${filter.label} category`}
               key={filter.id}
               onClick={() => setActiveCategory(filter.id)}
               className={`
@@ -389,6 +390,7 @@ export const SkillsContent = () => {
               
               return (
                 <button
+                  aria-label={`Select ${skill.title}`}
                   key={skill.category}
                   onClick={() => setActiveCategory(skill.category)}
                   className={`

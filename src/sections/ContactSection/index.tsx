@@ -238,6 +238,7 @@ export function ContactSection() {
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button
                     type="submit"
+                    aria-label="Send Message"
                     disabled={isSubmitting}
                     className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-black py-3 sm:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_6px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-1 transition-all duration-150 flex items-center justify-center gap-2 uppercase tracking-wide disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
                   >
@@ -257,6 +258,7 @@ export function ContactSection() {
                     type="button"
                     onClick={handleReset}
                     className="bg-white hover:bg-zinc-100 text-zinc-800 font-black py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_6px_0px_0px] hover:shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] hover:translate-y-1 transition-all duration-150 flex items-center justify-center gap-2 uppercase tracking-wide text-sm sm:text-base"
+                    aria-label="Reset Form"
                   >
                     <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
                     Reset

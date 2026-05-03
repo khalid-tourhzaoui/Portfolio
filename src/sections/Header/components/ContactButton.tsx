@@ -17,6 +17,7 @@ export const ContactButton = () => {
 
   return (
     <button
+      aria-label="Contact Me"
       onClick={handleClick}
       className="group hidden md:flex items-center justify-center gap-2 text-white text-sm lg:text-base font-semibold bg-orange-500 border-2 border-zinc-800 shadow-[rgba(0,0,0,0.95)_3px_6px_0px_0px] h-10 lg:h-11 px-4 lg:px-6 rounded-full hover:bg-orange-600 hover:shadow-[rgba(0,0,0,0.95)_5px_8px_0px_0px] transition-all duration-300 hover:scale-105 shrink-0"
     >

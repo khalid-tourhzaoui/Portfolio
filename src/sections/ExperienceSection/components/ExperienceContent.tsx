@@ -208,6 +208,7 @@ export const ExperienceContent = () => {
 
         <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
           <button
+            aria-label="Switch to Work Experience"
             onClick={() => handleTabChange("work")}
             className={`flex items-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-black uppercase border-3 sm:border-4 border-zinc-800 rounded-lg transition-all shadow-[0px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[2px] ${
               activeTab === "work"
@@ -219,6 +220,7 @@ export const ExperienceContent = () => {
             Work
           </button>
           <button
+            aria-label="Switch to Education Experience"
             onClick={() => handleTabChange("education")}
             className={`flex items-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-black uppercase border-3 sm:border-4 border-zinc-800 rounded-lg transition-all shadow-[0px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[0px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[2px] ${
               activeTab === "education"
@@ -250,6 +252,7 @@ export const ExperienceContent = () => {
               const Icon = item.icon;
               return (
                 <button
+                  aria-label={`Select ${item.company}`}
                   key={item.id}
                   onClick={() => setSelectedIndex(index)}
                   className={`w-full flex items-center justify-between px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl border-3 sm:border-4 border-zinc-800 shadow-[rgba(0,0,0,0.9)_0px_4px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_6px_0px_0px] transition-all ${
@@ -399,12 +402,14 @@ export const ExperienceContent = () => {
             </p>
             <div className="flex gap-1.5 sm:gap-2 md:gap-3 ml-auto">
               <button
+                aria-label="Previous Experience"
                 onClick={prevItem}
                 className="flex items-center gap-1 bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded border-2 border-zinc-800 font-bold text-[10px] sm:text-xs md:text-sm hover:bg-blue-600 transition-colors shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px]"
               >
                 ◀ <span className="hidden sm:inline">PREV</span>
               </button>
               <button
+                aria-label="Next Experience"
                 onClick={nextItem}
                 className="flex items-center gap-1 bg-blue-500 text-white px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded border-2 border-zinc-800 font-bold text-[10px] sm:text-xs md:text-sm hover:bg-blue-600 transition-colors shadow-[rgba(0,0,0,0.9)_0px_2px_0px_0px] sm:shadow-[rgba(0,0,0,0.9)_0px_3px_0px_0px]"
               >

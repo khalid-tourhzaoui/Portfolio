@@ -12,6 +12,7 @@ export const FooterBottom = () => {
         © {currentYear} All rights reserved.
       </div>
       <button
+        aria-label="Back to Top"
         onClick={scrollToTop}
         className="font-black bg-white shadow-[0px_3px_0px_0px_rgb(42,42,42)] text-center uppercase border-zinc-800 px-3 py-2 rounded border-2 border-solid hover:bg-gray-100 hover:shadow-[0px_2px_0px_0px_rgb(42,42,42)] hover:translate-y-[1px] transition-all order-1 sm:order-2"
       >

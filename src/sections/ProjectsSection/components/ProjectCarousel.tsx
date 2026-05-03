@@ -661,6 +661,7 @@ export const ProjectCarousel = () => {
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-400 to-orange-500 border-t-[5px] border-zinc-800">
           <div className="flex items-center gap-2">
             <button
+              aria-label="Previous Project"
               onClick={prevProject}
               disabled={isAnimating}
               className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed text-zinc-800"
@@ -669,6 +670,7 @@ export const ProjectCarousel = () => {
               <span className="hidden sm:inline">Prev</span>
             </button>
             <button
+              aria-label="Next Project"
               onClick={nextProject}
               disabled={isAnimating}
               className="flex items-center gap-1 px-3 sm:px-4 py-2 text-xs sm:text-sm font-black uppercase bg-white border-2 border-zinc-800 rounded-lg shadow-[0px_3px_0px_0px_rgba(42,42,42,1)] hover:shadow-[0px_1px_0px_0px_rgba(42,42,42,1)] hover:translate-y-[2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed text-zinc-800"

@@ -25,6 +25,7 @@ export const LaunchModalButtons = (props: LaunchModalButtonsProps) => {
   return (
     <div className="box-border caret-transparent gap-x-3 grid grid-cols-1 gap-y-3 pb-5 px-5 md:grid-cols-2">
       <button
+        aria-label="Enter with music"
         onClick={props.onEnterWithMusic}
         disabled={progress < 100}
         className={`text-white font-bold bg-red-400 caret-transparent block text-center text-nowrap border-zinc-800 px-4 py-3 rounded-md border-4 border-solid transition-all duration-300 animate-button-appear ${
@@ -36,6 +37,7 @@ export const LaunchModalButtons = (props: LaunchModalButtonsProps) => {
         Enter With Music
       </button>
       <button
+        aria-label="Enter without music"
         onClick={props.onEnterWithoutMusic}
         disabled={progress < 100}
         className={`font-bold bg-white caret-transparent block text-center text-nowrap border-zinc-800 px-4 py-3 rounded-md border-4 border-solid transition-all duration-300 animate-button-appear-delay ${

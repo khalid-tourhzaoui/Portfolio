@@ -111,6 +111,12 @@ import financeImg5 from "../../../../public/assets/finance-tracker-project/image
 import financeImg6 from "../../../../public/assets/finance-tracker-project/image_n_6.webp";
 import financeImg7 from "../../../../public/assets/finance-tracker-project/image_n_7.webp";
 
+// WC2026 Bracket Project Images
+import wc2026Img1 from "../../../../public/assets/wc2026-project/image_n_1.webp";
+import wc2026Img2 from "../../../../public/assets/wc2026-project/image_n_2.webp";
+import wc2026Img3 from "../../../../public/assets/wc2026-project/image_n_3.webp";
+import wc2026Img4 from "../../../../public/assets/wc2026-project/image_n_4.webp";
+import wc2026Img5 from "../../../../public/assets/wc2026-project/image_n_5.webp";
 interface Project {
   id: number;
   serviceName: string;
@@ -130,16 +136,31 @@ const projects: Project[] = [
       "Modern portfolio application with retro gaming/RPG inspired interface, featuring character cards, XP system, interactive switchboard navigation, and terminal-style contact form.",
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
-      { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React Router" },
+      {
+        icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Radix UI",
+      },
+      {
+        icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "React Router",
+      },
       { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://khalidtourhzaoui.vercel.app/",
     imgUrl: portfolioImg1,
-    images: [portfolioImg1, portfolioImg2, portfolioImg3, portfolioImg4, portfolioImg5],
+    images: [
+      portfolioImg1,
+      portfolioImg2,
+      portfolioImg3,
+      portfolioImg4,
+      portfolioImg5,
+    ],
     features: [
       "Unique gaming/RPG interface with character stats and XP system",
       "Interactive switchboard navigation and terminal-style components",
@@ -152,9 +173,15 @@ const projects: Project[] = [
     description:
       "Intelligent AI-powered content creation platform with article generation, blog title suggestions, AI image generation, background removal, and resume analysis powered by OpenAI GPT-4 and DALL-E.",
     tools: [
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Boot" },
+      {
+        icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Spring Boot",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OpenAI" },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
@@ -163,7 +190,14 @@ const projects: Project[] = [
     ],
     link: "https://github.com/khalid-tourhzaoui/jouska-ai",
     imgUrl: jouskaImg1,
-    images: [jouskaImg1, jouskaImg2, jouskaImg3, jouskaImg4, jouskaImg5, jouskaImg6],
+    images: [
+      jouskaImg1,
+      jouskaImg2,
+      jouskaImg3,
+      jouskaImg4,
+      jouskaImg5,
+      jouskaImg6,
+    ],
     features: [
       "AI article generation with customizable tone and SEO optimization",
       "Blog title generator with 10+ creative suggestions per request",
@@ -179,7 +213,10 @@ const projects: Project[] = [
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OpenAI" },
@@ -202,7 +239,10 @@ const projects: Project[] = [
     tools: [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
@@ -225,7 +265,10 @@ const projects: Project[] = [
     tools: [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
@@ -233,7 +276,14 @@ const projects: Project[] = [
     ],
     link: "https://github.com/khalid-tourhzaoui/laravel-react-tontine-tailadmin",
     imgUrl: tontineImg1,
-    images: [tontineImg1, tontineImg2, tontineImg3, tontineImg4, tontineImg5, tontineImg6],
+    images: [
+      tontineImg1,
+      tontineImg2,
+      tontineImg3,
+      tontineImg4,
+      tontineImg5,
+      tontineImg6,
+    ],
     features: [
       "Multi-tontine creation with customizable cycles, amounts, and participant management",
       "Automated email reminders, delay notifications, and in-app notification system",
@@ -247,7 +297,10 @@ const projects: Project[] = [
       "AI-powered background removal application with intelligent image processing, credit system, JWT authentication, and seamless user experience for high-quality image export.",
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Node.js" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Express" },
@@ -257,7 +310,13 @@ const projects: Project[] = [
     ],
     link: "https://github.com/votre-username/bg-removal",
     imgUrl: bgRemovalImg1,
-    images: [bgRemovalImg1, bgRemovalImg2, bgRemovalImg3, bgRemovalImg4, bgRemovalImg5],
+    images: [
+      bgRemovalImg1,
+      bgRemovalImg2,
+      bgRemovalImg3,
+      bgRemovalImg4,
+      bgRemovalImg5,
+    ],
     features: [
       "AI-powered background removal with drag-and-drop upload",
       "Interactive before/after slider for result comparison",
@@ -272,7 +331,10 @@ const projects: Project[] = [
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Shadcn" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Mapbox" },
@@ -295,10 +357,19 @@ const projects: Project[] = [
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
       { icon: <Layout className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Next.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
-      { icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Speech API" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
+      {
+        icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Speech API",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
-      { icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Groq AI" },
+      {
+        icon: <Languages className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Groq AI",
+      },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
     ],
     link: "https://text-translate-ai.vercel.app/",
@@ -317,12 +388,18 @@ const projects: Project[] = [
       "AI-powered sentiment analysis platform for YouTube comments with real-time data visualization, multilingual support, and comprehensive analytics dashboard using NLP and machine learning.",
     tools: [
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "TypeScript" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Flask" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Python" },
       { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "NLP" },
-      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "YouTube API" },
+      {
+        icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "YouTube API",
+      },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Radix UI" },
     ],
     link: "https://github.com/khalid-tourhzaoui/youtube-sentiment-app",
@@ -342,16 +419,32 @@ const projects: Project[] = [
     tools: [
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel" },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Inertia.js" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Inertia.js",
+      },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Brain className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Gemini AI" },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
-      { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "PDF Export" },
+      {
+        icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "PDF Export",
+      },
       { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "OAuth" },
     ],
     link: "https://github.com/khalid-tourhzaoui/AI-RESUME-BUILDER-APP",
     imgUrl: aiResumeImg1,
-    images: [aiResumeImg1, aiResumeImg2, aiResumeImg3, aiResumeImg4, aiResumeImg5, aiResumeImg6],
+    images: [
+      aiResumeImg1,
+      aiResumeImg2,
+      aiResumeImg3,
+      aiResumeImg4,
+      aiResumeImg5,
+      aiResumeImg6,
+    ],
     features: [
       "AI-powered content generation with Google Gemini for summaries and descriptions",
       "OAuth authentication (Google/GitHub) with Laravel Socialite and complete user management",
@@ -364,11 +457,20 @@ const projects: Project[] = [
     description:
       "Full-stack Moroccan bus ticket reservation platform connecting travelers to partner carriers (CTM, Ghazala, Pullman…). Features real-time seat selection, 2-minute seat lock, Stripe payments, Art Déco PDF tickets with QR codes, and a multi-role admin dashboard.",
     tools: [
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Laravel 11" },
+      {
+        icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Laravel 11",
+      },
       { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React 18" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Sanctum" },
-      { icon: <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Stripe" },
+      {
+        icon: <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Stripe",
+      },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
       { icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />, name: "jsPDF" },
       { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
@@ -400,22 +502,72 @@ const projects: Project[] = [
     description:
       "Full-stack personal finance management application built with Spring Boot and React. Features complete transaction tracking, category management, monthly budgets with visual progress alerts, and a real-time dashboard — all wrapped in a cohesive emerald design system with dark mode support.",
     tools: [
-      { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Boot" },
-      { icon: <Code2  className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
-      { icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Tailwind" },
+      {
+        icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Spring Boot",
+      },
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
       { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MySQL" },
       { icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />, name: "JWT" },
-      { icon: <Zap    className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
-      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Spring Security" },
-      { icon: <Globe  className="w-4 h-4 sm:w-5 sm:h-5" />, name: "REST API" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
+      {
+        icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Spring Security",
+      },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "REST API" },
     ],
     link: "https://github.com/khalid-tourhzaoui/personal-finance-tracker",
     imgUrl: financeImg1,
-    images: [financeImg1, financeImg2, financeImg3, financeImg4, financeImg5, financeImg6, financeImg7],
+    images: [
+      financeImg1,
+      financeImg2,
+      financeImg3,
+      financeImg4,
+      financeImg5,
+      financeImg6,
+      financeImg7,
+    ],
     features: [
       "Complete transaction management with list/card toggle, multi-filter search, and real-time summary (balance, income, expenses)",
       "Monthly budget system per category with 3-level visual progress alerts (green / orange / red) following YNAB/Mint international standards",
       "Emerald design system with Diamond Pattern texture, full dark mode.",
+    ],
+  },
+  {
+    id: 13,
+    serviceName: "WC2026 BRACKET",
+    description:
+      "Full-stack World Cup 2026 bracket prediction app with OTP authentication, drag-and-drop group stage, K.O. tree (desktop mirror + mobile tabs), scoring system, private leaderboards, and SEO score 100 on Lighthouse. Deployed on Vercel with MongoDB Atlas.",
+    tools: [
+      { icon: <Code2 className="w-4 h-4 sm:w-5 sm:h-5" />, name: "React" },
+      { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vite" },
+      {
+        icon: <Server className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Node/Express",
+      },
+      { icon: <Database className="w-4 h-4 sm:w-5 sm:h-5" />, name: "MongoDB" },
+      {
+        icon: <Paintbrush className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Tailwind",
+      },
+      { icon: <Layers className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Zustand" },
+      {
+        icon: <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />,
+        name: "Framer Motion",
+      },
+      { icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, name: "Vercel" },
+    ],
+    link: "https://wc2026bracket.vercel.app/",
+    imgUrl: wc2026Img1,
+    images: [wc2026Img1, wc2026Img2, wc2026Img3, wc2026Img4,wc2026Img5],
+    features: [
+      "OTP email authentication, drag-and-drop group stage for 48 teams across 12 groups, and 3rd-place selection with real country flags",
+      "Interactive K.O. bracket with auto-propagation of winners — desktop mirror tree + mobile tab view (R32 → Final)",
+      "Scoring engine vs official results, private group leaderboards, mock mode before tournament start, and Lighthouse 100 SEO",
     ],
   },
 ];
@@ -462,7 +614,9 @@ export const ProjectCarousel = () => {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + projectImages.length) % projectImages.length,
+    );
   };
 
   const goToImage = (index: number) => {
@@ -680,14 +834,14 @@ export const ProjectCarousel = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide max-w-[140px] sm:max-w-none">
             {projects.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToProject(index)}
                 disabled={isAnimating}
                 aria-label={`Go to project ${index + 1}`}
-                className={`w-3 h-3 sm:w-3.5 sm:h-3.5 border-2 border-zinc-800 rounded-full transition-all ${
+                className={`flex-shrink-0 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 border-2 border-zinc-800 rounded-full transition-all ${
                   index === currentIndex
                     ? "bg-white scale-110"
                     : "bg-white/40 hover:bg-white/70"

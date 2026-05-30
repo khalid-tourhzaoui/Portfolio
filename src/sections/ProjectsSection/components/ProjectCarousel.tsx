@@ -117,6 +117,11 @@ import wc2026Img2 from "../../../../public/assets/wc2026-project/image_n_2.webp"
 import wc2026Img3 from "../../../../public/assets/wc2026-project/image_n_3.webp";
 import wc2026Img4 from "../../../../public/assets/wc2026-project/image_n_4.webp";
 import wc2026Img5 from "../../../../public/assets/wc2026-project/image_n_5.webp";
+import wc2026Img6 from "../../../../public/assets/wc2026-project/image_n_6.webp";
+import wc2026Img7 from "../../../../public/assets/wc2026-project/image_n_7.webp";
+import wc2026Img8 from "../../../../public/assets/wc2026-project/image_n_8.webp";
+import wc2026Img9 from "../../../../public/assets/wc2026-project/image_n_9.webp";
+import wc2026Img10 from "../../../../public/assets/wc2026-project/image_n_10.webp";
 interface Project {
   id: number;
   serviceName: string;
@@ -563,7 +568,18 @@ const projects: Project[] = [
     ],
     link: "https://wc2026bracket.vercel.app/",
     imgUrl: wc2026Img1,
-    images: [wc2026Img1, wc2026Img2, wc2026Img3, wc2026Img4,wc2026Img5],
+    images: [
+      wc2026Img1,
+      wc2026Img2,
+      wc2026Img3,
+      wc2026Img4,
+      wc2026Img5,
+      wc2026Img6,
+      wc2026Img7,
+      wc2026Img8,
+      wc2026Img9,
+      wc2026Img10,
+    ],
     features: [
       "OTP email authentication, drag-and-drop group stage for 48 teams across 12 groups, and 3rd-place selection with real country flags",
       "Interactive K.O. bracket with auto-propagation of winners — desktop mirror tree + mobile tab view (R32 → Final)",

@@ -730,33 +730,31 @@ export const ProjectCarousel = () => {
                 )}
               </div>
 
-              {projectImages.length > 1 && (
-                <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                  {projectImages.map((img, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToImage(index)}
-                      className={`relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 border-3 rounded-lg overflow-hidden transition-all ${
-                        index === currentImageIndex
-                          ? "border-orange-500 scale-105 shadow-[0px_4px_0px_0px_rgba(249,115,22,1)]"
-                          : "border-zinc-800 hover:border-orange-300 shadow-[0px_3px_0px_0px_rgba(42,42,42,1)]"
-                      }`}
-                      aria-label={`View image ${index + 1}`}
-                    >
-                      <img
-                        src={img}
-                        loading="lazy"
-                        decoding="async"
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                      {index === currentImageIndex && (
-                        <div className="absolute inset-0 bg-orange-500/20 border-2 border-orange-500" />
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
+              <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-4 xl:grid-cols-6 gap-1">
+                {projectImages.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToImage(index)}
+                    className={`relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 border-3 rounded-lg overflow-hidden transition-all ${
+                      index === currentImageIndex
+                        ? "border-orange-500 scale-105 shadow-[0px_4px_0px_0px_rgba(249,115,22,1)]"
+                        : "border-zinc-800 hover:border-orange-300 shadow-[0px_3px_0px_0px_rgba(42,42,42,1)]"
+                    }`}
+                    aria-label={`View image ${index + 1}`}
+                  >
+                    <img
+                      src={img}
+                      loading="lazy"
+                      decoding="async"
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                    {index === currentImageIndex && (
+                      <div className="absolute inset-0 bg-orange-500/20 border-2 border-orange-500" />
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Project Details Section */}

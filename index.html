@@ -22,7 +22,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_MA" />
-    <meta property="og:site_name" content="Khalid Tourhzaoui Portfolio" />
+    <meta property="og:site_name" content="Khalid Tourhzaoui" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -50,12 +50,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- <link rel="preload" as="image" href="/profile-BppvMIsH.webp" /> -->
-
     <!-- Stylesheet -->
     <link href="tailwind.css" rel="stylesheet" />
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) — WebSite (fixes Google site name) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Khalid Tourhzaoui",
+      "url": "https://khalidtourhzaoui.vercel.app",
+      "description": "Portfolio of Khalid Tourhzaoui, Full Stack Web Developer from Morocco.",
+      "author": {
+        "@type": "Person",
+        "name": "Khalid Tourhzaoui"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) — Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
